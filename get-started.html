@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Started — Career Coach</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Career Coach</a>
+    <nav class="main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmaps</a></li>
+        <li><a href="who-its-for.html">Who It's For</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="get-started.html">Start My Roadmap</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Get started with Career Coach</h1>
+    <p class="lede">Tell us a bit about you, and we'll start building your roadmap. Just have a question instead? Skip to <a href="#contact">Contact</a>.</p>
+
+    <form class="placeholder" onsubmit="return false;">
+      <div>
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" disabled>
+      </div>
+      <div>
+        <label for="email">Campus email</label>
+        <input type="email" id="email" name="email" placeholder="you@[TODO: campus domain]" disabled>
+      </div>
+      <div>
+        <label for="year">Class year</label>
+        <select id="year" name="year" disabled>
+          <option>1st year</option>
+          <option>2nd year</option>
+          <option>3rd year</option>
+          <option>4th year</option>
+        </select>
+      </div>
+      <div>
+        <label for="major">Academic focus / major</label>
+        <input type="text" id="major" name="major" placeholder="e.g. Economics" disabled>
+      </div>
+      <div>
+        <label for="interests">Interests</label>
+        <input type="text" id="interests" name="interests" placeholder="e.g. data, design, sustainability" disabled>
+      </div>
+      <div>
+        <label for="target">Target career direction</label>
+        <input type="text" id="target" name="target" placeholder="e.g. product management" disabled>
+      </div>
+      <div>
+        <label>I'm interested in</label>
+        <div class="checkbox-row">
+          <label class="checkbox-label"><input type="checkbox" name="wants-resume" disabled> Resume review</label>
+          <label class="checkbox-label"><input type="checkbox" name="wants-interview" disabled> Mock interview</label>
+        </div>
+      </div>
+      <div>
+        <label for="availability">General availability (for a mock interview, if interested)</label>
+        <input type="text" id="availability" name="availability" placeholder="e.g. weekday afternoons" disabled>
+      </div>
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" disabled> I'd like occasional emails about my roadmap and coaching progress.
+      </label>
+      <button type="submit" disabled>Start My Roadmap (not yet live)</button>
+    </form>
+
+    <p class="note" style="margin-top:28px; max-width:500px;">
+      <b>TODO — this page is not functional yet.</b> The pitch confirms who the product is for but doesn't specify: the launch university's name or email domain, whether signup requires an account system, what happens after signup (immediate access vs. waitlist), or who owns the domain/hosting this would eventually live on. Per the web agent's charter, creating accounts, buying a domain, and anything that publishes or sends is a human call — flagged to Adam before this form can go live.
+    </p>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2 class="section-title">Have a question instead?</h2>
+    <p class="section-lede">This is separate from the roadmap intake above — for general questions and support.</p>
+    <form class="placeholder" onsubmit="return false;" style="max-width:480px;">
+      <div>
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="contact-name" placeholder="Your name" disabled>
+      </div>
+      <div>
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="contact-email" placeholder="you@example.com" disabled>
+      </div>
+      <div>
+        <label for="contact-message">Message</label>
+        <input type="text" id="contact-message" name="contact-message" placeholder="What's your question?" disabled>
+      </div>
+      <button type="submit" disabled>Send (not yet live)</button>
+    </form>
+    <p class="note" style="margin-top:20px; max-width:500px;"><b>TODO:</b> operations (Leyre) still needs a decided destination for submissions — a shared inbox, spreadsheet, or CRM — before either form above can go live, per PREPARE-WEBSITE.md.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Is Career Coach free?</h3>
+        <p class="note"><b>TODO:</b> pricing hasn't been decided yet.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens after I submit this form?</h3>
+        <p class="note"><b>TODO:</b> where submissions go and what confirmation you'll see hasn't been decided yet.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my information kept private?</h3>
+        <p>We haven't finalized our privacy policy yet. Nothing on this page is live or collecting real data right now — see the consent checkbox above for what we'd ask before ever emailing you.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does a resume review take?</h3>
+        <p class="note"><b>TODO:</b> turnaround time hasn't been set.</p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:24px;">This FAQ is maintained by operations (Leyre) and kept current as common questions come in, per PREPARE-WEBSITE.md.</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>&copy; 2026 Career Coach. All rights reserved.</div>
+    <ul>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmaps</a></li>
+      <li><a href="who-its-for.html">Who It's For</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="get-started.html">Get Started</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
