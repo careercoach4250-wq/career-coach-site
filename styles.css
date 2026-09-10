@@ -68,6 +68,9 @@ header.site .wrap {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.3rem;
@@ -77,6 +80,7 @@ header.site .wrap {
   flex-shrink: 0;
 }
 .brand:hover { text-decoration: none; }
+.logo-mark { width: 27px; height: 27px; flex-shrink: 0; }
 
 header.site .btn { flex-shrink: 0; white-space: nowrap; }
 nav.main { min-width: 0; }
