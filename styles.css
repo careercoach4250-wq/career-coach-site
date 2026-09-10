@@ -109,6 +109,21 @@ nav.main a.active { color: var(--teal); }
   padding: 72px 0 56px;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-art svg { width: 100%; height: auto; display: block; }
+.hero-art.flip svg { transform: scaleX(-1); }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-art { order: -1; max-width: 340px; margin: 0 auto; }
+}
+
 .hero h1 {
   font-size: clamp(2rem, 4.5vw, 3.1rem);
   line-height: 1.1;
