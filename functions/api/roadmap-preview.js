@@ -6,25 +6,52 @@
    on resources.html and coaching-roadmaps.html's Maya Torres example, so it
    doesn't invent clubs/programs/stats beyond what's actually confirmed. */
 
-const MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8";
+const MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 const MAX_FIELD_LEN = 80;
 const RATE_LIMIT_PER_HOUR = 20;
 const PHASES = ["discover", "plan", "prepare", "connect", "apply"];
 
-const SYSTEM_PROMPT = `You generate a SHORT, illustrative career-roadmap preview for a Tulane University undergraduate, based on their class year, academic focus, and target career direction.
+// Real, verified Tulane orgs/programs the model is allowed to name. Any other
+// club/org/program-shaped phrase in the AI's output fails the safety check
+// below and triggers the generic fallback instead of being shown to visitors.
+const ALLOWED_ORGS = [
+  "green bull",
+  "wall street krewe",
+  "darwin fenner fund",
+  "freeman career management center",
+  "freeman cmc",
+  "3+3 law",
+  "tulane law",
+  "albert lepage center",
+  "lepage center",
+  "tulane law school",
+];
 
-Structure the roadmap in exactly five phases: Discover, Plan, Prepare, Connect, Apply. Write ONE sentence per phase (max ~25 words each), specific to what this student typed, not generic filler.
+const SYSTEM_PROMPT = `You generate a SHORT, illustrative career-roadmap preview for a Tulane University undergraduate, based ONLY on the class year, academic focus, and target career direction they provide. Never assume unstated details (background, skills, hobbies) beyond what they typed.
 
-VERIFIED FACTS you may draw on when relevant to their target direction — do not invent anything beyond these:
-- Investment banking / finance: Green Bull Investment Banking Group (Tulane's top IB club), Wall Street Krewe, the Darwin Fenner Fund, and Freeman Career Management Center, whose own published timeline shows junior-internship applications can open as early as January of sophomore year.
-- Law: Tulane's 3+3 law pipeline (an accelerated path into Tulane Law).
-- Health / medicine / public health: Tulane's public health school, ranked top-10 nationally.
-- Entrepreneurship / startups: the Albert Lepage Center for Entrepreneurship and Innovation, which funds student ventures.
-- Any track: Tulane's public-service graduation requirement, and Tulane's alumni network in New York, DC, Atlanta, and Houston for post-grad networking.
-- For directions not covered above (e.g. tech, consulting, nonprofit, undecided), give solid general career-development advice for that field without naming specific unverified Tulane clubs or programs.
+Structure the roadmap in exactly five phases: Discover, Plan, Prepare, Connect, Apply. Write ONE sentence per phase (max ~25 words each), tailored to their major and target direction, not generic filler.
+
+You may name ONLY these specific verified Tulane organizations, and only when directly relevant:
+- Investment banking / finance target: Green Bull Investment Banking Group, Wall Street Krewe, the Darwin Fenner Fund, and Freeman Career Management Center (whose published timeline shows junior-internship applications can open as early as January of sophomore year).
+- Law target: Tulane's 3+3 law pipeline into Tulane Law School.
+- Health / medicine / public health target: Tulane's public health school (ranked top-10 nationally) — name the ranking, not a specific club.
+- Entrepreneurship / startups target: the Albert Lepage Center for Entrepreneurship and Innovation.
+
+STRICT RULE: for any target direction not listed above (e.g. software engineering, tech, consulting, marketing, nonprofit, undecided, art, science, etc.), you MUST NOT invent or name ANY specific club, organization, program, competition, or event of any kind — Tulane-specific or generic (no "coding club," "hackathon," "game dev club," fabricated or otherwise). Instead give solid, general career-development advice for that field: building relevant skills, a portfolio or resume, seeking internships, and networking with alumni or professionals in that field, described generically without naming any specific group.
 
 Respond with ONLY a single JSON object, no markdown fences, no commentary, in exactly this shape:
 {"discover":"...","plan":"...","prepare":"...","connect":"...","apply":"..."}`;
+
+// Detects "Capitalized Phrase" + org-like suffix word as a heuristic for a
+// named club/organization the model may have invented.
+const ORG_PATTERN =
+  /\b(?:[A-Z][a-zA-Z'&.]*\s+){1,5}(?:Club|Group|Society|Association|Fund|Center|Centre|Program|Network|Krewe|Consulting|Jam|Hackathon|Guild|Alliance|Coalition|Fellowship|Institute)\b/g;
+
+function containsUnverifiedOrg(text) {
+  const matches = text.match(ORG_PATTERN);
+  if (!matches) return false;
+  return matches.some((m) => !ALLOWED_ORGS.some((allowed) => m.toLowerCase().includes(allowed)));
+}
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -64,6 +91,8 @@ function extractJson(text) {
     if (PHASES.every((p) => typeof parsed[p] === "string" && parsed[p].trim())) {
       const out = {};
       for (const p of PHASES) out[p] = parsed[p].trim().slice(0, 300);
+      const combined = PHASES.map((p) => out[p]).join(" ");
+      if (containsUnverifiedOrg(combined)) return null;
       return out;
     }
   } catch {
@@ -109,6 +138,7 @@ export async function onRequestPost(context) {
         { role: "user", content: userMessage },
       ],
       max_tokens: 400,
+      temperature: 0.3,
     });
   } catch {
     return json({ preview: fallbackPreview(), source: "fallback" });
