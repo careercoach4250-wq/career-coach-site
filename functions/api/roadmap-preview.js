@@ -83,22 +83,31 @@ function fallbackPreview() {
   };
 }
 
-function extractJson(text) {
-  const match = text.match(/\{[\s\S]*\}/);
+function validatePreview(parsed) {
+  if (!parsed || typeof parsed !== "object") return null;
+  if (!PHASES.every((p) => typeof parsed[p] === "string" && parsed[p].trim())) return null;
+  const out = {};
+  for (const p of PHASES) out[p] = parsed[p].trim().slice(0, 300);
+  const combined = PHASES.map((p) => out[p]).join(" ");
+  if (containsUnverifiedOrg(combined)) return null;
+  return out;
+}
+
+function extractPreview(response) {
+  // Some Workers AI models return `response` as an already-parsed object;
+  // others return it as a raw string (sometimes with markdown fences) that
+  // needs pulling apart. Handle both.
+  if (response && typeof response === "object") {
+    return validatePreview(response);
+  }
+  if (typeof response !== "string") return null;
+  const match = response.match(/\{[\s\S]*\}/);
   if (!match) return null;
   try {
-    const parsed = JSON.parse(match[0]);
-    if (PHASES.every((p) => typeof parsed[p] === "string" && parsed[p].trim())) {
-      const out = {};
-      for (const p of PHASES) out[p] = parsed[p].trim().slice(0, 300);
-      const combined = PHASES.map((p) => out[p]).join(" ");
-      if (containsUnverifiedOrg(combined)) return null;
-      return out;
-    }
+    return validatePreview(JSON.parse(match[0]));
   } catch {
-    /* fall through to null */
+    return null;
   }
-  return null;
 }
 
 export async function onRequestPost(context) {
@@ -140,26 +149,14 @@ export async function onRequestPost(context) {
       max_tokens: 400,
       temperature: 0.3,
     });
-  } catch (err) {
-    return json({ preview: fallbackPreview(), source: "fallback", debug: String(err && err.message ? err.message : err) });
+  } catch {
+    return json({ preview: fallbackPreview(), source: "fallback" });
   }
 
-  const preview = output && output.response ? extractJson(String(output.response)) : null;
+  const preview = output ? extractPreview(output.response) : null;
 
   if (!preview) {
-    let debugRaw;
-    try {
-      debugRaw = {
-        outputType: typeof output,
-        keys: output && typeof output === "object" ? Object.keys(output) : null,
-        responseType: output ? typeof output.response : null,
-        responseKeys: output && output.response && typeof output.response === "object" ? Object.keys(output.response) : null,
-        responseValue: output && output.response && typeof output.response === "object" ? JSON.stringify(output.response).slice(0, 500) : String(output && output.response).slice(0, 500),
-      };
-    } catch (e) {
-      debugRaw = "debug-failed: " + (e && e.message);
-    }
-    return json({ preview: fallbackPreview(), source: "fallback", debugRaw });
+    return json({ preview: fallbackPreview(), source: "fallback" });
   }
 
   return json({ preview, source: "ai" });
