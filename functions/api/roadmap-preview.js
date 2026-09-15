@@ -140,14 +140,14 @@ export async function onRequestPost(context) {
       max_tokens: 400,
       temperature: 0.3,
     });
-  } catch {
-    return json({ preview: fallbackPreview(), source: "fallback" });
+  } catch (err) {
+    return json({ preview: fallbackPreview(), source: "fallback", debug: String(err && err.message ? err.message : err) });
   }
 
   const preview = output && output.response ? extractJson(String(output.response)) : null;
 
   if (!preview) {
-    return json({ preview: fallbackPreview(), source: "fallback" });
+    return json({ preview: fallbackPreview(), source: "fallback", debugRaw: output && output.response ? String(output.response) : null });
   }
 
   return json({ preview, source: "ai" });
