@@ -39,6 +39,67 @@ async function checkRateLimit(env, ip) {
   return true;
 }
 
+/* Email palette mirrors styles.css (--navy, --navy-dark, --teal, --mint, --ink,
+   --muted, --paper-soft, --border). Web fonts aren't reliable in email clients,
+   so headings fall back to Georgia (Lora's own fallback in styles.css) and body
+   text to a system sans stack (Work Sans's fallback). Table-based layout with
+   inline styles throughout for email-client compatibility. */
+
+function emailShell(bodyHtml) {
+  return `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background-color:#F5F7FC;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F5F7FC;padding:32px 16px;">
+    <tr><td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#FFFFFF;border:1px solid #E1E6F2;border-radius:16px;">
+        <tr>
+          <td style="background-color:#1E2761;background-image:linear-gradient(135deg,#1E2761,#14193F);padding:24px 32px;border-radius:16px 16px 0 0;">
+            <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+              <td style="padding-right:8px;">
+                <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+                  <td style="width:9px;height:9px;line-height:9px;font-size:9px;border-radius:50%;background-color:#02C39A;">&nbsp;</td>
+                  <td style="width:5px;">&nbsp;</td>
+                  <td style="width:10px;height:10px;line-height:10px;font-size:10px;border-radius:50%;background-color:#028090;">&nbsp;</td>
+                  <td style="width:5px;">&nbsp;</td>
+                  <td style="width:11px;height:11px;line-height:11px;font-size:11px;border-radius:50%;background-color:#FFFFFF;">&nbsp;</td>
+                </tr></table>
+              </td>
+              <td style="font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:19px;color:#FFFFFF;letter-spacing:-0.01em;">Career Coach</td>
+            </tr></table>
+          </td>
+        </tr>
+        <tr><td style="padding:32px;">
+          ${bodyHtml}
+        </td></tr>
+        <tr><td style="padding:18px 32px;border-top:1px solid #E1E6F2;background-color:#F5F7FC;border-radius:0 0 16px 16px;">
+          <p style="margin:0;font-family:Arial,'Segoe UI',sans-serif;font-size:12px;line-height:1.5;color:#5B6178;">Sent automatically from the Career Coach website's Get Started form. Reply to this email to respond directly.</p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+}
+
+function fieldRows(rows) {
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border:1px solid #E1E6F2;border-radius:10px;overflow:hidden;">
+    ${rows
+      .map(
+        ([k, v], i) => `<tr style="background-color:${i % 2 === 0 ? "#F5F7FC" : "#FFFFFF"};">
+          <td style="padding:11px 14px;font-family:Arial,'Segoe UI',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:#5B6178;width:42%;vertical-align:top;border-bottom:1px solid #E1E6F2;">${escapeHtml(k)}</td>
+          <td style="padding:11px 14px;font-family:Arial,'Segoe UI',sans-serif;font-size:14px;color:#1A1F36;vertical-align:top;border-bottom:1px solid #E1E6F2;">${escapeHtml(v || "—")}</td>
+        </tr>`
+      )
+      .join("")}
+  </table>`;
+}
+
+function heading(title, subtitle) {
+  return `<h1 style="margin:0 0 4px;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:22px;color:#1E2761;letter-spacing:-0.01em;">${escapeHtml(title)}</h1>
+    <p style="margin:0 0 22px;font-family:Arial,'Segoe UI',sans-serif;font-size:13px;color:#5B6178;">${escapeHtml(subtitle)}</p>`;
+}
+
 function buildIntakeEmail(f) {
   const rows = [
     ["Name", f.name],
@@ -53,18 +114,25 @@ function buildIntakeEmail(f) {
     ["OK to email about progress", f.consent ? "Yes" : "No"],
   ];
   const subject = `New roadmap intake: ${f.name || "Unnamed"} (${f.year || "year unknown"})`;
-  const html = `<h2>New roadmap intake</h2><table>${rows
-    .map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0;color:#555"><b>${escapeHtml(k)}</b></td><td style="padding:4px 0">${escapeHtml(v || "—")}</td></tr>`)
-    .join("")}</table>`;
+  const html = emailShell(
+    heading("New roadmap intake", "Someone just started a roadmap through the Get Started form.") + fieldRows(rows)
+  );
   return { subject, html };
 }
 
 function buildContactEmail(f) {
   const subject = `New contact message from ${f.name || "someone"}`;
-  const html = `<h2>New contact form message</h2>
-    <p><b>Name:</b> ${escapeHtml(f.name || "—")}</p>
-    <p><b>Email:</b> ${escapeHtml(f.email || "—")}</p>
-    <p><b>Message:</b><br>${escapeHtml(f.message || "—").replace(/\n/g, "<br>")}</p>`;
+  const messageBlock = `<div style="margin-top:16px;padding:16px 18px;background-color:#F5F7FC;border-left:3px solid #028090;border-radius:8px;">
+    <p style="margin:0;font-family:Arial,'Segoe UI',sans-serif;font-size:14px;line-height:1.6;color:#1A1F36;white-space:pre-wrap;">${escapeHtml(f.message || "—")}</p>
+  </div>`;
+  const html = emailShell(
+    heading("New contact message", "Someone asked a question via the “Have a question instead?” form.") +
+      fieldRows([
+        ["Name", f.name],
+        ["Email", f.email],
+      ]) +
+      messageBlock
+  );
   return { subject, html };
 }
 
