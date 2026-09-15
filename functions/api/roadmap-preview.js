@@ -147,7 +147,13 @@ export async function onRequestPost(context) {
   const preview = output && output.response ? extractJson(String(output.response)) : null;
 
   if (!preview) {
-    return json({ preview: fallbackPreview(), source: "fallback", debugRaw: output && output.response ? String(output.response) : null });
+    let debugRaw;
+    try {
+      debugRaw = JSON.stringify(output);
+    } catch {
+      debugRaw = String(output);
+    }
+    return json({ preview: fallbackPreview(), source: "fallback", debugRaw });
   }
 
   return json({ preview, source: "ai" });
