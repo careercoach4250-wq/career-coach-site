@@ -579,3 +579,92 @@ details.roadmap-phase[open] summary .chev { transform: rotate(90deg); }
 @media (prefers-reduced-motion: reduce) {
   details.roadmap-phase summary .chev { transition: none; }
 }
+
+/* Available Jobs */
+.jobs-toolbar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0 8px;
+}
+.jobs-search {
+  flex: 1;
+  min-width: 220px;
+  padding: 11px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: var(--paper-soft);
+  color: var(--ink);
+}
+.jobs-filter-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.pill {
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 9px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.pill:hover { border-color: var(--teal); color: var(--teal); }
+.pill.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+.jobs-updated {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 8px 0 28px;
+}
+.jobs-empty { color: var(--muted); padding: 20px 0; }
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  flex-direction: column;
+}
+.job-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+.job-card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+
+.job-type-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.job-type-intern { background: var(--ice); color: var(--navy); }
+.job-type-newgrad { background: var(--mint); color: var(--navy-dark); }
+
+.job-category {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.job-card h3 { margin: 0 0 6px; font-size: 1.05rem; font-weight: 600; color: var(--ink); }
+.job-company { font-size: 0.92rem; font-weight: 600; color: var(--teal); margin-bottom: 6px; }
+.job-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 18px; }
+.job-apply { margin-top: auto; text-align: center; padding: 10px 18px; font-size: 0.88rem; }
+
+@media (max-width: 640px) {
+  .jobs-toolbar { flex-direction: column; align-items: stretch; }
+}
