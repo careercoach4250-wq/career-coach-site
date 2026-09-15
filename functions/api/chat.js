@@ -98,8 +98,8 @@ export async function onRequestPost(context) {
       messages,
       max_tokens: MAX_OUTPUT_TOKENS,
     });
-  } catch {
-    return json({ error: "upstream_error" }, 502);
+  } catch (err) {
+    return json({ error: "upstream_error", detail: String(err && err.message ? err.message : err) }, 502);
   }
 
   const reply = (output && output.response ? String(output.response) : "").trim();
