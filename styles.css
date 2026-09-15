@@ -400,6 +400,23 @@ form.placeholder button[disabled] {
   font-weight: 600;
   cursor: not-allowed;
 }
+form.placeholder button[type="submit"]:not([disabled]) {
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+form.placeholder button[type="submit"]:not([disabled]):hover { background: #026e7b; transform: translateY(-1px); }
+
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.form-status { margin-top: 14px; font-size: 0.9rem; font-weight: 500; }
+.form-status-ok { color: var(--teal); }
+.form-status-error { color: #B3261E; }
 
 /* Checkbox rows (intake form) */
 .checkbox-row { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 4px; }

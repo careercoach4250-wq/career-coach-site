@@ -35,18 +35,18 @@
     <h1>Get started with Career Coach</h1>
     <p class="lede">Tell us a bit about you, and we'll start building your roadmap. Just have a question instead? Skip to <a href="#contact">Contact</a>.</p>
 
-    <form class="placeholder" onsubmit="return false;">
+    <form class="placeholder" id="intake-form">
       <div>
         <label for="name">Full name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" disabled>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
       </div>
       <div>
         <label for="email">Campus email</label>
-        <input type="email" id="email" name="email" placeholder="you@tulane.edu" disabled>
+        <input type="email" id="email" name="email" placeholder="you@tulane.edu" pattern="^[^\s@]+@tulane\.edu$" title="Use your @tulane.edu email address" required>
       </div>
       <div>
         <label for="year">Class year</label>
-        <select id="year" name="year" disabled>
+        <select id="year" name="year">
           <option>1st year</option>
           <option>2nd year</option>
           <option>3rd year</option>
@@ -55,35 +55,37 @@
       </div>
       <div>
         <label for="major">Academic focus / major</label>
-        <input type="text" id="major" name="major" placeholder="e.g. Economics" disabled>
+        <input type="text" id="major" name="major" placeholder="e.g. Economics">
       </div>
       <div>
         <label for="interests">Interests</label>
-        <input type="text" id="interests" name="interests" placeholder="e.g. data, design, sustainability" disabled>
+        <input type="text" id="interests" name="interests" placeholder="e.g. data, design, sustainability">
       </div>
       <div>
         <label for="target">Target career direction</label>
-        <input type="text" id="target" name="target" placeholder="e.g. product management" disabled>
+        <input type="text" id="target" name="target" placeholder="e.g. product management">
       </div>
       <div>
         <label>I'm interested in</label>
         <div class="checkbox-row">
-          <label class="checkbox-label"><input type="checkbox" name="wants-resume" disabled> Resume review</label>
-          <label class="checkbox-label"><input type="checkbox" name="wants-interview" disabled> Mock interview</label>
+          <label class="checkbox-label"><input type="checkbox" name="wants-resume"> Resume review</label>
+          <label class="checkbox-label"><input type="checkbox" name="wants-interview"> Mock interview</label>
         </div>
       </div>
       <div>
         <label for="availability">General availability (for a mock interview, if interested)</label>
-        <input type="text" id="availability" name="availability" placeholder="e.g. weekday afternoons" disabled>
+        <input type="text" id="availability" name="availability" placeholder="e.g. weekday afternoons">
       </div>
       <label class="checkbox-label">
-        <input type="checkbox" name="consent" disabled> I'd like occasional emails about my roadmap and coaching progress.
+        <input type="checkbox" name="consent"> I'd like occasional emails about my roadmap and coaching progress.
       </label>
-      <button type="submit" disabled>Start My Roadmap (not yet live)</button>
+      <input type="text" name="hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit">Start My Roadmap</button>
+      <p class="form-status" id="intake-status" hidden></p>
     </form>
 
     <p class="note" style="margin-top:28px; max-width:500px;">
-      <b>TODO — this page is not functional yet.</b> Access is limited to @tulane.edu addresses at this stage, but the pitch still doesn't specify whether signup requires an account system or what happens after signup (immediate access vs. waitlist). Per the web agent's charter, creating accounts, buying a domain, and anything that publishes or sends is a human call — flagged to Adam before this form can go live.
+      <b>Note:</b> submissions email the Career Coach team directly — there's no account system or login yet, so this is a one-time intake rather than a dashboard. Access is limited to @tulane.edu addresses. Pricing and what happens after intake (e.g. waitlist vs. immediate follow-up) are still being worked out — see the FAQ below.
     </p>
   </div>
 </section>
@@ -92,22 +94,23 @@
   <div class="wrap">
     <h2 class="section-title">Have a question instead?</h2>
     <p class="section-lede">This is separate from the roadmap intake above — for general questions and support.</p>
-    <form class="placeholder" onsubmit="return false;" style="max-width:480px;">
+    <form class="placeholder" id="contact-form" style="max-width:480px;">
       <div>
         <label for="contact-name">Name</label>
-        <input type="text" id="contact-name" name="contact-name" placeholder="Your name" disabled>
+        <input type="text" id="contact-name" name="contact-name" placeholder="Your name">
       </div>
       <div>
         <label for="contact-email">Email</label>
-        <input type="email" id="contact-email" name="contact-email" placeholder="you@example.com" disabled>
+        <input type="email" id="contact-email" name="contact-email" placeholder="you@example.com" required>
       </div>
       <div>
         <label for="contact-message">Message</label>
-        <input type="text" id="contact-message" name="contact-message" placeholder="What's your question?" disabled>
+        <input type="text" id="contact-message" name="contact-message" placeholder="What's your question?" required>
       </div>
-      <button type="submit" disabled>Send (not yet live)</button>
+      <input type="text" name="hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit">Send</button>
+      <p class="form-status" id="contact-status" hidden></p>
     </form>
-    <p class="note" style="margin-top:20px; max-width:500px;"><b>TODO:</b> operations (Leyre) still needs a decided destination for submissions — a shared inbox, spreadsheet, or CRM — before either form above can go live, per PREPARE-WEBSITE.md.</p>
   </div>
 </section>
 
@@ -121,11 +124,11 @@
       </div>
       <div class="faq-item">
         <h3>What happens after I submit this form?</h3>
-        <p class="note"><b>TODO:</b> where submissions go and what confirmation you'll see hasn't been decided yet.</p>
+        <p>It's emailed straight to the Career Coach team — there's no automated dashboard or confirmation email yet, so a real person follows up with you directly.</p>
       </div>
       <div class="faq-item">
         <h3>Is my information kept private?</h3>
-        <p>We haven't finalized our privacy policy yet. Nothing on this page is live or collecting real data right now — see the consent checkbox above for what we'd ask before ever emailing you.</p>
+        <p>We haven't finalized a formal privacy policy yet. What you submit here goes straight to the Career Coach team by email and isn't stored, sold, or used for anything else — see the consent checkbox above for what we'd ask before ever emailing you again.</p>
       </div>
       <div class="faq-item">
         <h3>How long does a resume review take?</h3>
@@ -152,6 +155,7 @@
   </div>
 </footer>
 
+<script src="get-started.js"></script>
 <script src="chat-widget.js"></script>
 </body>
 </html>
