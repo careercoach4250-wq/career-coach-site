@@ -5,7 +5,7 @@
    to enable per-visitor rate limiting; if it isn't bound, rate limiting is
    skipped rather than erroring. */
 
-const MODEL = "@cf/meta/llama-3.1-8b-instruct";
+const MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8";
 const MAX_OUTPUT_TOKENS = 300;
 const MAX_MESSAGE_LEN = 500;
 const MAX_HISTORY_TURNS = 6;
@@ -98,8 +98,8 @@ export async function onRequestPost(context) {
       messages,
       max_tokens: MAX_OUTPUT_TOKENS,
     });
-  } catch (err) {
-    return json({ error: "upstream_error", detail: String(err && err.message ? err.message : err) }, 502);
+  } catch {
+    return json({ error: "upstream_error" }, 502);
   }
 
   const reply = (output && output.response ? String(output.response) : "").trim();
