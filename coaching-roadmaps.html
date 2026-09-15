@@ -241,7 +241,42 @@
       </ol>
     </div>
 
-    <p class="note" style="margin-top:32px;"><b>Note:</b> this is one fully worked example, not a generator. A future version of Career Coach would build a roadmap like this dynamically for each student from their Get Started answers (major, year, interests, target career). Maya Torres is an illustrative composite built from career-navigator's Tulane-specific research, not a real student.</p>
+    <p class="note" style="margin-top:32px;"><b>Note:</b> this is one fully worked example, not a generator. Maya Torres is an illustrative composite built from career-navigator's Tulane-specific research, not a real student. Want a taste of your own? Try the instant preview below.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Preview your own roadmap</h2>
+    <p class="section-lede">Answer three quick questions and get an instant, AI-generated preview in the same five-stage shape as every Career Coach roadmap. It's a rough sketch, not the real thing — a full roadmap (like Maya's above) comes from actually starting one.</p>
+
+    <form class="placeholder" id="roadmap-preview-form" style="max-width:620px;">
+      <div>
+        <label for="rp-year">Class year</label>
+        <select id="rp-year" name="year">
+          <option>1st year</option>
+          <option>2nd year</option>
+          <option>3rd year</option>
+          <option>4th year</option>
+        </select>
+      </div>
+      <div>
+        <label for="rp-major">Academic focus / major</label>
+        <input type="text" id="rp-major" name="major" placeholder="e.g. Finance, Computer Science, Biology" required>
+      </div>
+      <div>
+        <label for="rp-target">Target career direction</label>
+        <input type="text" id="rp-target" name="target" placeholder="e.g. investment banking, software engineering, medicine" required>
+      </div>
+      <button type="submit">Preview My Roadmap</button>
+      <p class="form-status" id="rp-status" hidden></p>
+    </form>
+
+    <div class="steps" id="rp-result" style="margin-top:28px;" hidden></div>
+    <div id="rp-cta" hidden>
+      <p class="note" style="margin-top:20px;max-width:620px;"><b>This is just a sketch.</b> A real roadmap pulls in specific Tulane clubs, deadlines, and programs the way Maya's example above does.</p>
+      <a class="btn btn-primary" href="get-started.html" style="margin-top:8px;">Get My Full Roadmap</a>
+    </div>
   </div>
 </section>
 
@@ -300,6 +335,7 @@
   </div>
 </footer>
 
+<script src="roadmap-preview.js"></script>
 <script src="chat-widget.js"></script>
 </body>
 </html>
