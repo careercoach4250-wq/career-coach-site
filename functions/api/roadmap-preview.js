@@ -149,9 +149,15 @@ export async function onRequestPost(context) {
   if (!preview) {
     let debugRaw;
     try {
-      debugRaw = JSON.stringify(output);
-    } catch {
-      debugRaw = String(output);
+      debugRaw = {
+        outputType: typeof output,
+        keys: output && typeof output === "object" ? Object.keys(output) : null,
+        responseType: output ? typeof output.response : null,
+        responseKeys: output && output.response && typeof output.response === "object" ? Object.keys(output.response) : null,
+        responseValue: output && output.response && typeof output.response === "object" ? JSON.stringify(output.response).slice(0, 500) : String(output && output.response).slice(0, 500),
+      };
+    } catch (e) {
+      debugRaw = "debug-failed: " + (e && e.message);
     }
     return json({ preview: fallbackPreview(), source: "fallback", debugRaw });
   }
