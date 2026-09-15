@@ -1,4 +1,6 @@
-/* Career Coach — FAQ bot (client-side keyword matching, no API, no cost, no data sent anywhere) */
+/* Career Coach — AI FAQ assistant. Calls /api/chat (Cloudflare Pages Function backed by
+   Claude) for answers; falls back to local keyword matching if that call fails for any
+   reason (no API key configured, rate limited, network error, etc). */
 (function () {
   const QA = [
     { kw: ["what is", "what's career coach", "about", "what do you do"],
@@ -26,6 +28,7 @@
   ];
 
   const FALLBACK = "I don't have an answer for that yet. Try the Contact form on the Get Started page.";
+  const MAX_LEN = 500;
 
   function findAnswer(text) {
     const q = text.toLowerCase();
@@ -36,6 +39,18 @@
       if (score > bestScore) { bestScore = score; best = entry; }
     }
     return best ? best.a : FALLBACK;
+  }
+
+  async function askAI(text, history) {
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ message: text.slice(0, MAX_LEN), history }),
+    });
+    if (!res.ok) throw new Error("chat api error " + res.status);
+    const data = await res.json();
+    if (!data.reply) throw new Error("chat api: no reply");
+    return data.reply;
   }
 
   function addMessage(log, text, who) {
@@ -55,7 +70,7 @@
       </button>
       <div class="cc-chat-panel" hidden>
         <div class="cc-chat-head">
-          <span>Ask Career Coach <span class="cc-chat-tag">FAQ bot</span></span>
+          <span>Ask Career Coach <span class="cc-chat-tag">AI assistant</span></span>
           <button class="cc-chat-close" type="button" aria-label="Close">&times;</button>
         </div>
         <div class="cc-chat-log" role="log" aria-live="polite"></div>
@@ -75,11 +90,12 @@
     const input = form.querySelector("input");
 
     let greeted = false;
+    const history = [];
     function open() {
       panel.hidden = false;
       toggle.setAttribute("aria-expanded", "true");
       if (!greeted) {
-        addMessage(log, "Hi! I can answer quick questions about Career Coach — pricing, who it's for, how to get started, and more. This is a simple keyword-matching FAQ bot, not a live AI assistant.", "bot");
+        addMessage(log, "Hi! I'm the Career Coach assistant — ask me about pricing, who it's for, how to get started, and more.", "bot");
         greeted = true;
       }
       input.focus();
@@ -97,7 +113,23 @@
       if (!text) return;
       addMessage(log, text, "user");
       input.value = "";
-      setTimeout(() => addMessage(log, findAnswer(text), "bot"), 200);
+
+      const typing = document.createElement("div");
+      typing.className = "cc-msg cc-msg-bot cc-msg-typing";
+      typing.textContent = "…";
+      log.appendChild(typing);
+      log.scrollTop = log.scrollHeight;
+
+      askAI(text, history)
+        .then((reply) => {
+          typing.remove();
+          addMessage(log, reply, "bot");
+          history.push({ role: "user", content: text }, { role: "assistant", content: reply });
+        })
+        .catch(() => {
+          typing.remove();
+          addMessage(log, findAnswer(text), "bot");
+        });
     });
   }
 
