@@ -742,6 +742,21 @@ details.roadmap-phase[open] summary .chev { transform: rotate(90deg); }
   font-weight: 500;
 }
 
+.job-save-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #C7CCDC;
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.job-save-btn:hover { color: var(--teal); transform: scale(1.1); }
+.job-save-btn.saved { color: #E3B23C; }
+.job-save-btn.saved:hover { color: #c99a2e; }
+
 .job-card h3 { margin: 0 0 6px; font-size: 1.05rem; font-weight: 600; color: var(--ink); }
 .job-company { font-size: 0.92rem; font-weight: 600; color: var(--teal); margin-bottom: 6px; }
 .job-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 18px; }
