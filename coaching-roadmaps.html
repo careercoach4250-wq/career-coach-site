@@ -324,8 +324,23 @@
 <section>
   <div class="wrap">
     <h2 class="section-title">Mock interviews</h2>
-    <p class="section-lede">Live scheduling isn't built yet. For now, tell us you're interested and when you're generally free, and career-coach follows up to set it up directly.</p>
-    <p class="note"><b>TODO:</b> the full mock-interview flow is still a stub in career-coach's prototype — the intake below only captures interest and availability at this stage.</p>
+    <p class="section-lede">Book a real 30-minute mock interview with Asaf, right from this page — pick any open time below.</p>
+    <div class="cal-embed-wrap">
+      <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-mock-interview"></div>
+      <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "mock-interview", {origin:"https://cal.com"});
+
+        Cal.ns["mock-interview"]("inline", {
+          elementOrSelector:"#my-cal-inline-mock-interview",
+          config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+          calLink: "career-coach-kiwbkw/mock-interview",
+        });
+
+        Cal.ns["mock-interview"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#028090"}},"hideEventTypeDetails":false,"layout":"month_view"});
+      </script>
+    </div>
+    <p class="note" style="margin-top:20px;">Prefer to just flag interest instead? Use the intake form on the <a href="get-started.html">Get Started</a> page and career-coach will follow up directly.</p>
   </div>
 </section>
 

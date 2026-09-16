@@ -598,6 +598,19 @@ details.roadmap-phase[open] summary .chev { transform: rotate(90deg); }
   details.roadmap-phase summary .chev { transition: none; }
 }
 
+/* Mock interview booking (Cal.com inline embed) */
+.cal-embed-wrap {
+  margin-top: 8px;
+  height: 680px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .cal-embed-wrap { height: 780px; }
+}
+
 /* Resume review tool */
 .resume-review-tool {
   display: grid;
