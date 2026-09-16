@@ -380,7 +380,7 @@ form.placeholder label {
   display: block;
   margin-bottom: 6px;
 }
-form.placeholder input, form.placeholder select {
+form.placeholder input, form.placeholder select, form.placeholder textarea {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--border);
@@ -390,7 +390,8 @@ form.placeholder input, form.placeholder select {
   background: var(--paper-soft);
   color: var(--ink);
 }
-form.placeholder input::placeholder { color: #9BA2BD; }
+form.placeholder textarea { resize: vertical; line-height: 1.5; }
+form.placeholder input::placeholder, form.placeholder textarea::placeholder { color: #9BA2BD; }
 form.placeholder button[disabled] {
   background: var(--border);
   color: var(--muted);
@@ -595,6 +596,57 @@ details.roadmap-phase[open] summary .chev { transform: rotate(90deg); }
 
 @media (prefers-reduced-motion: reduce) {
   details.roadmap-phase summary .chev { transition: none; }
+}
+
+/* Resume review tool */
+.resume-review-tool {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  margin-top: 8px;
+  align-items: start;
+}
+.resume-review-tool .card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+}
+.resume-review-tool label {
+  display: block;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.resume-review-tool textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  background: var(--paper-soft);
+  color: var(--ink);
+  resize: vertical;
+  line-height: 1.5;
+}
+.resume-review-tool textarea::placeholder { color: #9BA2BD; }
+.resume-review-tool h3 { margin: 0 0 14px; font-family: var(--font-display); font-size: 1.15rem; color: var(--navy); }
+.resume-review-tool h4 { margin: 20px 0 8px; font-size: 0.95rem; font-weight: 600; color: var(--navy); }
+.resume-review-tool ul { margin: 0; padding-left: 20px; }
+.resume-review-tool li { font-size: 0.9rem; color: var(--muted); margin-bottom: 6px; }
+
+.rr-score-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--muted); }
+.rr-score-value { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--navy); margin: 2px 0 10px; }
+.rr-progress { height: 8px; background: var(--border); border-radius: 999px; overflow: hidden; margin-bottom: 6px; }
+.rr-progress-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--mint)); border-radius: 999px; }
+
+@media (max-width: 900px) {
+  .resume-review-tool { grid-template-columns: 1fr; }
 }
 
 /* Available Jobs */

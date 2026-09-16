@@ -301,7 +301,23 @@
         <p>Bullets missing a number or an action verb, and what's missing from the resume overall.</p>
       </div>
     </div>
-    <p class="note" style="margin-top:32px;"><b>TODO:</b> this is career-coach's (Asaf's) designed v1 analyzer — a rule-based first pass, not a finished AI product, and Asaf's own notes say a human review is still recommended on top of it. It exists as a working local prototype (<code>career-coach/app/</code>) and is not yet connected to this site.</p>
+    <div class="resume-review-tool">
+      <div class="card">
+        <label for="rr-resume">Resume text
+          <textarea id="rr-resume" rows="12" placeholder="Paste resume text here..."></textarea>
+        </label>
+        <label for="rr-job">Job description (optional — enables match scoring)
+          <textarea id="rr-job" rows="7" placeholder="Paste a job description to compare against..."></textarea>
+        </label>
+        <button type="button" class="btn btn-primary" id="rr-analyze">Analyze My Resume</button>
+        <p class="form-status" id="rr-status" hidden></p>
+      </div>
+      <div class="card" id="rr-results">
+        <h3>Results</h3>
+        <p class="section-lede" style="margin-bottom:0;">Run an analysis to see a match score, detected strengths, and suggestions here.</p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:24px;"><b>Note:</b> this is career-coach's (Asaf's) v1 analyzer — a rule-based first pass (keyword overlap, action-verb and quantified-impact detection, missing-section checks), not a finished AI product. A human review from Asaf is still recommended before applying. Analysis runs entirely in your browser — nothing you paste is uploaded or stored anywhere.</p>
   </div>
 </section>
 
@@ -336,6 +352,7 @@
 </footer>
 
 <script src="roadmap-preview.js"></script>
+<script src="resume-review.js"></script>
 <script src="chat-widget.js"></script>
 </body>
 </html>
