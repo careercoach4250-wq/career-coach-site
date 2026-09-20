@@ -1,7 +1,17 @@
 {
-  "updatedAt": "2026-09-19T13:12:58.396Z",
+  "updatedAt": "2026-09-20T13:11:42.076Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
+    {
+      "id": "e6fbfc33-cdd6-4ee6-acef-70e752008526",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Hippocratic AI",
+      "title": "Forward Deployment Engineer Resident - Residency Program",
+      "location": "Menlo Park, CA",
+      "url": "https://jobs.ashbyhq.com/Hippocratic%20AI/af91b9bd-4452-42c0-93d5-e1943070618e/application?embed=true",
+      "posted": "2026-09-19T22:17:29.000Z"
+    },
     {
       "id": "c7882e60-9d46-4536-8550-5308e78edb36",
       "type": "Internship",
@@ -31,6 +41,26 @@
       "location": "Houston, TX",
       "url": "https://job-boards.greenhouse.io/botauto/jobs/5429357008",
       "posted": "2026-09-19T01:27:13.000Z"
+    },
+    {
+      "id": "bbe59360-d6e5-4189-9126-da097b9c93c6",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "RTX",
+      "title": "Software Engineer Intern",
+      "location": "Cambridge, MA",
+      "url": "https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-MA-CAMBRIDGE-BBN06--10--50-Moulton-St--MOULTON-B6/Software-Engineer-Intern--Summer-2027----Onsite_01873017",
+      "posted": "2026-09-19T00:00:00.000Z"
+    },
+    {
+      "id": "0bef063c-0252-40bc-a594-e3c26379865e",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Perseus Group",
+      "title": "Software Engineer 1",
+      "location": "Sharon, PA; Jacksonville, FL",
+      "url": "https://talentmanagementsolution.wd3.myworkdayjobs.com/en-US/perseus-careers/job/Sharon-Pennsylvania---USA/Software-Engineer-I_R54341",
+      "posted": "2026-09-19T00:00:00.000Z"
     },
     {
       "id": "d8c45b15-7f06-40ce-bdda-a337e771a2e6",
@@ -423,26 +453,6 @@
       "posted": "2026-09-18T06:15:48.000Z"
     },
     {
-      "id": "c99fb84b-f415-4d60-8de5-3ad2537bd74f",
-      "type": "Internship",
-      "category": "Product",
-      "company": "Tesla",
-      "title": "Product Manager Intern - Residential Energy Engineering",
-      "location": "Palo Alto, CA",
-      "url": "https://www.tesla.com/careers/search/job/283841",
-      "posted": "2026-09-18T06:11:57.000Z"
-    },
-    {
-      "id": "50aa2666-a2a3-4da7-8099-d77ee703ebd6",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Tesla",
-      "title": "Software Engineer Intern - Energy Engineering",
-      "location": "Palo Alto, CA",
-      "url": "https://www.tesla.com/careers/search/job/283950",
-      "posted": "2026-09-18T06:11:56.000Z"
-    },
-    {
       "id": "5f473e5a-c08d-4e76-ae09-29c68b392aea",
       "type": "New Grad",
       "category": "Software",
@@ -590,16 +600,6 @@
       "title": "Electrical Engineer 1 - Electrical Hardware",
       "location": "Towson, MD",
       "url": "https://sbdinc.wd1.myworkdayjobs.com/en-US/Stanley_Black_Decker_Career_Site/job/Towson-MD-United-States/Engineer-I--Electrical_REQ-1000051847",
-      "posted": "2026-09-18T00:00:00.000Z"
-    },
-    {
-      "id": "cc7c4f99-00f9-44a9-9e51-dc2f9d993851",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Toyota",
-      "title": "Software Engineer - Early Career Professional",
-      "location": "Plano, TX",
-      "url": "https://toyota.wd503.myworkdayjobs.com/tmna/job/Plano-Texas/Software-Engineer--Early-Career-Professional-_10325071",
       "posted": "2026-09-18T00:00:00.000Z"
     }
   ]
