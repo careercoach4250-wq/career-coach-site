@@ -1,7 +1,407 @@
 {
-  "updatedAt": "2026-09-22T13:13:47.819Z",
+  "updatedAt": "2026-09-23T13:14:29.130Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
+    {
+      "id": "0b1fe42d-8ea6-4c68-bbf7-5ba32bf4a030",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Keysight Technologies",
+      "title": "Semiconductor Systems Automation Intern",
+      "location": "Santa Rosa, CA",
+      "url": "https://jobs.keysight.com/jobs/54371?icims=1",
+      "posted": "2026-09-23T01:11:58.000Z"
+    },
+    {
+      "id": "bcd64fac-014e-43fd-87bc-027ac1a14199",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "Keysight Technologies",
+      "title": "R&D Engineer 1",
+      "location": "Santa Rosa, CA",
+      "url": "https://jobs.keysight.com/jobs/54405?icims=1",
+      "posted": "2026-09-23T01:11:58.000Z"
+    },
+    {
+      "id": "78b43528-9f63-4fe7-9fd3-b20d58a0a218",
+      "type": "New Grad",
+      "category": "Quant",
+      "company": "JP Morgan Chase",
+      "title": "Market Risk Time Series Analytics Analyst/Associate",
+      "location": "Jersey City, NJ",
+      "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210785457",
+      "posted": "2026-09-23T01:09:22.000Z"
+    },
+    {
+      "id": "348585cc-c838-4fc7-987f-01c95bb18e67",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "Super Micro Computer",
+      "title": "Product Engineer",
+      "location": "San Jose, CA",
+      "url": "https://jobs.supermicro.com/job/San-Jose-Product-Engineer-Cali/1432791100/?ats=successfactors",
+      "posted": "2026-09-23T01:08:36.000Z"
+    },
+    {
+      "id": "8afcea8a-f2ea-4939-a079-70873c2a97db",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Microsoft",
+      "title": "Software Engineer - Cleared",
+      "location": "Reston, VA",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556982911",
+      "posted": "2026-09-23T01:06:50.000Z"
+    },
+    {
+      "id": "8a2fead2-fef4-46d3-9624-0306291e769b",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "Avathon",
+      "title": "Associate AI Engineer - Physical AI",
+      "location": "Pleasanton, CA",
+      "url": "https://avathon.com/company/careers-job-listing/?gh_jid=4736834005",
+      "posted": "2026-09-22T22:45:21.000Z"
+    },
+    {
+      "id": "8e844e5f-0bbf-48a1-83fc-1c2710d29d18",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Point",
+      "title": "Associate Software Engineer - Customer Operations",
+      "location": "Palo Alto, CA",
+      "url": "https://point.com/hiring?gh_jid=8829278002",
+      "posted": "2026-09-22T22:38:05.000Z"
+    },
+    {
+      "id": "84a10b39-bce1-4be5-bc19-a609bfe69a12",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "Eaton",
+      "title": "Firmware Engineer Intern/Co-op - Research & Development Engineering",
+      "location": "Moon Twp, PA",
+      "url": "https://eaton.eightfold.ai/careers/job/687238593356",
+      "posted": "2026-09-22T22:21:55.000Z"
+    },
+    {
+      "id": "93dd3fda-fc7f-40c8-b141-553b32a68027",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "Eaton",
+      "title": "Electrical Engineer Intern/Co-op - Engineering",
+      "location": "Peachtree City, GA",
+      "url": "https://eaton.eightfold.ai/careers/job/687238597770",
+      "posted": "2026-09-22T22:21:54.000Z"
+    },
+    {
+      "id": "3cd3db2a-093b-4ffb-b7fb-4348927dd1e1",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Eaton",
+      "title": "Software Engineering Intern - Research & Development Engineering",
+      "location": "Plymouth, MN",
+      "url": "https://eaton.eightfold.ai/careers/job/687239256112",
+      "posted": "2026-09-22T22:21:54.000Z"
+    },
+    {
+      "id": "0315cabd-eed9-4fb0-bf72-2770478f6bb9",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Rippling",
+      "title": "Full Stack Software Engineer Intern",
+      "location": "Seattle, WA",
+      "url": "https://ats.rippling.com/rippling/jobs/f64b6158-9534-4bab-9457-45556166b262",
+      "posted": "2026-09-22T22:20:54.000Z"
+    },
+    {
+      "id": "aa53868c-7316-4c11-b2d1-387065247bb1",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Lean TECHniques",
+      "title": "Software Engineer Intern",
+      "location": "Johnston, IA",
+      "url": "https://jobs.ashbyhq.com/leantechniques/a4ad4aa2-e0e5-40cd-b3a0-ce1c624c375c/application?embed=true",
+      "posted": "2026-09-22T22:20:52.000Z"
+    },
+    {
+      "id": "fff73d24-2557-417b-a791-58567415f245",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Rippling",
+      "title": "Software Engineer Intern - Backend Focused",
+      "location": "Seattle, WA",
+      "url": "https://ats.rippling.com/rippling/jobs/a07e4e46-3721-4934-b57b-0d58412e22ba",
+      "posted": "2026-09-22T22:20:51.000Z"
+    },
+    {
+      "id": "4592c922-5f50-4174-9938-79cc848b1e39",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Cisco",
+      "title": "Compiler Software Engineer 1 - Core Platform Software and Toolchains",
+      "location": "Austin, TX",
+      "url": "https://careers.cisco.com/global/en/job/2025313",
+      "posted": "2026-09-22T22:20:41.000Z"
+    },
+    {
+      "id": "74ef05dd-dadb-4a70-838d-d41642df9bdd",
+      "type": "Internship",
+      "category": "Software",
+      "company": "American Express",
+      "title": "Software Engineer Intern - Enterprise Technology Services",
+      "location": "Salt Lake City, UT",
+      "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26014224",
+      "posted": "2026-09-22T22:19:39.000Z"
+    },
+    {
+      "id": "23e3aa77-78dd-4f98-ab1b-2347e73135d3",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "Newell Brands",
+      "title": "Engineering Programs & Analytics Analyst",
+      "location": "Winchester, VA; Mogadore, OH; Maryville, TN; Huntersville, NC; Atlanta, GA",
+      "url": "https://jobs.newellbrands.com/job/Atlanta-Analyst,-Engineering-Programs-&-Analytics-Geor/1432617000/?ats=successfactors",
+      "posted": "2026-09-22T22:19:26.000Z"
+    },
+    {
+      "id": "285d5fb4-d878-447f-b4ff-b9a9c895429b",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "Eastern Research Group",
+      "title": "Occupational Safety and Health Data Analyst",
+      "location": "Fairfax, VA",
+      "url": "https://jobs.lever.co/erg/26fdd838-c4ba-4538-825c-c16b36d18fe1/apply",
+      "posted": "2026-09-22T22:19:04.000Z"
+    },
+    {
+      "id": "3f18a575-7ca7-4732-a34a-6be4fc65b1d4",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "RTX",
+      "title": "Electrical Engineer 1",
+      "location": "Cedar Rapids, IA",
+      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-193--1120-Collins-Rd-NE--BLDG193/Electrical-Engineer-1_01868084",
+      "posted": "2026-09-22T22:19:03.000Z"
+    },
+    {
+      "id": "97bafc91-6965-4190-9aca-eb19889919f9",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "Qorvo",
+      "title": "Test Engineering Intern",
+      "location": "Chelmsford, MA",
+      "url": "https://careers.qorvo.com/job/Chelmsford-Test-Engineering-Intern-MA-1824/1432540700/?ats=successfactors",
+      "posted": "2026-09-22T22:18:22.000Z"
+    },
+    {
+      "id": "0ee4a6bf-f582-487c-9319-eda96265fdd0",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "Datalab USA",
+      "title": "Production Programmer - SQL Developer",
+      "location": "Westminster, CO",
+      "url": "https://jobs.lever.co/datalabusa/9254110c-d83f-4921-aca6-b26d203bbc53/apply",
+      "posted": "2026-09-22T22:18:08.000Z"
+    },
+    {
+      "id": "58dd4289-8b24-42b6-9c25-4d2a093b22eb",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "Quantinuum",
+      "title": "Optics Engineer 1 - Contractor",
+      "location": "Broomfield, CO",
+      "url": "https://jobs.eu.lever.co/quantinuum/992e1677-5c9a-49db-bdd5-0269ab0bf50a/apply",
+      "posted": "2026-09-22T22:17:15.000Z"
+    },
+    {
+      "id": "571da82a-c8c1-4683-bcd8-35ce56fdb8c4",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "Anduril",
+      "title": "Early Career Firmware Engineer",
+      "location": "Costa Mesa, CA",
+      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5246141007",
+      "posted": "2026-09-22T22:15:58.000Z"
+    },
+    {
+      "id": "dc550f37-4505-4a97-8560-642d1cc2f0e9",
+      "type": "Internship",
+      "category": "Software",
+      "company": "William Blair",
+      "title": "Application Development Intern - Multiple Teams",
+      "location": "Chicago, IL",
+      "url": "https://www.williamblair.com/Careers/job-description?gh_jid=5242285007",
+      "posted": "2026-09-22T22:14:48.000Z"
+    },
+    {
+      "id": "140c2da4-0a49-45bd-b29d-c799ab7b15d7",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "TikTok",
+      "title": "Data Engineer Intern - Data Platform - TikTok BP",
+      "location": "San Jose, CA",
+      "url": "https://lifeattiktok.com/search/7681783406632782085",
+      "posted": "2026-09-22T22:14:35.000Z"
+    },
+    {
+      "id": "c6f17ebd-5b92-4f00-94a8-6a402b2bb7e2",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Keysight Technologies",
+      "title": "Software Engineer Intern - AI Developer Tooling",
+      "location": "Colorado Springs, CO",
+      "url": "https://jobs.keysight.com/jobs/54383?icims=1",
+      "posted": "2026-09-22T22:13:00.000Z"
+    },
+    {
+      "id": "d0ed0c99-e192-4c3d-88e7-f0f4d4109f3b",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Dominion Energy",
+      "title": "GIS Development Data Analyst Intern",
+      "location": "Cayce, SC",
+      "url": "https://careers.dominionenergy.com/job/CAYCE-Intern-GIS-SC-29033/1432505500/?ats=successfactors",
+      "posted": "2026-09-22T22:11:38.000Z"
+    },
+    {
+      "id": "1e42e978-b766-4f98-a946-d8005e4e6529",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Systems Planning and Analysis",
+      "title": "Software Engineer",
+      "location": "San Diego, CA",
+      "url": "https://spa.jibeapply.com/jobs/23504?icims=1",
+      "posted": "2026-09-22T22:11:26.000Z"
+    },
+    {
+      "id": "cd4e5539-0fd0-4b45-b76c-0ece4db32125",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "Garmin",
+      "title": "EMC Engineer Intern",
+      "location": "Olathe, KS",
+      "url": "https://careers.garmin.com/jobs/20216?icims=1",
+      "posted": "2026-09-22T22:11:05.000Z"
+    },
+    {
+      "id": "d21b7b94-4ec6-4789-9893-f5bcb8a6d2b8",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Tesla",
+      "title": "Robotics Modeling & Simulation Engineer Intern",
+      "location": "Palo Alto, CA",
+      "url": "https://www.tesla.com/careers/search/job/284436",
+      "posted": "2026-09-22T22:10:58.000Z"
+    },
+    {
+      "id": "2aaa3c43-a19a-487a-8332-ea35f8a8a465",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Cotiviti",
+      "title": "Data Engineer Intern - Multiple Teams",
+      "location": "Remote in USA",
+      "url": "https://careers-cotiviti.icims.com/jobs/20383/job?mobile=true&needsRedirect=false",
+      "posted": "2026-09-22T22:09:12.000Z"
+    },
+    {
+      "id": "d968f52e-5679-4270-b745-09f269337deb",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Navy Federal",
+      "title": "IT Reporting & Analytics Intern",
+      "location": "Vienna, VA",
+      "url": "https://fa-etbx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nfcu/job/32668",
+      "posted": "2026-09-22T22:08:47.000Z"
+    },
+    {
+      "id": "a95bcdcf-ce77-450f-ba78-c9b56846676d",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "Renesas Electronics",
+      "title": "Electrical Engineer",
+      "location": "Austin, TX",
+      "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000151129572",
+      "posted": "2026-09-22T22:08:08.000Z"
+    },
+    {
+      "id": "944f1a64-70f5-47e7-a144-e7dc884bf311",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Klaviyo",
+      "title": "People Analytics Co-op",
+      "location": "Boston, MA",
+      "url": "https://job-boards.greenhouse.io/klaviyocampus/jobs/8002711003",
+      "posted": "2026-09-22T22:06:49.000Z"
+    },
+    {
+      "id": "3a86764d-e47b-4475-98c1-ec31081f9a2f",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Udig",
+      "title": "Software Engineer Intern",
+      "location": "Nashville, TN; Richmond, VA",
+      "url": "https://udig.com/careers/job-listing/?gh_jid=7999436003",
+      "posted": "2026-09-22T14:30:53.000Z"
+    },
+    {
+      "id": "3a1393eb-1a4c-4277-aa93-46b222c507b8",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Optiver",
+      "title": "Software Engineer Co-op",
+      "location": "Chicago, IL",
+      "url": "https://job-boards.greenhouse.io/optiverprivate/jobs/8784302002",
+      "posted": "2026-09-22T14:29:24.000Z"
+    },
+    {
+      "id": "a8472d45-9d65-479c-9822-173cdacfce6c",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "SoundOff Signal",
+      "title": "Electrical Engineer Intern/Co-op",
+      "location": "Hudsonville, MI",
+      "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4524444",
+      "posted": "2026-09-22T14:19:49.000Z"
+    },
+    {
+      "id": "f2941a36-61c1-486f-bfb9-c38e195ec891",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "Johns Hopkins Applied Physics Laboratory",
+      "title": "Electrical/Computer Engineering Intern - Space Science Electronics",
+      "location": "Laurel, MD",
+      "url": "https://careers.jhuapl.edu/jobs/60123?icims=1",
+      "posted": "2026-09-22T14:18:25.000Z"
+    },
+    {
+      "id": "36fdb948-c215-4a20-afda-958941c4de18",
+      "type": "Internship",
+      "category": "Product",
+      "company": "Google",
+      "title": "Product Manager Intern - Summer 2027",
+      "location": "San Bruno, CA; Mountain View, CA",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/134770032394543814",
+      "posted": "2026-09-22T14:15:11.000Z"
+    },
+    {
+      "id": "516a1302-40e5-427e-b147-788ef9f8cfee",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "L3Harris Technologies",
+      "title": "Image Processing Engineer - Senior Associate",
+      "location": "Tulsa, OK",
+      "url": "https://jobs.l3harris.com/job/Tulsa-Senior-Associate,-Image-Science-Engineer-OK-74115/1432376600/?ats=successfactors",
+      "posted": "2026-09-22T14:09:32.000Z"
+    },
+    {
+      "id": "d1ffc984-76b9-475f-9274-cc90c1c97125",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Wise",
+      "title": "Graduate Software Engineer",
+      "location": "Austin, TX",
+      "url": "https://jobs.smartrecruiters.com/Wise/744000151030889",
+      "posted": "2026-09-22T14:06:40.000Z"
+    },
     {
       "id": "0d66888f-3087-4b82-a258-71b1163d8461",
       "type": "Internship",
@@ -83,46 +483,6 @@
       "posted": "2026-09-22T01:14:13.000Z"
     },
     {
-      "id": "a1e3987b-628f-4fd3-9b89-8bb755a6bd26",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Rivian",
-      "title": "Software Engineer Co-op Intern - Enterprise Applications",
-      "location": "Plymouth, MI",
-      "url": "https://careers.rivian.com/jobs/33804?icims=1",
-      "posted": "2026-09-22T01:14:13.000Z"
-    },
-    {
-      "id": "40393754-cddc-4a20-94cc-f5d3c6f488bf",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Rivian",
-      "title": "Software Engineer Co-op Intern - Enterprise Applications",
-      "location": "Normal, IL",
-      "url": "https://careers.rivian.com/jobs/33803?icims=1",
-      "posted": "2026-09-22T01:14:13.000Z"
-    },
-    {
-      "id": "2b316c3e-9a1f-4f4d-8a89-0bfaccfe907a",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Rivian",
-      "title": "Software Engineer Intern Co-op - Design Automation",
-      "location": "Palo Alto, CA",
-      "url": "https://careers.rivian.com/jobs/33748?icims=1",
-      "posted": "2026-09-22T01:14:12.000Z"
-    },
-    {
-      "id": "070fe1b9-0837-4ba9-aaad-ed124634f867",
-      "type": "Internship",
-      "category": "Hardware",
-      "company": "Tesla",
-      "title": "Firmware Integration Engineer Intern - Factory Firmware",
-      "location": "Austin, TX",
-      "url": "https://www.tesla.com/careers/search/job/284156",
-      "posted": "2026-09-22T01:14:10.000Z"
-    },
-    {
       "id": "53729738-db1e-4e84-9604-d02b38c5655b",
       "type": "New Grad",
       "category": "Hardware",
@@ -143,464 +503,104 @@
       "posted": "2026-09-22T01:07:48.000Z"
     },
     {
-      "id": "7b20c4df-f10b-41f9-8eb8-e8d3f55d3f10",
-      "type": "Internship",
-      "category": "Hardware",
-      "company": "Tesla",
-      "title": "Power Electronics Firmware Engineer Intern",
-      "location": "Palo Alto, CA",
-      "url": "https://www.tesla.com/careers/search/job/284029",
-      "posted": "2026-09-22T01:06:55.000Z"
-    },
-    {
-      "id": "74cf1c10-8e9a-4066-a47c-024ca7ecbf4b",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Tesla",
-      "title": "Residential Energy Device Software Engineer Intern - Energy Engineering",
-      "location": "Palo Alto, CA",
-      "url": "https://www.tesla.com/careers/search/job/284275",
-      "posted": "2026-09-22T01:06:51.000Z"
-    },
-    {
-      "id": "1a1a2a75-10ef-4a52-9850-702ee859dc3d",
-      "type": "Internship",
-      "category": "Hardware",
-      "company": "Tesla",
-      "title": "Reliability Test Engineer Intern - Energy Engineering",
-      "location": "Palo Alto, CA",
-      "url": "https://www.tesla.com/careers/search/job/284278",
-      "posted": "2026-09-22T01:06:50.000Z"
-    },
-    {
-      "id": "4f096c73-afae-450f-b903-ace71c84d47f",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Northrop Grumman",
-      "title": "Software Engineer Intern - Navigation Intelligence and Connectivity Division",
-      "location": "San Diego, CA",
-      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-San-Diego/XMLNAME-2027-Software-Engineer-Intern---San-Diego-CA_R10252150",
+      "id": "9c19cdd4-3943-4268-895b-3e6eb19e687e",
+      "type": "New Grad",
+      "category": "Product",
+      "company": "Watts Water",
+      "title": "Commercial Leadership Development Program",
+      "location": "North Andover, MA",
+      "url": "https://wattswater.wd5.myworkdayjobs.com/external/job/North-Andover-MA/Commercial-Leadership-Development-Program_10017600",
       "posted": "2026-09-22T00:00:00.000Z"
     },
     {
-      "id": "af6d7510-2a62-46db-87e2-1f16454890be",
+      "id": "d50d1577-1658-457d-a65f-f577f9996936",
       "type": "New Grad",
-      "category": "Software",
-      "company": "SingleStore",
-      "title": "Software Engineer New Grad - Helios",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
-      "posted": "2026-09-21T22:48:17.000Z"
-    },
-    {
-      "id": "e24e39d5-6e2d-4419-8a1c-3d3ac64cbeb4",
-      "type": "Internship",
-      "category": "Software",
-      "company": "SingleStore",
-      "title": "Software Engineer Intern - Engine",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220919",
-      "posted": "2026-09-21T22:48:16.000Z"
-    },
-    {
-      "id": "968d9575-5896-484e-aa2e-3de0d3cabfa2",
-      "type": "Internship",
-      "category": "Software",
-      "company": "SingleStore",
-      "title": "Software Engineer Intern - Helios",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220941",
-      "posted": "2026-09-21T22:48:16.000Z"
-    },
-    {
-      "id": "c40989ea-f1f3-4d28-b7a7-1756148122a1",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "SingleStore",
-      "title": "Software Engineer New Grad - Engine",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220863",
-      "posted": "2026-09-21T22:48:16.000Z"
-    },
-    {
-      "id": "dc90a21c-25c2-4735-abbe-bee451203aa2",
-      "type": "Internship",
       "category": "AI/ML/Data",
-      "company": "National Life",
-      "title": "Strategic Operations Analyst Intern",
-      "location": "Montpelier, VT; Addison, TX",
-      "url": "https://job-boards.greenhouse.io/nationallifeinsurancecompany/jobs/4410899009",
-      "posted": "2026-09-21T22:41:17.000Z"
+      "company": "Tyson Foods",
+      "title": "Data Engineer 1",
+      "location": "Springdale, AR",
+      "url": "https://tysonfoods.wd5.myworkdayjobs.com/TSN/job/Tyson-on-Thompson---Springdale-Arkansas/Data-Engineer-I_R0483830-1",
+      "posted": "2026-09-22T00:00:00.000Z"
     },
     {
-      "id": "1aced91a-6fa5-4f69-8d6c-d3036f8c30df",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Geneva Trading",
-      "title": "C++ Developer Intern",
-      "location": "Chicago, IL",
-      "url": "https://job-boards.greenhouse.io/genevatrading/jobs/5242063007",
-      "posted": "2026-09-21T22:30:56.000Z"
-    },
-    {
-      "id": "740153d0-fd38-4fff-bc27-425b307d5c71",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Boston Scientific",
-      "title": "AI Software Development Intern",
-      "location": "Arden Hills, MN",
-      "url": "https://bostonscientific.eightfold.ai/careers/job/563602813600585",
-      "posted": "2026-09-21T22:26:24.000Z"
-    },
-    {
-      "id": "1a872d07-40d8-4b98-8f0f-15127543ae64",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "Boston Scientific",
-      "title": "Data Engineer Intern",
-      "location": "Maple Grove, MN",
-      "url": "https://bostonscientific.eightfold.ai/careers/job/563602813501949",
-      "posted": "2026-09-21T22:26:24.000Z"
-    },
-    {
-      "id": "52e1ca75-9907-44e4-9bde-6834837fe9e3",
+      "id": "f72d2208-2e32-4b84-9c1c-512ced79c2cd",
       "type": "New Grad",
-      "category": "Software",
-      "company": "Qualcomm",
-      "title": "Backend Software Engineer - Software Engineering",
-      "location": "San Diego, CA",
-      "url": "https://qualcomm.eightfold.ai/careers/job/446721162271",
-      "posted": "2026-09-21T22:26:21.000Z"
-    },
-    {
-      "id": "ed00cc85-198b-4632-b6de-c47acb49112e",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Tyler Technologies",
-      "title": "Software Development Intern - Summer 2027",
-      "location": "Plano, TX",
-      "url": "https://jobs.jobvite.com/tylertech/job/oMAPAfwv?nl=1&nl=1&fr=false",
-      "posted": "2026-09-21T22:26:01.000Z"
-    },
-    {
-      "id": "a71102ca-4c4d-4bc3-8084-fcf5d09cf645",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Tyler Technologies",
-      "title": "Software Development Intern",
-      "location": "Lubbock, TX",
-      "url": "https://jobs.jobvite.com/tylertech/job/oKQJAfwD?nl=1&nl=1&fr=false",
-      "posted": "2026-09-21T22:26:01.000Z"
-    },
-    {
-      "id": "33a604bd-3a1d-4bbb-b154-2a3401d071e6",
-      "type": "Internship",
       "category": "AI/ML/Data",
-      "company": "Windstar Cruises",
-      "title": "Revenue and Data Analytics Intern",
-      "location": "Miami, FL",
-      "url": "https://xanterra.jibeapply.com/jobs/39609?icims=1",
-      "posted": "2026-09-21T22:25:58.000Z"
-    },
-    {
-      "id": "933ba205-c388-4e90-860a-b5e1ca92ba18",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Oklahoma State Government",
-      "title": "Information Systems Application Specialist",
-      "location": "Oklahoma City, OK",
-      "url": "https://okgov.wd1.myworkdayjobs.com/okgovjobs/job/Oklahoma-County/Information-Systems-Application-Specialist_JR61406",
-      "posted": "2026-09-21T22:24:43.000Z"
-    },
-    {
-      "id": "eef6ecab-80f1-4954-a0d1-165cc62c51ed",
-      "type": "Internship",
-      "category": "Hardware",
-      "company": "Eaton",
-      "title": "Embedded Software Engineer Intern - Research & Development Engineering",
-      "location": "Franksville, Caledonia, WI",
-      "url": "https://eaton.eightfold.ai/careers/job/687239255756",
-      "posted": "2026-09-21T22:23:58.000Z"
-    },
-    {
-      "id": "d8b6057a-7ccf-4a36-99eb-7a208939a0a8",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Eaton",
-      "title": "Software Engineering Intern - Research & Development Engineering",
-      "location": "Franksville, Caledonia, WI",
-      "url": "https://eaton.eightfold.ai/careers/job/687239256127",
-      "posted": "2026-09-21T22:23:57.000Z"
-    },
-    {
-      "id": "d9984cac-f718-4831-b31c-e1c01add9f9b",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "National Reconnaissance Office",
-      "title": "Technical Integrator",
-      "location": "Chantilly, VA",
-      "url": "https://nro.applytojob.com/apply/wx59oyV4sF/Technical-Integrator-Entry-Level",
-      "posted": "2026-09-21T22:23:16.000Z"
-    },
-    {
-      "id": "8dcf0c2f-08d7-44c1-8469-313723c64183",
-      "type": "Internship",
-      "category": "Hardware",
-      "company": "Koch Industries",
-      "title": "Optical System Test Engineer Intern",
-      "location": "Fremont, CA",
-      "url": "https://koch.avature.net/en_US/careers/JobDetail/194772",
-      "posted": "2026-09-21T22:23:12.000Z"
-    },
-    {
-      "id": "11d3d160-862a-4d48-9f6c-fc735d0c1383",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "Koch Industries",
-      "title": "Business Analytics & Insights Intern",
-      "location": "Green Bay, WI",
-      "url": "https://koch.avature.net/en_US/careers/JobDetail/194813",
-      "posted": "2026-09-21T22:23:09.000Z"
-    },
-    {
-      "id": "3ced3a3b-c1dc-406e-9949-2fbc2be31d0c",
-      "type": "Internship",
-      "category": "Product",
-      "company": "Zimmer Biomet Holdings",
-      "title": "Product Management Intern - Artificial Intelligence Product Management",
+      "company": "R1 RCM",
+      "title": "Revenue Cycle Analyst - Underpayments",
       "location": "Remote in USA",
-      "url": "https://careers.zimmerbiomet.com/us/en/job/12745",
-      "posted": "2026-09-21T22:22:50.000Z"
+      "url": "https://r1rcm.wd1.myworkdayjobs.com/en-US/R1RCM/job/Remote-USA/Revenue-Cycle-Analyst--Underpayments-_R260000007002",
+      "posted": "2026-09-22T00:00:00.000Z"
     },
     {
-      "id": "052eb803-66af-435a-9f6d-069e2aa8d052",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "Zimmer Biomet Holdings",
-      "title": "Summer Intern - Data Mesh Platform",
-      "location": "Remote in USA",
-      "url": "https://careers.zimmerbiomet.com/us/en/job/12688",
-      "posted": "2026-09-21T22:22:50.000Z"
-    },
-    {
-      "id": "e7950dc2-7cb6-4ca4-bb84-26ff7f459705",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "Cirrus Logic",
-      "title": "Post-Silicon Validation Engineer New Grad - Mixed IC Validation",
-      "location": "Austin, TX",
-      "url": "https://jobs.eu.lever.co/cirrus/b4334931-aee2-40d9-a82e-ae6fb644cab0/apply",
-      "posted": "2026-09-21T22:22:10.000Z"
-    },
-    {
-      "id": "738b2c8e-966f-4e33-b548-d71d5b159004",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "The Anywhere",
-      "title": "Full Stack Developer",
-      "location": "Hilton Head Island, SC",
-      "url": "https://apply.workable.com/the-anywhere-company/j/4010622FEF/apply",
-      "posted": "2026-09-21T22:20:02.000Z"
-    },
-    {
-      "id": "0f87dd0f-6b9e-4786-8864-d070e4b1a79f",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "ViaSat",
-      "title": "Systems Test Engineer",
-      "location": "Tempe, AZ",
-      "url": "https://careers.viasat.com/jobs/6938?icims=1",
-      "posted": "2026-09-21T22:18:51.000Z"
-    },
-    {
-      "id": "a5e5a517-e9b1-459c-9fa1-aecf085cac93",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Voyager Technologies",
-      "title": "Software Engineer - AI Automation - Internal Tools",
-      "location": "Seattle, WA; Washington, DC",
-      "url": "https://job-boards.greenhouse.io/voyagertechnologiesinc/jobs/4251267009",
-      "posted": "2026-09-21T22:15:44.000Z"
-    },
-    {
-      "id": "7cb75f90-8d8d-45a1-a809-491bcde77e4f",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Gannett Fleming",
-      "title": "Associate Software Developer",
-      "location": "Mechanicsburg, PA",
-      "url": "https://careers-gannettfleming.icims.com/jobs/14760/job?mobile=true&needsRedirect=false",
-      "posted": "2026-09-21T22:15:26.000Z"
-    },
-    {
-      "id": "86139554-385a-4f87-8d17-427b8cf60ed9",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "L3Harris Technologies",
-      "title": "Associate Software Engineering",
-      "location": "Greenville, TX",
-      "url": "https://jobs.l3harris.com/job/Greenville-Associate,-Software-Engineering-TX-75402/1431958600/?ats=successfactors",
-      "posted": "2026-09-21T22:09:48.000Z"
-    },
-    {
-      "id": "5baf30f8-02d7-4767-bb77-4d65c2960a3f",
+      "id": "6a4c532d-e042-4017-8d23-7a6f88dfef96",
       "type": "New Grad",
       "category": "AI/ML/Data",
-      "company": "Howmet Aerospace",
-      "title": "Manufacturing Data Analyst - Training Program",
-      "location": "Dover, NJ; Whitehall, MI; Hampton, VA; Morristown, TN; La Porte, IN; Wichita Falls, TX",
-      "url": "https://fa-exty-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/118740",
-      "posted": "2026-09-21T22:09:30.000Z"
+      "company": "Essex",
+      "title": "Operations Analytics Analyst",
+      "location": "Irvine, CA",
+      "url": "https://essex.wd5.myworkdayjobs.com/en-US/essexcareers/job/Orange-County---North/Analyst--Operations-Analytics_R9431-1",
+      "posted": "2026-09-22T00:00:00.000Z"
     },
     {
-      "id": "35b2a439-e042-479a-94b3-8506dedd01c1",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "Renesas Electronics",
-      "title": "Associate Reliability Engineer",
-      "location": "Palm Bay, FL",
-      "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000150727429",
-      "posted": "2026-09-21T22:07:11.000Z"
-    },
-    {
-      "id": "14d68a82-73d3-450d-8f83-5e35e2c34cca",
+      "id": "b2627976-395e-42cd-8612-f81fe8d44b30",
       "type": "New Grad",
       "category": "Software",
-      "company": "Intuitive Surgical",
-      "title": "Software Engineer - RISE",
-      "location": "Sunnyvale, CA",
-      "url": "https://jobs.smartrecruiters.com/Intuitive/744000150746589",
-      "posted": "2026-09-21T22:05:25.000Z"
+      "company": "Adobe",
+      "title": "AI Forward Deployed Engineer",
+      "location": "San Jose, CA",
+      "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Francisco/XMLNAME-2027-University-Graduate---AI-Forward-Deployed-Engineer_R172018",
+      "posted": "2026-09-22T00:00:00.000Z"
     },
     {
-      "id": "0b77664d-6d83-4a32-9f73-6037dd7f0288",
+      "id": "65c39cac-49f5-4b67-b714-c4885e03f9c0",
       "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "AbbVie",
-      "title": "Associate AI Data Scientist 1 - FAiM Team",
-      "location": "North Chicago, IL",
-      "url": "https://jobs.smartrecruiters.com/AbbVie/3743990015538268",
-      "posted": "2026-09-21T22:05:04.000Z"
+      "category": "Hardware",
+      "company": "Hewlett Packard Enterprise",
+      "title": "Platform System/Hardware Engineer - Customer Solutions Engineering",
+      "location": "Spring, TX",
+      "url": "https://hpe.wd5.myworkdayjobs.com/acjobsite/job/Spring-Texas-United-States-of-America/Platform-System-Hardware-Engineer---Customer-Solutions-Engineering_1213922",
+      "posted": "2026-09-22T00:00:00.000Z"
     },
     {
-      "id": "e5cc30a4-8555-48b7-b3dc-b3f20c76bd9c",
+      "id": "f65b2779-c9d2-4cdc-8327-38e3c12c8887",
       "type": "New Grad",
       "category": "Software",
-      "company": "Specter Aerospace",
-      "title": "Full Stack Developer 1/2",
-      "location": "Boston, MA",
-      "url": "https://specteraerospace.bamboohr.com/careers/152/",
-      "posted": "2026-09-21T14:18:38.000Z"
-    },
-    {
-      "id": "2b7698da-ccad-415d-be19-f8cd939f6521",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Arcfield",
-      "title": "Model-Based Systems Engineer",
-      "location": "Middletown, RI",
-      "url": "https://careers.arcfield.com/jobs/8669?icims=1",
-      "posted": "2026-09-21T14:07:26.000Z"
-    },
-    {
-      "id": "841914e1-0eb1-451e-8424-c2888a47e394",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "Northrop Grumman",
-      "title": "Associate Digital Engineer",
-      "location": "Baltimore, MD",
-      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Baltimore/XMLNAME-2027-Associate-Digital-Engineer---Pathways-Program---Baltimore-MD_R10251163",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "6bad7a33-03b2-46a4-8d91-2b7216de6106",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "Northrop Grumman",
-      "title": "Associate Embedded Software Engineer - Pathways Program",
-      "location": "Baltimore, MD",
-      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Baltimore/XMLNAME-2027-Associate-Embedded-Software-Engineer---Pathways-Program---Baltimore-MD_R10250982",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "551e52f2-65d3-4921-b08d-5f686b953112",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "RTX",
-      "title": "Embedded Software Engineer 1",
-      "location": "Cedar Rapids, IA",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-137--855-35Th-St-NE--BLDG-137/Embedded-Software-Engineer-I--Onsite-_01872627",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "39cdd786-c89d-45a8-a08e-238f6b6b5c61",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "Moog",
-      "title": "Associate FPGA Engineer - Defense Electrical Group",
-      "location": "Buffalo, NY",
-      "url": "https://moog.wd5.myworkdayjobs.com/moog_external_career_site/job/Buffalo-NY/Associate-FPGA-Engineer_R-26-17419",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "b4b4d865-c092-4219-8f56-7fe1585b9ca0",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "McKesson",
-      "title": "Scientific Data Analyst 1",
-      "location": "Irving, TX",
-      "url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers/job/USA-TX-Irving/Scientific-Data-Analyst-I_JR0153748",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "efca454d-849f-4bbf-83da-a435a84670bb",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Booz Allen",
-      "title": "AI and ML Engineer",
-      "location": "Chantilly, VA; McLean, VA",
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/McLean-VA/AI-and-ML-Engineer_R0250044",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "ebc66f87-345d-4d91-9644-5d16a8676470",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Bread Financial",
-      "title": "Rotational Program Associate - Automation & Reporting Analyst",
-      "location": "Frisco, TX; Chadds Ford Township, PA; Columbus, OH; Draper, UT; Wilmington, DE",
-      "url": "https://alliancedata.wd5.myworkdayjobs.com/breadfinancial_us/job/Columbus-OH/Rotational-Program-Associate---Automation---Reporting-Analyst_R1013201",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "2ea09470-e970-4deb-8ed2-481e7329c275",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Northrop Grumman",
-      "title": "Associate Software Engineer",
-      "location": "Dulles, VA",
-      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Virginia-Dulles/XMLNAME-2026-Associate-Engineer-Software-Dulles-VA_R10252043",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "a3319a7b-a8fc-41cb-969b-5bac97c85196",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
       "company": "F5",
-      "title": "Data Analyst 1",
+      "title": "Software Development Engineer 1 (AI)",
       "location": "Seattle, WA",
-      "url": "https://ffive.wd5.myworkdayjobs.com/en-US/f5jobs/job/Seattle/Data-Analyst-I_RP1038819",
-      "posted": "2026-09-21T00:00:00.000Z"
+      "url": "https://ffive.wd5.myworkdayjobs.com/en-US/f5jobs/job/Seattle/Software-Engineer-I_RP1038827-1",
+      "posted": "2026-09-22T00:00:00.000Z"
     },
     {
-      "id": "3bbcfa63-20ac-4203-ae5f-f10e9a89efb6",
+      "id": "8b1cf0ea-db75-4823-9d8a-2dcf9aaa270f",
       "type": "New Grad",
       "category": "Software",
-      "company": "Leidos",
-      "title": "Software Engineer",
-      "location": "Huntsville, AL",
-      "url": "https://leidos.wd5.myworkdayjobs.com/External/job/Huntsville-AL/Software-Engineer_R-00192652",
-      "posted": "2026-09-21T00:00:00.000Z"
+      "company": "F5",
+      "title": "Software Engineer 2 - Digital",
+      "location": "Seattle, WA",
+      "url": "https://ffive.wd5.myworkdayjobs.com/en-US/f5jobs/job/Seattle/Software-Engineer-II_RP1038820",
+      "posted": "2026-09-22T00:00:00.000Z"
+    },
+    {
+      "id": "ede5b45b-711e-47d3-a320-db8aa4c46b0e",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "KLA",
+      "title": "Software Engineer 2",
+      "location": "Ann Arbor, MI",
+      "url": "https://kla.wd1.myworkdayjobs.com/annarbor/job/Ann-Arbor-MI/Engr--Software-2_2640145",
+      "posted": "2026-09-22T00:00:00.000Z"
+    },
+    {
+      "id": "b971da28-0fdf-47bc-80cc-b2ec9d780ab6",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "KLA",
+      "title": "Software Engineer 2",
+      "location": "Ann Arbor, MI",
+      "url": "https://kla.wd1.myworkdayjobs.com/annarbor/job/Ann-Arbor-MI/Engr--Software-2_2640146",
+      "posted": "2026-09-22T00:00:00.000Z"
     }
   ]
 }
