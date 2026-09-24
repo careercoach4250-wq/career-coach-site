@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Career Coach — AI-powered career guidance for every student</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M6 36 L22 22 L42 8' fill='none' stroke='%231E2761' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='6' cy='36' r='5' fill='%2302C39A'/%3E%3Ccircle cx='22' cy='22' r='5.5' fill='%23028090'/%3E%3Ccircle cx='42' cy='8' r='6' fill='%231E2761'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1E2761">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Career Coach">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 </head>
 <body>
 
@@ -177,6 +184,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="social.html">Follow Us</a></li>
       <li><a href="get-started.html">Get Started</a></li>
+      <li data-install-app hidden><a href="#">Install the app</a></li>
     </ul>
   </div>
 </footer>
@@ -204,6 +212,7 @@
   </button>
 </nav>
 <div class="mobile-more-sheet" id="mobile-more-sheet" hidden>
+  <a href="#" data-install-app hidden>Install the app</a>
   <a href="how-it-works.html">How It Works</a>
   <a href="who-its-for.html">Who It's For</a>
   <a href="resources.html">Resources</a>
@@ -213,6 +222,7 @@
 </div>
 
 <script src="mobile-nav.js"></script>
+<script src="pwa.js"></script>
 <script src="chat-widget.js"></script>
 </body>
 </html>
