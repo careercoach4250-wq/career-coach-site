@@ -1,4 +1,4 @@
-/* Career Coach — resume review tool on coaching-roadmaps.html.
+/* Career Coach — instant resume check (Job Finding → Resume, job-finding.html).
    Ported from career-coach's (Asaf's) v1 analyzer prototype
    (career-coach/app/js/utils.js's analyzeResume + career-coach/app/js/modules/resumeReview.js) —
    same rule-based logic, same honesty framing. Runs entirely client-side:

@@ -7,7 +7,18 @@ const INTERN_URL =
   "https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/.github/scripts/listings.json";
 const GRAD_URL =
   "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json";
-const PER_TYPE_LIMIT = 30;
+// Up to this many of the newest roles per category, per type, so the feed
+// covers every field instead of whichever one posted most recently.
+const PER_CATEGORY_LIMIT = 12;
+
+// SimplifyJobs uses both short and long names for the same categories.
+const CATEGORY_NAMES = {
+  "Data Science, AI & Machine Learning": "AI/ML/Data",
+  "Software Engineering": "Software",
+  "Hardware Engineering": "Hardware",
+  "Product Management": "Product",
+  "Quantitative Finance": "Quant",
+};
 
 const US_STATE_CODES = new Set([
   "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
@@ -39,7 +50,7 @@ async function getFiltered(url, type) {
   const mapped = filtered.map((j) => ({
     id: j.id,
     type,
-    category: j.category,
+    category: CATEGORY_NAMES[j.category] || j.category || "Other",
     company: j.company_name,
     title: j.title,
     location: j.locations.filter(isUSLocation).join("; "),
@@ -49,7 +60,8 @@ async function getFiltered(url, type) {
   }));
 
   mapped.sort((a, b) => b.postedTs - a.postedTs);
-  return mapped.slice(0, PER_TYPE_LIMIT);
+  const perCategory = {};
+  return mapped.filter((j) => (perCategory[j.category] = (perCategory[j.category] || 0) + 1) <= PER_CATEGORY_LIMIT);
 }
 
 const [interns, newGrads] = await Promise.all([

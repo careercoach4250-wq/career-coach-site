@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Contact & coaching requests — Career Coach</title>
-<meta name="description" content="Request a coach-built roadmap or a mock interview, or send the Career Coach team a question.">
+<title>AI Career Coach — Career Coach</title>
+<meta name="description" content="Your AI career advisor: ask about career paths, resumes, interviews, recruiting timelines, and what to do next.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M6 36 L22 22 L42 8' fill='none' stroke='%231E2761' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='6' cy='36' r='5' fill='%2302C39A'/%3E%3Ccircle cx='22' cy='22' r='5.5' fill='%23028090'/%3E%3Ccircle cx='42' cy='8' r='6' fill='%231E2761'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap">
@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 </head>
-<body class="page-get-started">
+<body class="page-ai-coach">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site">
@@ -29,7 +29,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="job-finding.html">Job Finding</a></li>
         <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmap</a></li>
-        <li><a href="ai-coach.html" class="nav-ai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>AI Career Coach</a></li>
+        <li><a href="ai-coach.html" class="nav-ai active" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>AI Career Coach</a></li>
       </ul>
     </nav>
     <div class="header-actions">
@@ -43,116 +43,78 @@
 
 <main id="main">
 
-<section class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Contact &amp; coaching requests</span>
-<h1>Talk to the Career Coach team</h1>
-    <p class="lede">Want a roadmap built by our career-pathing team, or a resume review or mock interview with a real person? Tell us about you below. Just have a question? Skip to <a href="#contact">Contact</a>. For an instant roadmap, use the <a href="coaching-roadmaps.html#builder">roadmap builder</a>.</p>
+<div class="coach-app">
+  <aside class="coach-sidebar" id="coach-sidebar" aria-label="Conversations">
+    <button type="button" class="btn btn-primary coach-new" id="coach-new">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> New conversation
+    </button>
+    <h2 class="coach-side-title">History</h2>
+    <ul class="coach-history" id="coach-history"></ul>
+    <p class="coach-history-empty muted" id="coach-history-empty">Your conversations will show up here.</p>
+    <div class="coach-profile-card">
+      <span class="coach-profile-label">Coach knows you as</span>
+      <p data-profile-summary data-empty="No profile yet. Add one so you don't have to repeat yourself."></p>
+      <button type="button" class="link-btn" data-open-profile>Edit profile</button>
+    </div>
+    <p class="coach-privacy muted">Conversations are saved in this browser only.</p>
+  </aside>
+  <div class="coach-scrim" id="coach-scrim" hidden></div>
 
-    <form class="placeholder" id="intake-form">
-      <div>
-        <label for="name">Full name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-      </div>
-      <div>
-        <label for="email">Campus email</label>
-        <input type="email" id="email" name="email" placeholder="you@tulane.edu" pattern="^[^\s@]+@tulane\.edu$" title="Use your @tulane.edu email address" required>
-      </div>
-      <div>
-        <label for="year">Class year</label>
-        <select id="year" name="year">
-          <option>1st year</option>
-          <option>2nd year</option>
-          <option>3rd year</option>
-          <option>4th year</option>
-        </select>
-      </div>
-      <div>
-        <label for="major">Academic focus / major</label>
-        <input type="text" id="major" name="major" placeholder="e.g. Economics">
-      </div>
-      <div>
-        <label for="interests">Interests</label>
-        <input type="text" id="interests" name="interests" placeholder="e.g. data, design, sustainability">
-      </div>
-      <div>
-        <label for="target">Target career direction</label>
-        <input type="text" id="target" name="target" placeholder="e.g. product management">
-      </div>
-      <div>
-        <label>I'm interested in</label>
-        <div class="checkbox-row">
-          <label class="checkbox-label"><input type="checkbox" name="wants-resume"> Resume review</label>
-          <label class="checkbox-label"><input type="checkbox" name="wants-interview"> Mock interview</label>
+  <section class="coach-main" aria-label="AI Career Coach">
+    <div class="coach-topbar">
+      <button type="button" class="icon-btn coach-menu" id="coach-menu" aria-label="Show conversation history" aria-expanded="false" aria-controls="coach-sidebar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="coach-title">
+        <span class="coach-avatar" aria-hidden="true">✦</span>
+        <div>
+          <h1>AI Career Coach</h1>
+          <p class="muted" id="coach-subtitle">Your career advisor, available 24/7</p>
         </div>
       </div>
-      <div>
-        <label for="availability">General availability (for a mock interview, if interested)</label>
-        <input type="text" id="availability" name="availability" placeholder="e.g. weekday afternoons">
-      </div>
-      <label class="checkbox-label">
-        <input type="checkbox" name="consent"> I'd like occasional emails about my roadmap and coaching progress.
-      </label>
-      <input type="text" name="hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button type="submit">Send my request</button>
-      <p class="form-status" id="intake-status" hidden></p>
-    </form>
-
-    <p class="note" style="margin-top:28px; max-width:500px;">
-      <b>Note:</b> submissions email the Career Coach team directly — there's no account system or login yet, so this is a one-time intake rather than a dashboard. Access is limited to @tulane.edu addresses. Pricing and what happens after intake (e.g. waitlist vs. immediate follow-up) are still being worked out — see the FAQ below.
-    </p>
-  </div>
-</section>
-
-<section class="alt" id="contact">
-  <div class="wrap">
-    <h2 class="section-title">Have a question instead?</h2>
-    <p class="section-lede">This is separate from the roadmap intake above — for general questions and support.</p>
-    <form class="placeholder" id="contact-form" style="max-width:480px;">
-      <div>
-        <label for="contact-name">Name</label>
-        <input type="text" id="contact-name" name="contact-name" placeholder="Your name">
-      </div>
-      <div>
-        <label for="contact-email">Email</label>
-        <input type="email" id="contact-email" name="contact-email" placeholder="you@example.com" required>
-      </div>
-      <div>
-        <label for="contact-message">Message</label>
-        <input type="text" id="contact-message" name="contact-message" placeholder="What's your question?" required>
-      </div>
-      <input type="text" name="hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button type="submit">Send</button>
-      <p class="form-status" id="contact-status" hidden></p>
-    </form>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2 class="section-title">FAQ</h2>
-    <div class="faq">
-      <div class="faq-item">
-        <h3>Is Career Coach free?</h3>
-        <p class="note"><b>TODO:</b> pricing hasn't been decided yet.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What happens after I submit this form?</h3>
-        <p>It's emailed straight to the Career Coach team — there's no automated dashboard or confirmation email yet, so a real person follows up with you directly.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Is my information kept private?</h3>
-        <p>What you submit here goes straight to the Career Coach team by email and isn't sold or used for anything else. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How long does a resume review take?</h3>
-        <p class="note"><b>TODO:</b> turnaround time hasn't been set.</p>
-      </div>
+      <button type="button" class="icon-btn" id="coach-new-top" aria-label="New conversation" title="New conversation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
     </div>
-    <p class="note" style="margin-top:24px;">This FAQ is maintained by operations (Leyre) and kept current as common questions come in, per PREPARE-WEBSITE.md.</p>
-  </div>
-</section>
 
+    <div class="coach-scroll" id="coach-scroll">
+      <div class="coach-welcome" id="coach-welcome">
+        <span class="coach-avatar coach-avatar-lg" aria-hidden="true">✦</span>
+        <h2 id="coach-greeting">What's on your mind?</h2>
+        <p class="muted">Ask about career paths, recruiting timelines, your resume, interviews, clubs, or what to do this semester. I'll use your profile so you don't have to repeat yourself.</p>
+        <div class="coach-profile-nudge" id="coach-profile-nudge" hidden>
+          <span>Add your year, major, and goals and every answer gets more specific.</span>
+          <button type="button" class="btn btn-outline btn-sm" data-open-profile>Add my profile</button>
+        </div>
+        <div class="prompt-grid" id="prompt-grid">
+          <button type="button" class="prompt-chip" data-prompt="What careers can I pursue with a Finance degree?"><span>🧭</span>What careers can I pursue with a Finance degree?</button>
+          <button type="button" class="prompt-chip" data-prompt="Review my resume for an investment banking internship. Here it is:&#10;&#10;" data-fill><span>📄</span>Review my resume for an investment banking internship.</button>
+          <button type="button" class="prompt-chip" data-prompt="Prepare me for a consulting interview."><span>💼</span>Prepare me for a consulting interview.</button>
+          <button type="button" class="prompt-chip" data-prompt="What should I do this semester to improve my chances of getting a VC internship?"><span>🚀</span>What should I do this semester to improve my chances of getting a VC internship?</button>
+          <button type="button" class="prompt-chip" data-prompt="Create a career roadmap for becoming a financial analyst."><span>🗺️</span>Create a career roadmap for becoming a financial analyst.</button>
+          <button type="button" class="prompt-chip" data-prompt="What clubs should I join based on my career goals?"><span>🤝</span>What clubs should I join based on my career goals?</button>
+          <button type="button" class="prompt-chip" data-prompt="Help me prepare for an interview tomorrow."><span>⏰</span>Help me prepare for an interview tomorrow.</button>
+        </div>
+      </div>
+      <div class="coach-messages" id="coach-messages" role="log" aria-live="polite"></div>
+    </div>
+
+    <div class="coach-composer-wrap">
+      <div class="followups" id="followups" hidden></div>
+      <form class="coach-composer" id="coach-form">
+        <label for="coach-input" class="sr-only">Message the AI Career Coach</label>
+        <textarea id="coach-input" rows="1" placeholder="Ask anything about your career…" autocomplete="off"></textarea>
+        <button type="button" class="coach-stop" id="coach-stop" hidden aria-label="Stop generating">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/></svg>
+        </button>
+        <button type="submit" class="coach-send" id="coach-send" aria-label="Send">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <p class="coach-disclaimer">AI can make mistakes. Double-check important details like deadlines with your career center.</p>
+    </div>
+  </section>
+</div>
 </main>
 
 <footer class="site">
@@ -209,7 +171,7 @@
     <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 12 12 19 5"/><circle cx="5" cy="19" r="1.8" class="fill"/><circle cx="12" cy="12" r="1.8" class="fill"/><circle cx="19" cy="5" r="1.8" class="fill"/></svg>
     <span>Roadmap</span>
   </a>
-  <a href="ai-coach.html" class="tab-item">
+  <a href="ai-coach.html" class="tab-item active" aria-current="page">
     <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
     <span>AI Coach</span>
   </a>
@@ -221,7 +183,6 @@
 
 <script src="cc-core.js"></script>
 <script src="pwa.js"></script>
-<script src="get-started.js"></script>
-<script src="chat-widget.js"></script>
+<script src="ai-coach.js"></script>
 </body>
 </html>

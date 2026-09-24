@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>About — Career Coach</title>
+<meta name="description" content="Who we are, why we built Career Coach, and who it's for.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M6 36 L22 22 L42 8' fill='none' stroke='%231E2761' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='6' cy='36' r='5' fill='%2302C39A'/%3E%3Ccircle cx='22' cy='22' r='5.5' fill='%23028090'/%3E%3Ccircle cx='42' cy='8' r='6' fill='%231E2761'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap">
@@ -16,157 +17,196 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 </head>
-<body>
+<body class="page-about">
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html"><svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 36 L22 22 L42 8" fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="36" r="4.5" fill="var(--mint)"/><circle cx="22" cy="22" r="5" fill="var(--teal)"/><circle cx="42" cy="8" r="5.5" fill="var(--navy)"/></svg>Career Coach</a>
-    <nav class="main">
+    <nav class="main" aria-label="Main">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmaps</a></li>
-        <li><a href="who-its-for.html">Who It's For</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="jobs.html">Available Jobs</a></li>
-        <li><a href="our-motive.html">Our Motive</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="social.html">Follow Us</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+        <li><a href="job-finding.html">Job Finding</a></li>
+        <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmap</a></li>
+        <li><a href="ai-coach.html" class="nav-ai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>AI Career Coach</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary" href="get-started.html">Start My Roadmap</a>
+    <div class="header-actions">
+      <button type="button" class="profile-chip" data-open-profile aria-label="Edit your profile" title="Your profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span>Profile</span>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="coaching-roadmaps.html#builder">Build My Roadmap</a>
+    </div>
   </div>
 </header>
 
-<section class="hero">
+<main id="main">
+
+<section class="hero hero-compact">
   <div class="wrap">
-    <h1>Built by students who've been through it</h1>
-    <p class="lede">Seven students direct Career Coach's strategy, each working from the background they already know best. AI agents handle the daily work; the judgment calls stay with us.</p>
+    <span class="eyebrow">About Career Coach</span>
+    <h1>We're students too. We built the career guide we wish we'd had.</h1>
+    <p class="lede">Career Coach started with a question every one of us has asked: "I know what I'm studying, but what do I actually do with it?"</p>
+    <nav class="about-jump" aria-label="On this page">
+      <a href="#who-we-are">Who we are</a>
+      <a href="#why">Why Career Coach</a>
+      <a href="#for">Who it's for</a>
+      <a href="#team">The team</a>
+    </nav>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <h2 class="section-title">The team</h2>
-    <div class="team-grid">
-
-      <div class="team-card">
-        <div class="initial">L</div>
-        <h3>Liv</h3>
-        <div class="role">Website &amp; Product</div>
-        <p class="desc">Marketing — research &amp; design background. Builds and maintains the Career Coach platform.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="initial">A</div>
-        <h3>Autumn</h3>
-        <div class="role">Research &amp; Analytics</div>
-        <p class="desc">Marketing — research &amp; design background. Researches careers, jobs, alumni, classes, and clubs.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="initial">M</div>
-        <h3>Mia</h3>
-        <div class="role">Content &amp; Marketing</div>
-        <p class="desc">Marketing — research &amp; design background. Creates content, social posts, and campaigns.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="initial">A</div>
-        <h3>Adam Gara</h3>
-        <div class="role">CEO</div>
-        <p class="desc">Global Business — supervisor experience. Routes work and approves outward-facing decisions.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="initial">D</div>
-        <h3>Diana</h3>
-        <div class="role">Career Pathing</div>
-        <p class="desc">Finance background, based in Spain, cross-cultural view. Recommends career paths and builds roadmaps.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="initial">L</div>
-        <h3>Leyre</h3>
-        <div class="role">Operations &amp; Support</div>
-        <p class="desc">Management background, based in Spain, customer-facing analyst experience. Manages users, CRM, and support.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="initial">A</div>
-        <h3>Asaf</h3>
-        <div class="role">Resume &amp; Interview Coaching</div>
-        <p class="desc">Finance background, international and extensive job experience. Reviews resumes and runs mock interviews.</p>
-      </div>
-
+<section id="who-we-are">
+  <div class="wrap split">
+    <div>
+      <h2 class="section-title">Who we are</h2>
+      <p class="prose">Career Coach is a career platform built by seven students at Tulane University. It brings together everything you need to go from "I'm not sure what I want" to "I got the offer": career exploration, a personalized roadmap, resume and interview prep, job listings, and an AI career coach you can ask anything.</p>
+      <p class="prose">The idea is simple. Career help shouldn't be a pile of disconnected tools and a once-a-semester appointment. It should feel like having a mentor who knows your goals, tells you what to focus on now, and helps you get ready for what's next.</p>
+    </div>
+    <div class="about-card">
+      <h3>How we build it</h3>
+      <p>Seven students set the direction. AI agents help us run Career Coach day to day, so we can build more with a small team. The judgment calls stay human: what we recommend, how we say it, and what we'll never promise.</p>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section class="alt" id="why">
   <div class="wrap">
-    <h2 class="section-title">How we build it</h2>
-    <p class="section-lede">Seven students direct the strategy. Seven AI agents run Career Coach day to day — no extra hires needed to launch. Judgment stays human: brand voice and final approval, product decisions, escalations a bot can't resolve, interpreting results, partnerships, and the big calls on strategy and fundraising.</p>
+    <h2 class="section-title">Why Career Coach</h2>
+    <p class="section-lede">Most students know what they're studying. Far fewer know what comes after, and nobody hands you the playbook. These are the questions we kept hearing:</p>
+    <div class="question-grid">
+      <div class="question-card"><span class="q-mark" aria-hidden="true">?</span><h3>"What can I actually do with my major?"</h3><p>Most majors lead to far more careers than students realize, and most of those paths are invisible until someone points them out.</p></div>
+      <div class="question-card"><span class="q-mark" aria-hidden="true">?</span><h3>"How does recruiting even work?"</h3><p>In some fields, internship applications open more than a year before you'd start. If you don't know the timeline, you can miss it entirely.</p></div>
+      <div class="question-card"><span class="q-mark" aria-hidden="true">?</span><h3>"What experience do I need?"</h3><p>Which clubs, classes, skills, and internships actually make you competitive, and which ones just fill up your calendar?</p></div>
+      <div class="question-card"><span class="q-mark" aria-hidden="true">?</span><h3>"What should I be doing right now?"</h3><p>Big goals are easier when you know the next three steps. Most students don't get told what those are.</p></div>
+    </div>
+    <p class="why-answer">Career Coach answers all four in one place, based on <em>your</em> year, major, and goals, not generic advice.</p>
+
+    <div class="audience-grid" style="margin-top:36px;">
+      <div class="audience-card">
+        <span class="tag">We believe</span>
+        <h3>One roadmap beats a dozen tabs</h3>
+        <p>You need one clear next step, not a dozen disconnected tools competing for your attention.</p>
+      </div>
+      <div class="audience-card">
+        <span class="tag">We believe</span>
+        <h3>Honest feedback over hype</h3>
+        <p>Real strengths and real gaps, not empty encouragement, and no guarantees we can't back up.</p>
+      </div>
+      <div class="audience-card">
+        <span class="tag">We believe</span>
+        <h3>Built for students, not corporations</h3>
+        <p>Every decision starts from what actually helps the student in front of us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="for">
+  <div class="wrap">
+    <h2 class="section-title">Who is this for?</h2>
+    <p class="section-lede">Career Coach is built for university students and recent graduates who want more guidance with career decisions, recruiting, and professional development, whether you have a plan or no idea yet. We're launching at Tulane University, so Tulane students get a roadmap built on Tulane's own clubs, programs, and recruiting timelines.</p>
+    <div class="stage-grid">
+      <div class="stage-card"><span class="tag">1st &amp; 2nd year</span><h3>Exploring</h3><p>Figure out which paths fit before you commit, and start building the right experience early.</p></div>
+      <div class="stage-card"><span class="tag">3rd year</span><h3>Recruiting</h3><p>Resume, interviews, networking, and applications, all in the year when it counts most.</p></div>
+      <div class="stage-card"><span class="tag">4th year</span><h3>Landing the offer</h3><p>Close out full-time recruiting and step into your first role ready.</p></div>
+      <div class="stage-card"><span class="tag">Recent grads</span><h3>Pivoting or starting</h3><p>Job searching after graduation, or rethinking the path you started on. It's not too late.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="team">
+  <div class="wrap">
+    <h2 class="section-title">The team</h2>
+    <p class="section-lede">Seven students, each working from the background they know best.</p>
+    <div class="team-grid">
+      <div class="team-card"><div class="initial">A</div><h3>Adam Gara</h3><div class="role">CEO</div><p class="desc">Global Business, with supervisor experience. Sets direction and approves what goes out.</p></div>
+      <div class="team-card"><div class="initial">L</div><h3>Liv</h3><div class="role">Website &amp; Product</div><p class="desc">Marketing, with a research &amp; design background. Builds and maintains the Career Coach platform.</p></div>
+      <div class="team-card"><div class="initial">D</div><h3>Diana</h3><div class="role">Career Pathing</div><p class="desc">Finance background, based in Spain, with a cross-cultural view. Recommends career paths and builds roadmaps.</p></div>
+      <div class="team-card"><div class="initial">A</div><h3>Asaf</h3><div class="role">Resume &amp; Interview Coaching</div><p class="desc">Finance background with international and extensive job experience. Reviews resumes and runs mock interviews.</p></div>
+      <div class="team-card"><div class="initial">A</div><h3>Autumn</h3><div class="role">Research &amp; Analytics</div><p class="desc">Marketing, with a research &amp; design background. Researches careers, jobs, alumni, classes, and clubs.</p></div>
+      <div class="team-card"><div class="initial">M</div><h3>Mia</h3><div class="role">Content &amp; Marketing</div><p class="desc">Marketing, with a research &amp; design background. Creates content, social posts, and campaigns.</p></div>
+      <div class="team-card"><div class="initial">L</div><h3>Leyre</h3><div class="role">Operations &amp; Support</div><p class="desc">Management background, based in Spain, with customer-facing analyst experience. Manages users and support.</p></div>
+    </div>
   </div>
 </section>
 
 <div class="cta-band">
-  <h2>See what we've built</h2>
-  <p>Explore how Career Coach works, then get started.</p>
-  <a class="btn btn-primary" href="how-it-works.html">How It Works</a>
+  <h2>See what Career Coach can do for you</h2>
+  <p>Build your roadmap in a couple of minutes, or just ask the AI Career Coach a question.</p>
+  <div class="cta-band-actions">
+    <a class="btn btn-primary" href="coaching-roadmaps.html#builder">Build My Roadmap</a>
+    <a class="btn btn-ghost-light" href="ai-coach.html">Ask the AI Coach</a>
+  </div>
 </div>
+</main>
 
 <footer class="site">
-  <div class="wrap">
-    <div>&copy; 2026 Career Coach. All rights reserved.</div>
-    <ul>
-      <li><a href="how-it-works.html">How It Works</a></li>
-      <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmaps</a></li>
-      <li><a href="who-its-for.html">Who It's For</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="jobs.html">Available Jobs</a></li>
-      <li><a href="our-motive.html">Our Motive</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="social.html">Follow Us</a></li>
-      <li><a href="get-started.html">Get Started</a></li>
-      <li data-install-app hidden><a href="#">Install the app</a></li>
-    </ul>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 36 L22 22 L42 8" fill="none" stroke="var(--ice)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="36" r="4.5" fill="var(--mint)"/><circle cx="22" cy="22" r="5" fill="var(--teal)"/><circle cx="42" cy="8" r="5.5" fill="#fff"/></svg>Career Coach</a>
+      <p>Career paths, recruiting prep, job opportunities, and a personalized roadmap, with an AI career coach in your corner. Built by students, for students.</p>
+      <a href="#" class="footer-install" data-install-app hidden>Install the app</a>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="job-finding.html">Job Finding</a></li>
+        <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmap</a></li>
+        <li><a href="ai-coach.html">AI Career Coach</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="get-started.html#contact">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Follow us</h3>
+      <div class="social-icons">
+        <a href="#" data-placeholder aria-label="Career Coach on LinkedIn (coming soon)" title="LinkedIn — coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.2v.1M12 17v-6.5M12 13.5a2.8 2.8 0 0 1 5.6 0V17"/></svg></a>
+        <a href="https://www.instagram.com/careercoachco/" target="_blank" rel="noopener" aria-label="Career Coach on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7v.1"/></svg></a>
+        <a href="#" data-placeholder aria-label="Career Coach on X (coming soon)" title="X — coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h4.2L20 20h-4.2z"/><path d="M19.5 4l-6.3 7.2M4.5 20l6.3-7.2"/></svg></a>
+        <a href="https://www.tiktok.com/@careercoach.co" target="_blank" rel="noopener" aria-label="Career Coach on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.4 4.6 5 5"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Career Coach. All rights reserved.</span>
+    <span>Made by Tulane students in New Orleans.</span>
   </div>
 </footer>
 
 <nav class="mobile-tabbar" aria-label="Primary">
   <a href="index.html" class="tab-item">
-    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>
     <span>Home</span>
   </a>
-  <a href="jobs.html" class="tab-item">
-    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+  <a href="job-finding.html" class="tab-item">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
     <span>Jobs</span>
   </a>
   <a href="coaching-roadmaps.html" class="tab-item">
-    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 12 12 19 5"/><circle cx="5" cy="19" r="1.8" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="19" cy="5" r="1.8" fill="currentColor" stroke="none"/></svg>
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 12 12 19 5"/><circle cx="5" cy="19" r="1.8" class="fill"/><circle cx="12" cy="12" r="1.8" class="fill"/><circle cx="19" cy="5" r="1.8" class="fill"/></svg>
     <span>Roadmap</span>
   </a>
-  <a href="get-started.html" class="tab-item">
-    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8l4 4-4 4"/></svg>
-    <span>Get Started</span>
+  <a href="ai-coach.html" class="tab-item">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
+    <span>AI Coach</span>
   </a>
-  <button type="button" class="tab-item active" id="tab-more-btn" aria-haspopup="true" aria-expanded="false">
-    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg>
-    <span>More</span>
-  </button>
+  <a href="about.html" class="tab-item active" aria-current="page">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.1"/></svg>
+    <span>About</span>
+  </a>
 </nav>
-<div class="mobile-more-sheet" id="mobile-more-sheet" hidden>
-  <a href="#" data-install-app hidden>Install the app</a>
-  <a href="how-it-works.html">How It Works</a>
-  <a href="who-its-for.html">Who It's For</a>
-  <a href="resources.html">Resources</a>
-  <a href="our-motive.html">Our Motive</a>
-  <a href="about.html">About</a>
-  <a href="social.html">Follow Us</a>
-</div>
 
-<script src="mobile-nav.js"></script>
+<script src="cc-core.js"></script>
 <script src="pwa.js"></script>
 <script src="chat-widget.js"></script>
 </body>

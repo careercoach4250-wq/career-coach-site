@@ -1,17 +1,17 @@
 /* Career Coach — service worker. Makes the site installable as an app and
-   keeps the pages readable offline. Pages and job data are network-first (so
-   visitors always get the latest when online); static assets are cached.
-   /api/ calls (chat, forms, roadmap preview) and cross-origin requests like
+   keeps the pages readable offline. Pages, styles, scripts, and job data are network-first (so
+   visitors always get the latest when online); only icons are cache-first.
+   /api/ calls (AI coach, forms) and cross-origin requests like
    Cal.com and Google Fonts are never intercepted. Bump VERSION on changes to
    the precache list. */
-const VERSION = "cc-v1";
+const VERSION = "cc-v2";
 const PAGES = [
-  "index", "how-it-works", "coaching-roadmaps", "who-its-for", "resources",
-  "jobs", "our-motive", "about", "social", "get-started", "offline"
+  "index", "about", "job-finding", "coaching-roadmaps", "ai-coach",
+  "get-started", "privacy", "terms", "offline"
 ];
 const ASSETS = [
-  "/styles.css", "/mobile-nav.js", "/chat-widget.js", "/pwa.js",
-  "/get-started.js", "/jobs.js", "/resume-review.js", "/roadmap-preview.js",
+  "/styles.css", "/cc-core.js", "/chat-widget.js", "/pwa.js", "/ai-coach.js", "/job-finding.js", "/roadmap-builder.js",
+  "/get-started.js", "/jobs.js", "/resume-review.js",
   "/jobs-data.json", "/manifest.webmanifest",
   "/icons/icon-192.png", "/icons/icon-512.png", "/icons/apple-touch-icon.png"
 ];
@@ -65,7 +65,9 @@ self.addEventListener("fetch", (e) => {
   const url = new URL(req.url);
   if (req.method !== "GET" || url.origin !== location.origin || url.pathname.startsWith("/api/")) return;
 
-  if (req.mode === "navigate" || url.pathname.endsWith(".json")) {
+  // Icons rarely change: serve from cache. Everything else is network-first
+  // so pages, styles, and scripts always match after a deploy.
+  if (!url.pathname.startsWith("/icons/")) {
     e.respondWith(
       fetch(req)
         .then((res) => {
@@ -79,7 +81,7 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // Static assets: serve from cache, refresh in the background.
+  // Icons: cache first, refresh in the background.
   e.respondWith(
     fromCache(req).then((hit) => {
       const fresh = fetch(req).then((res) => {

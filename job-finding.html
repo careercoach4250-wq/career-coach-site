@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Job Finding — Career Coach</title>
+<meta name="description" content="Your recruiting toolkit: resume review, cover letters, case prep, interview prep, and job and internship opportunities.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M6 36 L22 22 L42 8' fill='none' stroke='%231E2761' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='6' cy='36' r='5' fill='%2302C39A'/%3E%3Ccircle cx='22' cy='22' r='5.5' fill='%23028090'/%3E%3Ccircle cx='42' cy='8' r='6' fill='%231E2761'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1E2761">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Career Coach">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+</head>
+<body class="page-job-finding">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 36 L22 22 L42 8" fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="36" r="4.5" fill="var(--mint)"/><circle cx="22" cy="22" r="5" fill="var(--teal)"/><circle cx="42" cy="8" r="5.5" fill="var(--navy)"/></svg>Career Coach</a>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="job-finding.html" class="active" aria-current="page">Job Finding</a></li>
+        <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmap</a></li>
+        <li><a href="ai-coach.html" class="nav-ai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>AI Career Coach</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="profile-chip" data-open-profile aria-label="Edit your profile" title="Your profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span>Profile</span>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="coaching-roadmaps.html#builder">Build My Roadmap</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero hero-compact">
+  <div class="wrap">
+    <span class="eyebrow">Job Finding</span>
+    <h1>Your recruiting toolkit.</h1>
+    <p class="lede">Everything you need to go from application to offer: resume, cover letter, case prep, interview practice, and open roles that fit you.</p>
+    <div class="profile-strip">
+      <span class="profile-strip-label">Tailored to</span>
+      <span class="profile-strip-value" data-profile-summary data-empty="Add your profile to personalize every tool"></span>
+      <button type="button" class="link-btn" data-open-profile>Edit profile</button>
+    </div>
+  </div>
+</section>
+
+<div class="toolkit-bar">
+  <div class="wrap">
+    <div class="toolkit-tabs" role="tablist" aria-label="Recruiting tools">
+      <a href="#resume" role="tab" id="tab-resume" aria-controls="resume" class="toolkit-tab">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg><span>Resume</span></a>
+      <a href="#cover-letter" role="tab" id="tab-cover-letter" aria-controls="cover-letter" class="toolkit-tab">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Cover Letter</span></a>
+      <a href="#case-prep" role="tab" id="tab-case-prep" aria-controls="case-prep" class="toolkit-tab">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>Case Prep</span></a>
+      <a href="#interview-prep" role="tab" id="tab-interview-prep" aria-controls="interview-prep" class="toolkit-tab">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span>Interview Prep</span></a>
+      <a href="#jobs" role="tab" id="tab-jobs" aria-controls="jobs" class="toolkit-tab">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>Job Opportunities</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- RESUME -->
+<section class="toolkit-panel" id="resume" role="tabpanel" aria-labelledby="tab-resume">
+  <div class="wrap">
+    <div class="panel-head">
+      <div>
+        <h2 class="section-title">Resume</h2>
+        <p class="section-lede">Paste your resume, plus a job description if you have one. Run the instant check, then get detailed AI feedback with rewritten bullet points.</p>
+      </div>
+    </div>
+    <div class="resume-review-tool">
+      <div class="card">
+        <label for="rr-resume">Resume text
+          <textarea id="rr-resume" rows="12" placeholder="Paste your resume text here…"></textarea>
+        </label>
+        <label for="rr-job">Job description <span class="opt">optional, enables match scoring</span>
+          <textarea id="rr-job" rows="6" placeholder="Paste a job description to compare against…"></textarea>
+        </label>
+        <div class="btn-row">
+          <button type="button" class="btn btn-outline" id="rr-analyze">Instant check</button>
+          <button type="button" class="btn btn-primary" id="rr-ai"><span class="spark" aria-hidden="true">✦</span> AI feedback</button>
+        </div>
+        <p class="form-status" id="rr-status" hidden></p>
+      </div>
+      <div class="card" id="rr-results">
+        <h3>Results</h3>
+        <p class="muted">Run the instant check for a match score, strengths, and quick fixes. AI feedback goes deeper and rewrites your weakest bullets.</p>
+      </div>
+    </div>
+    <div class="ai-output card" id="rr-ai-output" hidden aria-live="polite"></div>
+
+    <div class="tips-grid">
+      <div class="tip-card"><h4>One page, clean format</h4><p>For students, one page almost always wins. Stick to one font, consistent dates, and clear section headings.</p></div>
+      <div class="tip-card"><h4>Action + what + result</h4><p>Start every bullet with a strong verb and end with an outcome, ideally a number: "Grew club membership 40% by…"</p></div>
+      <div class="tip-card"><h4>Tailor it every time</h4><p>Mirror the key skills in each job description, as long as they're true of you. Recruiters skim for them.</p></div>
+      <div class="tip-card"><h4>Order matters</h4><p>Education, Experience, Leadership &amp; Activities, then Skills. Your strongest, most relevant items go first.</p></div>
+    </div>
+    <p class="fine-print">The instant check is Asaf's rule-based analyzer and runs entirely in your browser. AI feedback sends your resume to our AI to generate a response; we don't keep a copy. A human review from Asaf is still worth it before a big application: <a href="#interview-prep" data-tab-link>book a session</a>.</p>
+  </div>
+</section>
+
+<!-- COVER LETTER -->
+<section class="toolkit-panel" id="cover-letter" role="tabpanel" aria-labelledby="tab-cover-letter" hidden>
+  <div class="wrap">
+    <div class="panel-head">
+      <div>
+        <h2 class="section-title">Cover Letter</h2>
+        <p class="section-lede">Get a first draft written for a specific role, built from your profile and the job description. Then make it sound like you.</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <form class="card tool-form" id="cl-form">
+        <div class="field-row">
+          <label>Role<input name="role" required placeholder="e.g. Summer Analyst"></label>
+          <label>Company<input name="company" required placeholder="e.g. Acme Capital"></label>
+        </div>
+        <label>Addressed to <span class="opt">optional</span><input name="contact" placeholder="e.g. Ms. Rivera, or leave blank"></label>
+        <label>Job description <span class="opt">recommended</span><textarea name="jobDescription" rows="6" placeholder="Paste the job posting…"></textarea></label>
+        <label>What should it highlight? <span class="opt">we'll also use your profile</span><textarea name="highlights" rows="4" placeholder="e.g. my finance club leadership, the Excel model I built for my internship, why I want this firm…"></textarea></label>
+        <label>Tone
+          <select name="tone">
+            <option value="professional and warm">Professional &amp; warm</option>
+            <option value="confident and direct">Confident &amp; direct</option>
+            <option value="enthusiastic and personable">Enthusiastic &amp; personable</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn-primary"><span class="spark" aria-hidden="true">✦</span> Write my cover letter</button>
+        <p class="form-status" id="cl-status" hidden></p>
+      </form>
+      <div class="card cl-output-card">
+        <div class="cl-output-head">
+          <h3>Your draft</h3>
+          <div class="btn-row-sm">
+            <button type="button" class="link-btn" id="cl-copy" disabled>Copy</button>
+            <button type="button" class="link-btn" id="cl-download" disabled>Download .txt</button>
+          </div>
+        </div>
+        <textarea id="cl-output" rows="18" placeholder="Your tailored cover letter will appear here. You can edit it directly." aria-label="Cover letter draft"></textarea>
+        <p class="fine-print">Always read it through and add your own specifics. It only uses what you've told us, so the more detail you give, the better it gets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE PREP -->
+<section class="toolkit-panel" id="case-prep" role="tabpanel" aria-labelledby="tab-case-prep" hidden>
+  <div class="wrap">
+    <div class="panel-head">
+      <div>
+        <h2 class="section-title">Case Prep</h2>
+        <p class="section-lede">Case interviews are standard in consulting and common in strategy, product, and some finance roles. Learn the structure, then practice a live case with an AI interviewer.</p>
+      </div>
+    </div>
+
+    <ol class="case-flow">
+      <li><b>Clarify</b><span>Restate the problem, confirm the goal, and ask 1–2 sharp questions.</span></li>
+      <li><b>Structure</b><span>Lay out a clear, tailored framework before diving in.</span></li>
+      <li><b>Analyze</b><span>Work the data, do the math out loud, and say what it means.</span></li>
+      <li><b>Recommend</b><span>Answer first, then the reasons, risks, and next steps.</span></li>
+    </ol>
+
+    <div class="case-layout">
+      <div>
+        <h3 class="sub-title">Common case types</h3>
+        <div class="case-types">
+          <button type="button" class="case-type active" data-case="profitability"><b>Profitability</b><span>Profits are falling. Break it into revenue (price × volume) and costs (fixed + variable).</span></button>
+          <button type="button" class="case-type" data-case="market-sizing"><b>Market sizing</b><span>Estimate a number. Pick top-down or bottom-up, state assumptions, round cleanly.</span></button>
+          <button type="button" class="case-type" data-case="market-entry"><b>Market entry</b><span>Should they enter? Market attractiveness, competition, capabilities, economics.</span></button>
+          <button type="button" class="case-type" data-case="m-and-a"><b>M&amp;A</b><span>Should they buy? Target's standalone value, synergies, price, and risks.</span></button>
+          <button type="button" class="case-type" data-case="pricing"><b>Pricing</b><span>Set a price using cost-based, competitor-based, and value-based lenses.</span></button>
+          <button type="button" class="case-type" data-case="growth"><b>Growth strategy</b><span>Grow revenue organically (customers, products, channels) or inorganically.</span></button>
+        </div>
+        <div class="tip-card" style="margin-top:18px;">
+          <h4>Case math, fast</h4>
+          <p>Round to friendly numbers, keep track of zeros with "thousands / millions" labels, and sanity-check every answer against reality before you share it.</p>
+        </div>
+      </div>
+
+      <div class="card mini-chat" id="case-chat">
+        <div class="mini-chat-head">
+          <div>
+            <h3>Practice with an AI interviewer</h3>
+            <p class="muted" id="case-label">Profitability case</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" id="case-start">Start case</button>
+        </div>
+        <div class="mini-chat-log" id="case-log" aria-live="polite">
+          <p class="muted mini-chat-empty">Pick a case type, then press <b>Start case</b>. The interviewer will give you a prompt; answer out loud, then type your structure and reasoning. Type <b>feedback</b> anytime for a scored debrief.</p>
+        </div>
+        <form class="mini-chat-form" id="case-form">
+          <textarea rows="2" placeholder="Walk through your structure…" aria-label="Your response" disabled></textarea>
+          <div class="mini-chat-actions">
+            <button type="button" class="link-btn" id="case-feedback" disabled>Get feedback</button>
+            <button type="submit" class="btn btn-primary btn-sm" disabled>Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERVIEW PREP -->
+<section class="toolkit-panel" id="interview-prep" role="tabpanel" aria-labelledby="tab-interview-prep" hidden>
+  <div class="wrap">
+    <div class="panel-head">
+      <div>
+        <h2 class="section-title">Interview Prep</h2>
+        <p class="section-lede">Practice real questions, write or talk through your answer, and get scored feedback with a stronger version to aim for.</p>
+      </div>
+    </div>
+
+    <div class="card iv-controls">
+      <div class="jobs-filter-pills" id="iv-type" role="group" aria-label="Question type">
+        <button type="button" class="pill active" data-type="behavioral">Behavioral</button>
+        <button type="button" class="pill" data-type="technical">Technical</button>
+        <button type="button" class="pill" data-type="role-specific">Role-specific</button>
+      </div>
+      <label class="iv-role">For the role<input id="iv-role" placeholder="e.g. investment banking summer analyst"></label>
+      <button type="button" class="btn btn-outline btn-sm" id="iv-generate"><span class="spark" aria-hidden="true">✦</span> New questions</button>
+    </div>
+
+    <div class="iv-layout">
+      <div>
+        <h3 class="sub-title">Questions</h3>
+        <ul class="iv-questions" id="iv-questions"></ul>
+        <p class="form-status" id="iv-q-status" hidden></p>
+        <div class="tip-card" style="margin-top:18px;">
+          <h4>Use STAR for behavioral answers</h4>
+          <p><b>Situation</b> (brief context), <b>Task</b> (your responsibility), <b>Action</b> (what <em>you</em> did, in the most detail), <b>Result</b> (the outcome, with a number if you can). Aim for about 90 seconds.</p>
+        </div>
+      </div>
+      <div class="card">
+        <p class="iv-current-label">Your question</p>
+        <p class="iv-current" id="iv-current">Pick a question on the left.</p>
+        <label for="iv-answer" class="sr-only">Your answer</label>
+        <textarea id="iv-answer" rows="9" placeholder="Type your answer the way you'd say it…"></textarea>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="iv-feedback"><span class="spark" aria-hidden="true">✦</span> Get feedback</button>
+        </div>
+        <p class="form-status" id="iv-status" hidden></p>
+        <div class="ai-output" id="iv-output" hidden aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="mock-book">
+      <div>
+        <h3 class="sub-title">Book a live mock interview</h3>
+        <p class="muted">Practice with a real person. Book a 30-minute mock interview with Asaf. Pick any open time below.</p>
+      </div>
+      <div class="cal-embed-wrap" id="cal-embed" data-cal-link="career-coach-kiwbkw/mock-interview">
+        <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-mock-interview"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOB OPPORTUNITIES -->
+<section class="toolkit-panel" id="jobs" role="tabpanel" aria-labelledby="tab-jobs" hidden>
+  <div class="wrap">
+    <div class="panel-head">
+      <div>
+        <h2 class="section-title">Job Opportunities</h2>
+        <p class="section-lede">Open internships and new-grad roles across the US, refreshed daily and ranked by how well they match your profile.</p>
+      </div>
+    </div>
+    <div class="jobs-toolbar">
+      <input type="search" id="jobs-search" class="jobs-search" placeholder="Search by title, company, or keyword…" aria-label="Search jobs">
+      <div class="jobs-filter-pills" id="jobs-type-filter">
+        <button type="button" class="pill active" data-type="all">All</button>
+        <button type="button" class="pill" data-type="Internship">Internships</button>
+        <button type="button" class="pill" data-type="New Grad">New Grad</button>
+        <button type="button" class="pill" data-type="saved" id="jobs-saved-pill">Saved (0)</button>
+      </div>
+    </div>
+    <div class="jobs-filters">
+      <label>Industry<select id="jobs-industry"><option value="">All industries</option></select></label>
+      <label>Location<input id="jobs-location" placeholder="City, state, or remote"></label>
+      <label>Sort<select id="jobs-sort"><option value="match">Best match for me</option><option value="new">Newest</option></select></label>
+    </div>
+    <p class="jobs-updated" id="jobs-updated">Loading listings…</p>
+    <div class="job-grid" id="job-grid"></div>
+    <p class="jobs-empty" id="jobs-empty" hidden>No open roles match that search right now. Try a different keyword.</p>
+    <p class="fine-print" style="margin-top:28px;">Listings come from <a href="https://github.com/SimplifyJobs/Summer2026-Internships" target="_blank" rel="noopener">SimplifyJobs' open-source internship</a> and <a href="https://github.com/SimplifyJobs/New-Grad-Positions" target="_blank" rel="noopener">new-grad</a> trackers, filtered to open, US-based roles for Bachelor's candidates. Today that feed covers mostly tech, data, product, and quant roles. For finance, consulting, and other industries, also check Handshake through your career center. Always verify details on the employer's site. Saved jobs stay in this browser only.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 36 L22 22 L42 8" fill="none" stroke="var(--ice)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="36" r="4.5" fill="var(--mint)"/><circle cx="22" cy="22" r="5" fill="var(--teal)"/><circle cx="42" cy="8" r="5.5" fill="#fff"/></svg>Career Coach</a>
+      <p>Career paths, recruiting prep, job opportunities, and a personalized roadmap, with an AI career coach in your corner. Built by students, for students.</p>
+      <a href="#" class="footer-install" data-install-app hidden>Install the app</a>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="job-finding.html">Job Finding</a></li>
+        <li><a href="coaching-roadmaps.html">Coaching &amp; Roadmap</a></li>
+        <li><a href="ai-coach.html">AI Career Coach</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="get-started.html#contact">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Follow us</h3>
+      <div class="social-icons">
+        <a href="#" data-placeholder aria-label="Career Coach on LinkedIn (coming soon)" title="LinkedIn — coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.2v.1M12 17v-6.5M12 13.5a2.8 2.8 0 0 1 5.6 0V17"/></svg></a>
+        <a href="https://www.instagram.com/careercoachco/" target="_blank" rel="noopener" aria-label="Career Coach on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7v.1"/></svg></a>
+        <a href="#" data-placeholder aria-label="Career Coach on X (coming soon)" title="X — coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h4.2L20 20h-4.2z"/><path d="M19.5 4l-6.3 7.2M4.5 20l6.3-7.2"/></svg></a>
+        <a href="https://www.tiktok.com/@careercoach.co" target="_blank" rel="noopener" aria-label="Career Coach on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.4 4.6 5 5"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Career Coach. All rights reserved.</span>
+    <span>Made by Tulane students in New Orleans.</span>
+  </div>
+</footer>
+
+<nav class="mobile-tabbar" aria-label="Primary">
+  <a href="index.html" class="tab-item">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="job-finding.html" class="tab-item active" aria-current="page">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+    <span>Jobs</span>
+  </a>
+  <a href="coaching-roadmaps.html" class="tab-item">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 12 12 19 5"/><circle cx="5" cy="19" r="1.8" class="fill"/><circle cx="12" cy="12" r="1.8" class="fill"/><circle cx="19" cy="5" r="1.8" class="fill"/></svg>
+    <span>Roadmap</span>
+  </a>
+  <a href="ai-coach.html" class="tab-item">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
+    <span>AI Coach</span>
+  </a>
+  <a href="about.html" class="tab-item">
+    <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.1"/></svg>
+    <span>About</span>
+  </a>
+</nav>
+
+<script src="cc-core.js"></script>
+<script src="pwa.js"></script>
+<script src="resume-review.js"></script>
+<script src="jobs.js"></script>
+<script src="job-finding.js"></script>
+<script src="chat-widget.js"></script>
+</body>
+</html>

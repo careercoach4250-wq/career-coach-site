@@ -68,4 +68,17 @@
     message: form["contact-message"].value,
     hp: form.hp.value,
   }));
+
+  // Prefill the request form from the student's saved profile (cc-core.js).
+  const intake = document.getElementById("intake-form");
+  if (intake && window.CC) {
+    const p = window.CC.profile.get();
+    const set = (name, v) => { if (v && intake[name] && !intake[name].value) intake[name].value = v; };
+    set("name", p.name);
+    set("major", p.major);
+    set("interests", p.interests);
+    set("target", p.roles || (p.industry !== "Not sure yet" ? p.industry : ""));
+    const yr = [...intake.year.options].find((o) => p.year && p.year.startsWith(o.value || o.text));
+    if (yr) intake.year.value = yr.value || yr.text;
+  }
 })();
