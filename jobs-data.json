@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T13:11:52.527Z",
+  "updatedAt": "2026-09-27T13:12:00.924Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
     {
@@ -453,16 +453,6 @@
       "posted": "2026-09-25T14:13:52.000Z"
     },
     {
-      "id": "074a0da6-73e2-402d-90a7-ca4bf302d862",
-      "type": "Internship",
-      "category": "Software",
-      "company": "First Citizens BancShares",
-      "title": "IT Intern - Software Developer",
-      "location": "Raleigh, NC",
-      "url": "https://firstcitizens.jibeapply.com/jobs/35709?icims=1",
-      "posted": "2026-09-25T14:08:48.000Z"
-    },
-    {
       "id": "12a8e91a-ba38-4d9b-9ed5-2ab53af54c62",
       "type": "New Grad",
       "category": "Hardware",
@@ -551,6 +541,16 @@
       "location": "San Diego, CA",
       "url": "https://jobs.apple.com/en-us/details/200685702",
       "posted": "2026-09-25T01:06:47.000Z"
+    },
+    {
+      "id": "e61c4916-6a49-4922-a691-73e2250dd9c9",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Leidos",
+      "title": "Software Development Intern",
+      "location": "Gaithersburg, MD",
+      "url": "https://leidos.wd5.myworkdayjobs.com/External/job/Gaithersburg-MD/Software-Development-Intern_R-00193103",
+      "posted": "2026-09-25T00:00:00.000Z"
     },
     {
       "id": "f1498361-ba76-45f9-9d85-dfac75b061a9",
@@ -673,16 +673,6 @@
       "posted": "2026-09-25T00:00:00.000Z"
     },
     {
-      "id": "777dc751-d5f0-4f2d-97c7-9d205411e8c1",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "RTX",
-      "title": "Software Engineer 1 - Gen4 Airborne Radar",
-      "location": "El Segundo, CA",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-EL-SEGUNDO-R01--2000-E-Imperial-Hwy--BLDG-R01/Software-Engineer-I--Gen4-Airborne-Radar_01877039",
-      "posted": "2026-09-25T00:00:00.000Z"
-    },
-    {
       "id": "33f5b7c2-9c16-45c7-aa98-0d573badf59f",
       "type": "New Grad",
       "category": "Hardware",
@@ -783,6 +773,16 @@
       "posted": "2026-09-24T22:14:42.000Z"
     },
     {
+      "id": "228de40c-38b3-44c3-8ac5-a7d93bc664d7",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "CesiumAstro",
+      "title": "Embedded Software Engineer 1",
+      "location": "Westminster, CO",
+      "url": "https://jobs.lever.co/CesiumAstro/d56f6207-fc5b-421d-904d-4d2e9ff621bf/apply",
+      "posted": "2026-09-24T22:14:42.000Z"
+    },
+    {
       "id": "95226b41-b82e-408a-b515-b4a25a2512c1",
       "type": "Internship",
       "category": "Product",
@@ -821,6 +821,16 @@
       "location": "New Berlin, WI",
       "url": "https://abb.wd3.myworkdayjobs.com/external_career_page/job/New-Berlin-Wisconsin-United-States-of-America/Product-Management-Intern---Summer-2027_JR00047280",
       "posted": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "id": "ecaeb780-1615-4819-b504-9e3106d4d09a",
+      "type": "Internship",
+      "category": "Quant",
+      "company": "Citadel",
+      "title": "Fixed Income & Macro Trader Intern - US",
+      "location": "Greenwich, CT; Miami, FL",
+      "url": "https://www.citadel.com/careers/details/trader-fixed-income-macro-rotational-trader-intern-us/",
+      "posted": "2026-09-23T22:25:20.000Z"
     },
     {
       "id": "d9f1e414-b254-48f5-8e45-37a9a6b883cf",
@@ -1141,16 +1151,6 @@
       "location": "Boston, MA; Westlake, TX; Smithfield, RI; Merrimack, NH",
       "url": "https://fmr.wd1.myworkdayjobs.com/targeted/job/Boston-MA/Co-op--Quantitative-Analyst_2135235",
       "posted": "2026-09-11T00:00:00.000Z"
-    },
-    {
-      "id": "a4f7639e-dcce-4b8a-9d8a-2459909bd068",
-      "type": "Internship",
-      "category": "Quant",
-      "company": "Geneva Trading",
-      "title": "Quantitative Trading Intern",
-      "location": "Chicago, IL",
-      "url": "https://job-boards.greenhouse.io/genevatrading/jobs/5232641007",
-      "posted": "2026-09-10T22:24:15.000Z"
     },
     {
       "id": "ee7309ba-fb23-49f4-bcd1-cb34d3b4d7b4",
