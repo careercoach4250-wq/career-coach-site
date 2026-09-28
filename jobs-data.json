@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T13:12:00.924Z",
+  "updatedAt": "2026-09-28T13:14:48.576Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
     {
@@ -71,16 +71,6 @@
       "location": "Austin, TX; San Jose, CA",
       "url": "https://jobs.apple.com/en-us/details/200685871",
       "posted": "2026-09-26T01:06:25.000Z"
-    },
-    {
-      "id": "372dabb4-b681-4c6f-bc61-e5c936c3958f",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "Amazon",
-      "title": "Hardware Development Engineer - AI/ML Server Development",
-      "location": "Seattle, WA; Cupertino, CA; Denver, CO",
-      "url": "https://amazon.jobs/en/jobs/10482698/hardware-development-engineer-ai-ml-server-development",
-      "posted": "2026-09-26T01:06:16.000Z"
     },
     {
       "id": "128ee1a3-4234-414f-bf0e-253945bdc241",
@@ -313,16 +303,6 @@
       "posted": "2026-09-25T22:09:21.000Z"
     },
     {
-      "id": "40bf0d3e-456c-4a73-a81b-3767a13f72ea",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Charles Schwab",
-      "title": "Associate Software Development Engineer",
-      "location": "Orlando, FL; Southlake, TX",
-      "url": "https://career-schwab.icims.com/jobs/126526/job?mobile=true&needsRedirect=false",
-      "posted": "2026-09-25T22:08:58.000Z"
-    },
-    {
       "id": "c8a241fd-2c15-4ae3-8589-8a9b698b11c3",
       "type": "Internship",
       "category": "Hardware",
@@ -463,16 +443,6 @@
       "posted": "2026-09-25T14:08:34.000Z"
     },
     {
-      "id": "d314f5f4-0dfc-4dcd-9b4a-b27f1694d1b9",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Bluestaq",
-      "title": "Software Engineering Resident - Multiple Teams",
-      "location": "Colorado Springs, CO",
-      "url": "https://job-boards.greenhouse.io/bluestaq/jobs/4420189009",
-      "posted": "2026-09-25T14:08:04.000Z"
-    },
-    {
       "id": "af7ae639-a887-435b-9b79-1edc4e0c680d",
       "type": "Internship",
       "category": "Software",
@@ -550,6 +520,16 @@
       "title": "Software Development Intern",
       "location": "Gaithersburg, MD",
       "url": "https://leidos.wd5.myworkdayjobs.com/External/job/Gaithersburg-MD/Software-Development-Intern_R-00193103",
+      "posted": "2026-09-25T00:00:00.000Z"
+    },
+    {
+      "id": "f8aa999f-66d3-4ae6-b0bf-286944064197",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Greenheck Group",
+      "title": "Application Developer Co-op",
+      "location": "Schofield, WI",
+      "url": "https://greenheckgroup.wd5.myworkdayjobs.com/external/job/Schofield-WI/Application-Developer-Co-op_JR104721",
       "posted": "2026-09-25T00:00:00.000Z"
     },
     {
@@ -763,6 +743,16 @@
       "posted": "2026-09-24T22:17:22.000Z"
     },
     {
+      "id": "63ee202c-e263-4273-bfef-b12583dfe8bb",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "GM financial",
+      "title": "Software Development Engineer 1 - Mobile",
+      "location": "Irving, TX",
+      "url": "https://fa-exvu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/260957",
+      "posted": "2026-09-24T22:16:31.000Z"
+    },
+    {
       "id": "b7c09e6c-300b-44d7-979c-ffb2447b3c5b",
       "type": "New Grad",
       "category": "Hardware",
@@ -781,6 +771,16 @@
       "location": "Westminster, CO",
       "url": "https://jobs.lever.co/CesiumAstro/d56f6207-fc5b-421d-904d-4d2e9ff621bf/apply",
       "posted": "2026-09-24T22:14:42.000Z"
+    },
+    {
+      "id": "4578a39b-4ffb-4224-8d71-8f1e9310819f",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "Micron Technology",
+      "title": "Product Development Failure Analysis Engineer New Grad - HBM PYE",
+      "location": "Boise, ID",
+      "url": "https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Senior-or-Staff-HBM-PYE-Product-Development-Failure-Analysis-Engineer_JR110624",
+      "posted": "2026-09-24T22:12:58.000Z"
     },
     {
       "id": "95226b41-b82e-408a-b515-b4a25a2512c1",
@@ -973,26 +973,6 @@
       "posted": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "695c330c-a16f-4490-93fc-2f34b8d874ce",
-      "type": "Internship",
-      "category": "Quant",
-      "company": "Fidelity Investments",
-      "title": "Quantitative Research Intern - Multi-Asset Research Team",
-      "location": "Boston, MA",
-      "url": "https://fmr.wd1.myworkdayjobs.com/targeted/job/Boston-MA/Quantitative-Research-Intern--Multi-Asset-Research-Team_2135361",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
-      "id": "6177e762-3444-42f7-97c6-b94abf15c039",
-      "type": "Internship",
-      "category": "Quant",
-      "company": "Fidelity Investments",
-      "title": "Quantitative Research Intern",
-      "location": "Boston, MA",
-      "url": "https://fmr.wd1.myworkdayjobs.com/targeted/job/Boston-MA/Strategic-Advisers-Quantitative-Research-Intern---Undergrad_2135905",
-      "posted": "2026-09-21T00:00:00.000Z"
-    },
-    {
       "id": "f2361451-4719-430b-9ff4-17c900d7b502",
       "type": "New Grad",
       "category": "Product",
@@ -1153,6 +1133,16 @@
       "posted": "2026-09-11T00:00:00.000Z"
     },
     {
+      "id": "a4f7639e-dcce-4b8a-9d8a-2459909bd068",
+      "type": "Internship",
+      "category": "Quant",
+      "company": "Geneva Trading",
+      "title": "Quantitative Trading Intern",
+      "location": "Chicago, IL",
+      "url": "https://job-boards.greenhouse.io/genevatrading/jobs/5232641007",
+      "posted": "2026-09-10T22:24:15.000Z"
+    },
+    {
       "id": "ee7309ba-fb23-49f4-bcd1-cb34d3b4d7b4",
       "type": "New Grad",
       "category": "Quant",
@@ -1161,6 +1151,16 @@
       "location": "Nashville, TN",
       "url": "https://abglobal.wd1.myworkdayjobs.com/alliancebernsteincareers/job/Nashville-Tennessee/Derivative-Valuation-Analyst_R0019733-2",
       "posted": "2026-09-10T00:00:00.000Z"
+    },
+    {
+      "id": "a8f74022-e7f9-431a-a969-0b7d525a735c",
+      "type": "Internship",
+      "category": "Quant",
+      "company": "Zions Bank",
+      "title": "Quantitative Modeling Analyst Intern - Corporate Quantitative Analytics",
+      "location": "United States",
+      "url": "https://zionsbancorp.taleo.net/careersection/joinexternalmobile/jobdetail.ftl?job=071620",
+      "posted": "2026-09-09T15:21:11.000Z"
     },
     {
       "id": "ad04c8bc-a7d6-4b68-8b8c-0eb0876c9014",
