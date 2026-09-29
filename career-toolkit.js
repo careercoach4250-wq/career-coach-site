@@ -1,6 +1,7 @@
-/* Career Coach — Job Finding hub (job-finding.html). Wires the five toolkit
+/* Career Coach — Career Toolkit hub (career-toolkit.html). Wires the five toolkit
    tabs together: tab switching (deep-linkable via #resume, #cover-letter,
-   #case-prep, #interview-prep, #jobs), AI resume feedback, the cover-letter
+   #case-prep, #interview-prep, #jobs, plus #resume-templates for the template
+   library inside the Resume tab), AI resume feedback, the cover-letter
    writer, the AI case interviewer, interview practice + feedback, and the
    Cal.com mock-interview booking (loaded the first time that tab opens).
    Job cards hand a role to the cover-letter / interview tabs. */
@@ -11,7 +12,16 @@
 
   // ---- Tabs ----------------------------------------------------------------
 
+  // Sub-views inside a tab, deep-linkable by their own hash.
+  const SUBVIEWS = { "resume-templates": ["resume", "templates"] };
+
   function activate(id, opts = {}) {
+    if (SUBVIEWS[id]) {
+      const [tab, view] = SUBVIEWS[id];
+      activate(tab, opts);
+      resumeView(view);
+      return;
+    }
     if (!TABS.includes(id)) id = "resume";
     TABS.forEach((t) => {
       const panel = $(t), tab = $("tab-" + t);
@@ -21,7 +31,8 @@
       tab.setAttribute("aria-selected", String(on));
       tab.tabIndex = on ? 0 : -1;
     });
-    if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+    const hash = "#" + (id === "resume" && !$("rr-view-templates").hidden ? "resume-templates" : id);
+    if (location.hash !== hash) history.replaceState(null, "", hash);
     if (id === "interview-prep") loadCal();
     if (opts.scroll) document.querySelector(".toolkit-bar").scrollIntoView({ behavior: "smooth", block: "start" });
     const active = $("tab-" + id);
@@ -64,22 +75,64 @@
     else { btn.disabled = false; if (btn.dataset.label) btn.innerHTML = btn.dataset.label; }
   }
 
+  // ---- Resume: review / template views ----------------------------------------
+
+  function resumeView(view) {
+    const views = document.querySelectorAll("[data-rview]");
+    views.forEach((b) => {
+      const on = b.dataset.rview === view;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", String(on));
+    });
+    $("rr-view-review").hidden = view !== "review";
+    $("rr-view-templates").hidden = view !== "templates";
+    const hash = view === "templates" ? "#resume-templates" : "#resume";
+    if (location.hash !== hash) history.replaceState(null, "", hash);
+  }
+  document.querySelector(".rr-views").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-rview]");
+    if (b) resumeView(b.dataset.rview);
+  });
+
+  // A template's "Get feedback for …" button: set the target and switch views.
+  document.addEventListener("cc:resume-target", (e) => {
+    window.CCResume.setTarget(e.detail.target);
+    resumeView("review");
+    document.querySelector(".toolkit-bar").scrollIntoView({ behavior: "smooth", block: "start" });
+    status($("rr-status"), `Target set to "${e.detail.target}". Upload your resume or paste it, then run a check.`, "ok");
+  });
+
   // ---- Resume: AI feedback -----------------------------------------------------
+
+  // "### Formatting — Needs work" -> heading with a status chip.
+  const VERDICT = /^(.*?)\s+[—–-]\s+(strong|good|solid|needs work|fix first)\s*$/i;
+  function decorate(root) {
+    root.querySelectorAll("h4").forEach((h) => {
+      const m = h.textContent.match(VERDICT);
+      if (!m) return;
+      const v = m[2].toLowerCase();
+      const cls = v === "fix first" ? "rr-fix" : v === "needs work" ? "rr-look" : "rr-good";
+      h.classList.add("rr-area-head");
+      h.innerHTML = `${CC.esc(m[1])} <span class="rr-chip ${cls}">${CC.esc(m[2])}</span>`;
+    });
+  }
 
   const rrAi = $("rr-ai");
   rrAi.addEventListener("click", async () => {
     const resume = $("rr-resume").value.trim();
     const st = $("rr-status");
-    if (resume.length < 40) return status(st, "Paste your resume text first (at least a few lines).");
-    status(st, "");
+    if (resume.length < 40) return status(st, "Upload your resume or paste its text first.");
+    const target = window.CCResume.getTarget();
+    status(st, target ? "" : "Tip: add a target role or industry above for more tailored feedback.", "ok");
     const out = $("rr-ai-output");
     out.hidden = false;
-    out.innerHTML = `<p class="muted"><span class="spinner" aria-hidden="true"></span> Reading your resume…</p>`;
+    out.innerHTML = `<p class="muted"><span class="spinner" aria-hidden="true"></span> Reading your resume${target ? ` for ${CC.esc(target)}` : ""}…</p>`;
+    out.scrollIntoView({ behavior: "smooth", block: "start" });
     busy(rrAi, true, "Reviewing…");
+    const head = `<div class="ai-output-head"><span class="ai-badge">✦ AI feedback${target ? " · " + CC.esc(target) : ""}</span></div>`;
+    const paint = (text) => { out.innerHTML = `${head}<div class="md">${CC.md(text)}</div>`; decorate(out); };
     try {
-      const data = await CC.ai({ mode: "resume", resume, job: $("rr-job").value });
-      out.innerHTML = `<div class="ai-output-head"><span class="ai-badge">✦ AI feedback</span></div><div class="md">${CC.md(data.reply)}</div>`;
-      out.scrollIntoView({ behavior: "smooth", block: "start" });
+      await CC.ai({ mode: "resume", resume, job: $("rr-job").value, target, facts: window.CCResume.getFacts() }, { onToken: paint });
     } catch (err) {
       out.hidden = true;
       status(st, CC.aiErrorMessage(err));

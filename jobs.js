@@ -1,4 +1,4 @@
-/* Career Coach — Job Opportunities (Job Finding hub). Renders jobs-data.json,
+/* Career Coach — Job Opportunities (Career Toolkit hub). Renders jobs-data.json,
    a static file refreshed daily by a GitHub Actions workflow (see
    .github/workflows/update-jobs.yml) that pulls from SimplifyJobs' open
    internship/new-grad datasets. Ranks roles against the student's profile

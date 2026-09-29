@@ -17,7 +17,7 @@
   ],
   "shortcuts": [
     { "name": "AI Career Coach", "url": "/ai-coach.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
-    { "name": "Job Finding", "url": "/job-finding.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Career Toolkit", "url": "/career-toolkit.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
     { "name": "My Roadmap", "url": "/coaching-roadmaps.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
   ]
 }

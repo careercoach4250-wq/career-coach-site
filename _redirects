@@ -1,8 +1,12 @@
+# 2026-09-29: "Job Finding" renamed to "Career Toolkit".
+/job-finding         /career-toolkit              301
+/job-finding.html    /career-toolkit              301
+
 # Pages merged into the new five-tab structure (2026-09-24). Old links keep working.
 /how-it-works        /#how-it-works               301
 /how-it-works.html   /#how-it-works               301
-/jobs                /job-finding#jobs            301
-/jobs.html           /job-finding#jobs            301
+/jobs                /career-toolkit#jobs         301
+/jobs.html           /career-toolkit#jobs         301
 /resources           /coaching-roadmaps#tulane    301
 /resources.html      /coaching-roadmaps#tulane    301
 /our-motive          /about#why                   301

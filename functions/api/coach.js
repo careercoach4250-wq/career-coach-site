@@ -3,7 +3,7 @@
      coach               full-page AI Career Coach chat (streams)
      widget              the small floating chat bubble (streams, shorter answers)
      case                case-interview practice partner (streams)
-     resume              AI resume feedback
+     resume              AI resume feedback, area by area, tailored to a target (streams)
      cover_letter        tailored cover letter draft
      interview_questions practice questions for a role
      interview_feedback  feedback on a practice answer
@@ -30,8 +30,8 @@ const TULANE_FACTS = `VERIFIED TULANE FACTS (the only Tulane-specific names you 
 
 const SITE_FACTS = `ABOUT CAREER COACH (the platform you are part of):
 - Career Coach is a career platform built by Tulane students, launching at Tulane University (about 8,500 undergraduates). Access is planned for @tulane.edu emails.
-- Tabs: Home, About, Job Finding (resume review, cover letters, case prep, interview prep, job and internship listings), Coaching & Roadmap (personalized roadmap builder), and AI Career Coach (you).
-- Students can book a real 30-minute mock interview with Asaf on the Job Finding page (Interview Prep).
+- Tabs: Home, About, Career Toolkit (resume upload and feedback, a resume template library by career area, cover letters, case prep, interview prep, job and internship listings), Coaching & Roadmap (personalized roadmap builder), and AI Career Coach (you).
+- Students can book a real 30-minute mock interview with Asaf on the Career Toolkit page (Interview Prep).
 - Pricing hasn't been decided; everything is free right now. A formal privacy policy is still a draft.
 - For anything else, students can use the Contact form (Get Started page).`;
 
@@ -56,6 +56,23 @@ function profileText(p) {
   if (!fields.length) return "";
   return "STUDENT PROFILE (already provided by the student; use it and don't ask for it again):\n" +
     fields.map(([k, v]) => `- ${k}: ${v.trim().slice(0, 400)}`).join("\n");
+}
+
+// Layout facts measured in the browser from an uploaded PDF/.docx.
+function factsText(f) {
+  if (!f || typeof f !== "object") return "";
+  const n = (v, max) => (Number.isFinite(v) && v >= 0 ? Math.min(Math.round(v * 2) / 2, max) : 0);
+  const fonts = (Array.isArray(f.fonts) ? f.fonts : []).filter((x) => typeof x === "string").slice(0, 5).map((x) => x.slice(0, 40));
+  const lines = [
+    `- File type: ${str(f.kind, 20) || "unknown"}`,
+    n(f.pages, 20) ? `- Pages: ${n(f.pages, 20)}` : "",
+    fonts.length ? `- Fonts used (most text first): ${fonts.join(", ")}` : "",
+    n(f.bodySize, 40) ? `- Main body font size: about ${n(f.bodySize, 40)}pt` : "",
+    `- Tables: ${n(f.tables, 50)}; text boxes: ${n(f.textBoxes, 50)}; images/graphics: ${n(f.images, 50)}`,
+    f.headerContact === true ? "- Contact info is inside the page header (some ATS skip headers)" : "",
+    f.scanned === true ? "- Little or no selectable text: likely a scanned image, unreadable by ATS" : "",
+  ].filter(Boolean);
+  return "FILE FACTS (measured from the uploaded file; use them for Formatting and ATS feedback):\n" + lines.join("\n");
 }
 
 function system(parts) {
@@ -248,21 +265,34 @@ If the student types "feedback" or finishes with a recommendation, give structur
       const resume = str(body.resume);
       if (resume.length < 40) return null;
       const job = str(body.job);
+      const target = str(body.target, 120);
+      const goal = target || "the student's goal (from their profile, if given)";
       return {
-        max_tokens: 1300,
+        stream: true,
+        max_tokens: 2600,
         temperature: 0.3,
         messages: [
-          { role: "system", content: system([PERSONA, HONESTY, profile,
-            `Review the student's resume${job ? " against the job description" : ""}. Respond in Markdown with these sections:
+          { role: "system", content: system([PERSONA, HONESTY, profile, factsText(body.facts),
+            `Review the student's resume${target ? ` for ${target}` : ""}${job ? " against the job description" : ""}. Be specific to THIS resume: quote or point to their actual lines. For every point, say what to change AND why it matters to recruiters in ${target ? "that field" : "their target field"}. No generic advice that could apply to any resume.${body.facts ? "" : " The student pasted plain text, so you can't see the layout. For Formatting, comment only on what the text shows (length, consistency, date styles) and suggest uploading the file for a layout check."}
+
+Respond in Markdown with exactly this structure:
 ### Overall impression
-2–3 sentences, honest.
-### Top fixes
-The 3–5 highest-impact changes, most important first.
+2–3 honest sentences: how this resume reads for ${goal}, and the single biggest opportunity.
+### Top 3 priorities
+A numbered list, most important first.
+
+Then one section per area, in this order, each heading written exactly as "### <Area> — <verdict>" where verdict is one of: Strong, Needs work, Fix first.
+Areas: Formatting; Structure; Bullet points; Action verbs; Quantified impact; Skills; Experience descriptions; Overall clarity; Relevance to ${target || "your target"}; ATS & readability.
+Under each heading write:
+**What to change:** 1–3 specific points that reference their resume (if the verdict is Strong, say briefly what's working instead).
+**Why:** one sentence on why it matters for ${target || "their target"}.
+For Skills and Relevance, name specific skills or experiences recruiters in that field expect that are missing, and tell the student to add them only if true.
+For ATS & readability, consider single-column layout, standard headings, contact info in the body, no tables or text boxes, and parseable text.
+
 ### Bullet rewrites
-Pick 3 weak bullets. For each show **Before:** and **After:**. Rewrites may restructure wording and add a placeholder like [X%] or [#] where a number belongs, but must NOT invent facts or metrics.
-${job ? "### Keywords from the job\nImportant skills/keywords from the job description that are missing or weak in the resume.\n" : ""}### Format & polish
-Brief notes on length, section order, consistency.`]) },
-          { role: "user", content: `RESUME:\n${resume}${job ? `\n\nJOB DESCRIPTION:\n${job}` : ""}` },
+Pick the 4 weakest bullets. For each give **Before:** (the exact original), **After:** (the improved version), and **Why it's better:** (short). Rewrites may restructure and strengthen wording and use placeholders like [X%] or [#] where a number belongs, but must NEVER invent facts, metrics, tools, employers, or experiences.
+${job ? "### Keywords from the job\nImportant skills and keywords from the job description that are missing or weak in the resume.\n" : ""}`]) },
+          { role: "user", content: `${target ? `TARGET: ${target}\n\n` : ""}RESUME:\n${resume}${job ? `\n\nJOB DESCRIPTION:\n${job}` : ""}` },
         ],
       };
     }
