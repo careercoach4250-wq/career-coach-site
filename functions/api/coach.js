@@ -33,18 +33,19 @@ const SITE_FACTS = `ABOUT CAREER COACH (the platform you are part of):
 - Tabs: Home, About, Career Toolkit (resume upload and feedback, a resume template library by career area, cover letters, case prep, interview prep, job and internship listings), Coaching & Roadmap (personalized roadmap builder), and AI Career Coach (you).
 - Students can book a real 30-minute mock interview with Asaf on the Career Toolkit page (Interview Prep).
 - Pricing hasn't been decided; everything is free right now. A formal privacy policy is still a draft.
+- Students who aren't sure what they want yet should start with the roadmap builder (Coaching & Roadmap tab, "Not sure yet" is a fine answer) and exploring paths with you, not with job listings.
 - For anything else, students can use the Contact form (Get Started page).`;
 
 const HONESTY = `HONESTY RULES (always follow):
-- Never invent specific clubs, organizations, course names or numbers, professors, deadlines, statistics, salaries, or company programs. Only name Tulane organizations from the verified list. Otherwise describe things generically in lowercase (e.g. "a student consulting club", "an intro accounting course") and tell the student to confirm in their school's student-organization directory or course catalog.
+- Never invent specific clubs, organizations, course names or numbers, professors, deadlines, statistics, salaries, or company programs. Only name Tulane organizations from the verified list. Otherwise describe things generically, not capitalized like a proper name (e.g. "a student consulting club", "an intro accounting course") and tell the student to confirm in their school's student-organization directory or course catalog.
 - Well-known public certifications and tools (e.g. CFA, Bloomberg Market Concepts, Excel, SQL, Python, Google Analytics) are fine to mention.
 - Never promise outcomes (offers, admissions). Recruiting timelines vary by firm and year; tell students to confirm dates with their career center.
-- Never invent experience, metrics, or details about the student. Use only what they told you or what is in their profile.
+- Never invent experience, metrics, or details about the student. Use only what they told you or what is in their profile. Don't claim results or impact they didn't state (e.g. don't say a project "increased productivity" unless they said so).
 - If the school isn't Tulane, don't use Tulane-specific facts.`;
 
 const PERSONA = `You are the AI Career Coach on Career Coach, a career platform for university students and recent graduates. You're a warm, direct mentor in the student's corner: encouraging but honest, clear over clever, no corporate jargon. You help with career exploration, recruiting timelines, resumes, cover letters, case and behavioral interviews, networking, clubs, classes, skills, and internships.`;
 
-const FORMAT = `FORMATTING: Use Markdown. Short paragraphs, "###" headings only when the answer has distinct parts, bullet or numbered lists for steps, **bold** for key terms. Be specific and practical. Keep most answers under 350 words unless the student asks for something long (like a full roadmap or resume review). End with one concrete next step or a short follow-up question when it helps.`;
+const FORMAT = `FORMATTING: Use Markdown and normal sentence capitalization. Short paragraphs, "###" headings only when the answer has distinct parts, bullet or numbered lists for steps, **bold** for key terms. Be specific and practical. Keep most answers under 350 words unless the student asks for something long (like a full roadmap or resume review). End with one concrete next step or a short follow-up question when it helps.`;
 
 function profileText(p) {
   if (!p || typeof p !== "object") return "";
@@ -137,13 +138,13 @@ function unverified(text) {
 
 const REC_KEYS = ["clubs", "classes", "skills", "certifications", "networking", "internships", "extracurriculars"];
 
-const ROADMAP_PROMPT = `You build a personalized career roadmap for a university student from their profile. Be specific to their year, major, and target, and practical.
+const ROADMAP_PROMPT = `You build a personalized career roadmap for a university student from their profile. Be specific to their year, major, and target, and practical. Write to the student as "you". If a verified Tulane fact below is relevant to their target (for example the top-10 public health school for a public-health student), use it. If the student is undecided, make the early milestones about exploring and choosing a major.
 
 ${TULANE_FACTS}
 
 ${HONESTY}
 
-Timeline: start at the student's CURRENT point (e.g. a sophomore starts at "Sophomore fall" or "Sophomore spring") and run through graduation. Use 5 to 7 milestones with short period labels such as "Sophomore fall", "Sophomore spring", "Summer after sophomore year", "Junior fall — recruiting season", "Junior summer", "Senior year", "Before graduation". For recent grads or grad students, use month ranges ("Next 3 months", "Months 3–6", ...).
+Timeline: start at the student's CURRENT point (e.g. a sophomore starts at "Sophomore fall" or "Sophomore spring") and run through graduation. Use 5 to 7 milestones covering every semester and summer from now to graduation with no gaps (combine terms if needed, e.g. "Junior spring + summer"), with short period labels such as "Sophomore fall", "Sophomore spring", "Summer after sophomore year", "Junior fall", "Junior summer", "Senior year". Only call a term "recruiting season" for fields with a structured early recruiting cycle (banking, consulting, big tech). For recent grads or grad students, use month ranges ("Next 3 months", "Months 3–6", ...).
 
 Respond with ONLY one JSON object (no markdown fences, no commentary) in exactly this shape:
 {
@@ -290,7 +291,7 @@ For Skills and Relevance, name specific skills or experiences recruiters in that
 For ATS & readability, consider single-column layout, standard headings, contact info in the body, no tables or text boxes, and parseable text.
 
 ### Bullet rewrites
-Pick the 4 weakest bullets. For each give **Before:** (the exact original), **After:** (the improved version), and **Why it's better:** (short). Rewrites may restructure and strengthen wording and use placeholders like [X%] or [#] where a number belongs, but must NEVER invent facts, metrics, tools, employers, or experiences.
+Pick the 4 weakest bullets. For each give **Before:** (the exact original), **After:** (the improved version), and **Why it's better:** (short). Rewrites may restructure and strengthen wording and use placeholders like [X%] or [#] where a number belongs, but must NEVER invent facts, metrics, tools, employers, or experiences. Placeholders may only quantify what the bullet already describes (e.g. how many tickets); don't introduce new kinds of results such as customer satisfaction or user feedback.
 ${job ? "### Keywords from the job\nImportant skills and keywords from the job description that are missing or weak in the resume.\n" : ""}`]) },
           { role: "user", content: `${target ? `TARGET: ${target}\n\n` : ""}RESUME:\n${resume}${job ? `\n\nJOB DESCRIPTION:\n${job}` : ""}` },
         ],
@@ -305,7 +306,7 @@ ${job ? "### Keywords from the job\nImportant skills and keywords from the job d
         temperature: 0.55,
         messages: [
           { role: "system", content: system([HONESTY, profile,
-            `Write a tailored cover letter for a student. 250–350 words, 3–4 paragraphs, ${str(body.tone, 40) || "professional and warm"} tone. Open with a specific hook for this company and role (not "I am writing to apply"). Connect the student's real experience to the role's needs. Use ONLY the experience given in the profile or highlights; never invent experiences, metrics, or facts about the company beyond the job description. If the student's name is unknown, sign as [Your Name]. Output only the letter text, starting with "Dear Hiring Manager," (or the named contact if given), no commentary.`]) },
+            `Write a tailored cover letter for a student. 250–350 words, 3–4 paragraphs, ${str(body.tone, 40) || "professional and warm"} tone. Open with a specific hook for this company and role (not "I am writing to apply"). Connect the student's real experience to the role's needs. Use ONLY the experience given in the profile or highlights; never invent experiences, metrics, results, or facts about the company beyond the job description. Describe what the student did without adding outcomes they didn't state (no "significantly reduced", "increased productivity", etc. unless they said so). Skip generic flattery about the company. If the student's name is unknown, sign as [Your Name]. Output only the letter text, starting with "Dear Hiring Manager," (or the named contact if given), no commentary.`]) },
           { role: "user", content: `Role: ${role}\nCompany: ${company}\n${str(body.contact, 80) ? `Addressed to: ${str(body.contact, 80)}\n` : ""}Job description:\n${str(body.jobDescription) || "(not provided)"}\n\nWhat I want to highlight:\n${str(body.highlights) || "(use my profile)"}` },
         ],
       };
@@ -318,7 +319,7 @@ ${job ? "### Keywords from the job\nImportant skills and keywords from the job d
         temperature: 0.7,
         messages: [
           { role: "system", content: system([profile,
-            `Generate 5 realistic ${type} interview questions for a student interviewing for ${role}. Mix difficulty. For technical questions, match what's commonly asked for that role at the entry level. Output exactly 5 lines, one question per line, no numbering, no extra text.`]) },
+            `Generate 5 realistic ${type} interview questions for a university student interviewing for ${role}. Match what interviewers actually ask students for internships and entry-level roles, from easier to harder. For software roles that means coding and data-structures questions, explaining your own projects, and basic concepts, not senior system design (distributed systems, scaling architecture). For other fields, use the standard entry-level questions for that field. Output exactly 5 lines, one question per line, no numbering, no extra text.`]) },
           { role: "user", content: `Give me 5 ${type} questions for ${role}.` },
         ],
       };

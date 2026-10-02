@@ -71,6 +71,12 @@
     return new Date(iso).toLocaleDateString();
   }
 
+  const SYNONYMS = {
+    engineer: ["engineer", "developer", "programmer"], engineering: ["engineer", "developer"], developer: ["developer", "engineer"],
+    swe: ["software engineer", "software developer", "software"], intern: ["intern", "co-op", "coop"], internship: ["intern", "co-op", "coop"],
+    ml: ["ml", "machine learning", "ai"], ai: ["ai", "machine learning", "ml"], remote: ["remote"],
+  };
+
   function words(s) {
     return ((s || "").toLowerCase().match(/[a-z][a-z+#]{2,}/g) || []).filter((w) => !STOP.has(w));
   }
@@ -87,8 +93,12 @@
     if (hits.size) { score += Math.min(hits.size, 2) * 2; reasons.push("matches your interests"); }
     const locs = (p.locations || "").toLowerCase().split(/[,;/]| or /).map((s) => s.trim()).filter((s) => s.length > 1);
     if (locs.some((l) => job.location.toLowerCase().includes(l))) { score += 2; reasons.push("in a place you picked"); }
+    // Class year: internships for underclassmen and juniors, new-grad roles for seniors and grads.
     const late = /4th|senior|recent|graduate student/i.test(p.year || "");
-    if (p.year && (late ? job.type === "New Grad" : job.type === "Internship")) { score += 1; }
+    if (p.year) {
+      if (late ? job.type === "New Grad" : job.type === "Internship") score += 1;
+      else if (!late && job.type === "New Grad") score -= 4;
+    }
     return { score, reasons };
   }
 
@@ -103,7 +113,9 @@
       if (ind && j.category !== ind) return false;
       if (loc && !j.location.toLowerCase().includes(loc)) return false;
       if (!q) return true;
-      return [j.title, j.company, j.location, j.category].some((f) => (f || "").toLowerCase().includes(q));
+      // Every word must match somewhere; common synonyms count ("engineer" finds "developer").
+      const hay = [j.title, j.company, j.location, CATEGORY_LABELS[j.category] || j.category].join(" ").toLowerCase();
+      return q.split(/\s+/).filter(Boolean).every((w) => (SYNONYMS[w] || [w]).some((x) => hay.includes(x)));
     }).map((j) => ({ ...j, match: matchInfo(j, p) }));
 
     if (sortSel.value === "match") list.sort((a, b) => b.match.score - a.match.score || new Date(b.posted) - new Date(a.posted));
@@ -134,7 +146,9 @@
     emptyEl.hidden = list.length !== 0;
     emptyEl.textContent = activeType === "saved"
       ? "No saved jobs yet. Tap the star on any listing to save it here."
-      : "No open roles match those filters right now. Try widening your search.";
+      : loc || /new orleans|nola|louisiana/.test(q)
+        ? "No roles in that location in today's listings. Most roles here are in tech hubs or remote. Try \"Remote\", or check Handshake for local openings."
+        : "No open roles match those filters right now. Try widening your search.";
   }
 
   typeFilter.addEventListener("click", (e) => {

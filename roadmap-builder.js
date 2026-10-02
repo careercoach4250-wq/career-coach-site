@@ -181,15 +181,19 @@
     if (form.reportValidity()) build();
   });
 
-  document.getElementById("rm-example").addEventListener("click", () => {
-    form.elements.year.value = "2nd year (sophomore)";
-    form.elements.major.value = "Finance";
-    form.elements.roles.value = "Investment banking analyst";
-    form.elements.industry.value = "Finance & banking";
+  function fillExample(v) {
+    Object.entries(v).forEach(([k, val]) => { if (form.elements[k]) form.elements[k].value = val; });
     form.elements.school.value = form.elements.school.value || "Tulane University";
     form.scrollIntoView({ behavior: "smooth", block: "start" });
     form.querySelector("button[type=submit]").focus({ preventScroll: true });
-  });
+  }
+  document.getElementById("rm-example").addEventListener("click", () => fillExample({
+    year: "2nd year (sophomore)", major: "Finance", roles: "Investment banking analyst", industry: "Finance & banking",
+  }));
+  document.getElementById("rm-example-explore").addEventListener("click", () => fillExample({
+    year: "1st year (freshman)", major: "Undecided", roles: "Not sure yet, maybe public health or policy",
+    industry: "Not sure yet", interests: "public health, policy, helping communities",
+  }));
 
   const existing = saved();
   if (existing && existing.roadmap && existing.roadmap.milestones) {
