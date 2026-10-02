@@ -153,8 +153,12 @@
           const data = l.slice(5).trim();
           if (!data || data === "[DONE]") continue;
           try {
-            const piece = JSON.parse(data).response;
-            if (typeof piece === "string" && piece) { text += piece; opts.onToken(text); }
+            // Workers AI sends a digit-only token as a JSON number ("response": 1),
+            // and newer models also send OpenAI-style choices[0].delta.content.
+            const d = JSON.parse(data);
+            let piece = d.response;
+            if (piece == null && d.choices && d.choices[0] && d.choices[0].delta) piece = d.choices[0].delta.content;
+            if (piece != null && piece !== "") { text += String(piece); opts.onToken(text); }
           } catch { /* partial or non-JSON line */ }
         }
       }

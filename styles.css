@@ -618,7 +618,8 @@ footer.site a:hover { color: #fff; }
 .roadmap-snapshot .side.target .roadmap-chip { background: rgba(255,255,255,0.16); color: #fff; }
 @media (max-width: 760px) {
   .roadmap-snapshot { grid-template-columns: 1fr; }
-  .roadmap-snapshot .arrow { padding: 10px 0; transform: rotate(90deg); }
+  .roadmap-snapshot .arrow { padding: 6px 0; font-size: 0; }
+  .roadmap-snapshot .arrow::after { content: "\2193"; font-size: 1.4rem; }
 }
 
 .roadmap-timeline { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }

@@ -500,13 +500,18 @@
       if (b) show(b.dataset.id, true);
     });
 
-    // Start on the template that matches the student's target, if any.
-    const p = window.CC ? window.CC.profile.get() : {};
-    const hint = `${p.roles || ""} ${p.industry || ""} ${p.major || ""}`;
-    const guess = /venture|private equity/i.test(hint) ? "vcpe" : /account|audit|tax/i.test(hint) ? "accounting"
-      : /consult/i.test(hint) ? "consulting" : /marketing|media|brand/i.test(hint) ? "marketing"
-      : /software|tech|computer|data|engineer/i.test(hint) ? "tech" : "finance";
-    show(guess, false);
+    // Start on the template that matches the student's target, if any, and
+    // follow profile changes until the student picks a template themselves.
+    let picked = false;
+    picker.addEventListener("click", () => { picked = true; });
+    function guess(p) {
+      const hint = `${p.roles || ""} ${p.industry || ""} ${p.major || ""}`;
+      return /venture|private equity/i.test(hint) ? "vcpe" : /account|audit|tax/i.test(hint) ? "accounting"
+        : /consult/i.test(hint) ? "consulting" : /marketing|media|brand/i.test(hint) ? "marketing"
+        : /software|tech|computer|data|engineer/i.test(hint) ? "tech" : "finance";
+    }
+    show(guess(window.CC ? window.CC.profile.get() : {}), false);
+    if (window.CC) window.CC.profile.onChange((p) => { if (!picked) show(guess(p), false); });
   }
 
   window.CCTemplates = { TEMPLATES, docx };
