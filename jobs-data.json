@@ -1,7 +1,17 @@
 {
-  "updatedAt": "2026-10-10T17:40:56.554Z",
+  "updatedAt": "2026-10-11T17:55:43.481Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
+    {
+      "id": "cc5558b2-1bda-49b9-a95f-0a93489f72e2",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Johns Hopkins Applied Physics Laboratory",
+      "title": "Data Science & Autonomous Systems Intern - Data Science & Autonomous Systems - Critical Infrastructure Protection",
+      "location": "Laurel, MD",
+      "url": "https://careers.jhuapl.edu/jobs/60432?icims=1",
+      "posted": "2026-10-10T22:07:37.000Z"
+    },
     {
       "id": "96b88f42-fdea-4557-a58f-4847e5ce71d3",
       "type": "New Grad",
@@ -463,16 +473,6 @@
       "posted": "2026-10-09T14:20:15.000Z"
     },
     {
-      "id": "56bc590e-3ded-4a5e-a2a2-b872fdfaf778",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Ford Motor Company",
-      "title": "Accounting Technology Analyst",
-      "location": "Dearborn, MI",
-      "url": "https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/72451",
-      "posted": "2026-10-09T14:10:32.000Z"
-    },
-    {
       "id": "229a4d5b-5264-4536-9536-3b0b0059c653",
       "type": "Internship",
       "category": "Product",
@@ -491,16 +491,6 @@
       "location": "Chicago, IL; St. Louis, MO; Trenton, NJ",
       "url": "https://uscareers2-asm.icims.com/jobs/441209/job?mobile=true&needsRedirect=false",
       "posted": "2026-10-09T14:08:45.000Z"
-    },
-    {
-      "id": "d6e1c8d2-0097-46cd-b28e-71210e3b79c8",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "Standard Aero",
-      "title": "IT Analyst Intern",
-      "location": "Cincinnati, OH",
-      "url": "https://cva.fa.us1.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3/job/10479",
-      "posted": "2026-10-09T09:14:42.000Z"
     },
     {
       "id": "120709b5-ed04-4080-906e-7c8a7adfb299",
@@ -763,6 +753,16 @@
       "posted": "2026-10-09T00:00:00.000Z"
     },
     {
+      "id": "4bcb1987-5e3a-4180-a0c2-7a9a7bf3ad04",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "RTX",
+      "title": "Software Engineer 1",
+      "location": "Richardson, TX",
+      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-TX-RICHARDSON-C17--1717-Cityline-Dr--CITYLINE-C17/Software-Engineer-I--Onsite-_01875410",
+      "posted": "2026-10-09T00:00:00.000Z"
+    },
+    {
       "id": "b0755243-0db2-4f3a-99fa-5d6544dc202b",
       "type": "New Grad",
       "category": "Hardware",
@@ -803,14 +803,14 @@
       "posted": "2026-10-08T22:11:59.000Z"
     },
     {
-      "id": "5252b216-a102-40ce-a6ef-25c6b2992040",
+      "id": "93c487ce-79a1-4da5-86f6-3cfebea198ed",
       "type": "Internship",
       "category": "Hardware",
-      "company": "Renesas Electronics",
-      "title": "Memory Server System Testing Intern",
-      "location": "San Jose, CA",
-      "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000154490303",
-      "posted": "2026-10-08T22:06:52.000Z"
+      "company": "MSA Safety",
+      "title": "Electrical Engineering Co-op",
+      "location": "Cranberry Township, PA",
+      "url": "https://careers.msasafety.com/jobs/10163?icims=1",
+      "posted": "2026-10-08T14:10:43.000Z"
     },
     {
       "id": "2355c32e-a301-4b8a-bf6b-352e71daf514",
