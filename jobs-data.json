@@ -1,7 +1,117 @@
 {
-  "updatedAt": "2026-10-11T17:55:43.481Z",
+  "updatedAt": "2026-10-12T21:37:44.489Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
+    {
+      "id": "1935c5df-770d-45f2-bbde-4d4a462ad5cb",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Wolverine Trading",
+      "title": "Early Career C++ Software Engineer",
+      "location": "Chicago, IL",
+      "url": "https://wolve.pinpointhq.com/en/postings/4b0e86a1-db36-4490-9a98-17782ffcc648?ats=pinpointhq",
+      "posted": "2026-10-12T14:19:16.000Z"
+    },
+    {
+      "id": "68895e12-9a1f-4ca5-8dfb-b050f2ea8a43",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Google",
+      "title": "Forward Deployed Engineer Intern",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/75665705386549958",
+      "posted": "2026-10-12T14:18:41.000Z"
+    },
+    {
+      "id": "e25d2576-d751-4033-9fa1-ed32e9bec327",
+      "type": "New Grad",
+      "category": "Hardware",
+      "company": "Apple",
+      "title": "ASIC Design Engineer - Fabric/Interconnect",
+      "location": "Austin, TX; Santa Clara, CA",
+      "url": "https://jobs.apple.com/en-us/details/200688304",
+      "posted": "2026-10-12T14:11:16.000Z"
+    },
+    {
+      "id": "df030492-3a72-4388-a440-77952fc6c3d3",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Crown Innovations",
+      "title": "Systems Engineer 1",
+      "location": "Mountain View, CA",
+      "url": "https://jobs.smartrecruiters.com/TBD20261012CrownInnovationsInc/744000144160949",
+      "posted": "2026-10-12T10:18:33.000Z"
+    },
+    {
+      "id": "2deb4c4d-48a6-4b30-8445-41e253c752f2",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "Crown Innovations",
+      "title": "R&D Engineer 1",
+      "location": "Mountain View, CA",
+      "url": "https://jobs.smartrecruiters.com/TBD20261012CrownInnovationsInc/744000144158449",
+      "posted": "2026-10-12T09:46:42.000Z"
+    },
+    {
+      "id": "df3768d8-aca4-41b1-bdc0-2874bc2151d2",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Crown Innovations",
+      "title": "Intern",
+      "location": "Mountain View, CA",
+      "url": "https://jobs.smartrecruiters.com/TBD20261012CrownInnovationsInc/744000144112445",
+      "posted": "2026-10-12T09:42:23.000Z"
+    },
+    {
+      "id": "425cf488-0ee5-4bff-a865-9b760232a73e",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "Pearson",
+      "title": "Data Analyst - Measurement",
+      "location": "Remote in USA",
+      "url": "https://hccz.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/26228",
+      "posted": "2026-10-12T01:10:33.000Z"
+    },
+    {
+      "id": "89b2788a-307f-4b1d-b6cc-95f5495d7a89",
+      "type": "Internship",
+      "category": "Software",
+      "company": "RTX",
+      "title": "Software Engineer Intern",
+      "location": "Tucson, AZ",
+      "url": "https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-AZ-TUCSON-805--1151-E-Hermans-Rd--BLDG-805/Software-Engineer-Intern_01874282-1",
+      "posted": "2026-10-12T00:00:00.000Z"
+    },
+    {
+      "id": "2081ec0c-9ef0-4e78-8859-84739cedab0c",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Aderant",
+      "title": "Associate Software Engineer",
+      "location": "Atlanta, GA",
+      "url": "https://aderant.wd5.myworkdayjobs.com/Aderant_External_Careers/job/Atlanta-Georgia/Associate-Software-Engineer_REQ_100000484",
+      "posted": "2026-10-12T00:00:00.000Z"
+    },
+    {
+      "id": "bb47dc93-f16f-46a0-b000-c7c3f10499df",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "C&S Wholesale Grocers",
+      "title": "IS Intern - Data Analytics & Data Science",
+      "location": "Edison, NJ",
+      "url": "https://cswg.wd1.myworkdayjobs.com/cs_careers/job/Edison-NJ/IS-Internship---Data-Analytics---Data-Science_R-268963",
+      "posted": "2026-10-11T00:00:00.000Z"
+    },
+    {
+      "id": "8944e3f6-18d2-4e20-b86a-23223ceba88f",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "NVIDIA",
+      "title": "Software Engineer New Grad - DL Kernel Libraries",
+      "location": "Santa Clara, CA",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--DL-Kernel-Libraries---New-College-Grad-2027_JR2027337",
+      "posted": "2026-10-11T00:00:00.000Z"
+    },
     {
       "id": "cc5558b2-1bda-49b9-a95f-0a93489f72e2",
       "type": "Internship",
@@ -413,16 +523,6 @@
       "posted": "2026-10-09T14:27:56.000Z"
     },
     {
-      "id": "18bad5bf-089e-4921-991f-09e20254da1d",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "John Deere",
-      "title": "Product Engineering Student Intern - Robotics",
-      "location": "Champaign, IL",
-      "url": "https://johndeere.eightfold.ai/careers/job/137483758357",
-      "posted": "2026-10-09T14:25:57.000Z"
-    },
-    {
       "id": "6e0b1f7b-ab3e-439e-ae35-827c4fa4d1ae",
       "type": "Internship",
       "category": "Quant",
@@ -483,16 +583,6 @@
       "posted": "2026-10-09T14:09:22.000Z"
     },
     {
-      "id": "b3a4254f-7841-468a-afc5-650b7ea761c6",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Advantage Solutions",
-      "title": "Category Insights Analyst",
-      "location": "Chicago, IL; St. Louis, MO; Trenton, NJ",
-      "url": "https://uscareers2-asm.icims.com/jobs/441209/job?mobile=true&needsRedirect=false",
-      "posted": "2026-10-09T14:08:45.000Z"
-    },
-    {
       "id": "120709b5-ed04-4080-906e-7c8a7adfb299",
       "type": "New Grad",
       "category": "Hardware",
@@ -521,16 +611,6 @@
       "location": "Cary, NC",
       "url": "https://apply.workable.com/cwill-us/j/DD1A0BECB1/apply",
       "posted": "2026-10-09T01:18:39.000Z"
-    },
-    {
-      "id": "b6cfb1a4-f1f9-4894-a725-982afa329551",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Forge Nano",
-      "title": "Software Engineer 1",
-      "location": "Thornton, CO",
-      "url": "https://forge-nano.breezy.hr/p/66630c61f7e4/apply",
-      "posted": "2026-10-09T01:10:12.000Z"
     },
     {
       "id": "c6d9ec64-c0ff-463b-bd9c-4a87bc738068",
@@ -563,36 +643,6 @@
       "posted": "2026-10-09T00:00:00.000Z"
     },
     {
-      "id": "e8314098-af0f-4c4a-988b-ea69c0698a13",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Aptiv",
-      "title": "Software Engineer Intern",
-      "location": "Walnut Creek, CA",
-      "url": "https://aptiv.wd5.myworkdayjobs.com/aptiv_careers/job/USA-Walnut-Creek-CA---WR/Engineering-Intern_J000704388",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
-      "id": "d264e688-c953-468e-a492-487e9683cb63",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Aptiv",
-      "title": "Software Engineer Intern",
-      "location": "Walnut Creek, CA",
-      "url": "https://aptiv.wd5.myworkdayjobs.com/aptiv_careers/job/USA-Walnut-Creek-CA---WR/Engineering-Intern_J000704387",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
-      "id": "08534f02-cdda-4163-8227-8adc00591296",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Radiance Technologies",
-      "title": "Modeling & Simulation Engineer Intern",
-      "location": "Huntsville, AL",
-      "url": "https://radiancetech.wd12.myworkdayjobs.com/Radiance_External/job/Huntsville-AL/Modeling---Simulation-Engineer-Intern_HR102472",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
       "id": "4e69af63-87c5-4fd4-87cc-63e4dcf7613a",
       "type": "Internship",
       "category": "Hardware",
@@ -600,16 +650,6 @@
       "title": "Electrical Engineer Intern - Controls/PCB",
       "location": "Gloucester, MA",
       "url": "https://amat.wd1.myworkdayjobs.com/External/job/GloucesterMA/XMLNAME-2027-Summer-Electrical-Engineer--Intern--Controls-PCB----BS-or-MS--Gloucester--MA-_R2630658",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
-      "id": "8fc02634-7bf1-4c6c-9d32-78f048f7e7e6",
-      "type": "Internship",
-      "category": "Hardware",
-      "company": "Johnson Controls",
-      "title": "Software Engineer Co-op",
-      "location": "Burlington, MA",
-      "url": "https://jci.wd5.myworkdayjobs.com/JCI/job/Burlington-Massachusetts-United-States-of-America/Software-Engineering-Co-Op_EB00075408",
       "posted": "2026-10-09T00:00:00.000Z"
     },
     {
@@ -713,16 +753,6 @@
       "posted": "2026-10-09T00:00:00.000Z"
     },
     {
-      "id": "64798a92-22e3-405a-93b7-ccded7db1b4e",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "RTX",
-      "title": "Web/Full Stack Software Engineer 1",
-      "location": "Fullerton, CA",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-FULLERTON-611--1801-Hughes-Dr--BLDG-611/Web-Full-Stack-Software-Engineer-I--Onsite-_01881496",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
       "id": "ae0d8aa9-2650-452d-bfdf-e0a189e5f896",
       "type": "New Grad",
       "category": "Hardware",
@@ -743,26 +773,6 @@
       "posted": "2026-10-09T00:00:00.000Z"
     },
     {
-      "id": "abf307ea-f290-4086-8c5b-8986750b9083",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "RTX",
-      "title": "Full Stack Software Engineer 1",
-      "location": "San Diego, CA",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-SAN-DIEGO-SD1--8650-Balboa-Ave--SAN-ANTONIO-BLDG/Full-Stack-Software-Engineer-I--Onsite-_01881492",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
-      "id": "4bcb1987-5e3a-4180-a0c2-7a9a7bf3ad04",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "RTX",
-      "title": "Software Engineer 1",
-      "location": "Richardson, TX",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-TX-RICHARDSON-C17--1717-Cityline-Dr--CITYLINE-C17/Software-Engineer-I--Onsite-_01875410",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
       "id": "b0755243-0db2-4f3a-99fa-5d6544dc202b",
       "type": "New Grad",
       "category": "Hardware",
@@ -770,26 +780,6 @@
       "title": "Principal Engineer - Device Engineering",
       "location": "Malta, NY",
       "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Principal-Engineer--Device-Engineering--2027-New-College-Graduate-_JR-2604445",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
-      "id": "bd560af3-c9e1-48d9-bd21-769ee1f62e1b",
-      "type": "New Grad",
-      "category": "Hardware",
-      "company": "Applied Materials",
-      "title": "Systems Engineer",
-      "location": "Santa Clara, CA",
-      "url": "https://amat.wd1.myworkdayjobs.com/External/job/Santa-ClaraCA/Systems-Engineer--New-College-Grad--Bachelor-s-Master-s--Santa-Clara--CA-_R2629143",
-      "posted": "2026-10-09T00:00:00.000Z"
-    },
-    {
-      "id": "aeb06042-6bcd-47ee-9360-e5dd6d09ab85",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Fannie Mae",
-      "title": "Business Intelligence & AI Solutions Analyst - Single Family",
-      "location": "Plano, TX",
-      "url": "https://fanniemae.wd1.myworkdayjobs.com/FannieMaeCareers/job/Plano-TX/Business-Intelligence---AI-Solutions-Analyst--Single-Family_JR2908",
       "posted": "2026-10-09T00:00:00.000Z"
     },
     {
@@ -810,6 +800,16 @@
       "title": "Electrical Engineering Co-op",
       "location": "Cranberry Township, PA",
       "url": "https://careers.msasafety.com/jobs/10163?icims=1",
+      "posted": "2026-10-08T14:10:43.000Z"
+    },
+    {
+      "id": "7e68ac6d-e42d-4ba4-9cdf-eb5b44a8c6e4",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "MSA Safety",
+      "title": "Electrical Engineering Technology Co-op",
+      "location": "Cranberry Township, PA",
+      "url": "https://careers.msasafety.com/jobs/10162?icims=1",
       "posted": "2026-10-08T14:10:43.000Z"
     },
     {
