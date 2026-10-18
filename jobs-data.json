@@ -1,7 +1,27 @@
 {
-  "updatedAt": "2026-10-17T16:10:27.660Z",
+  "updatedAt": "2026-10-18T16:24:27.318Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
+    {
+      "id": "2d44df47-4fb1-4120-a4ac-7fbcc5f6c103",
+      "type": "Internship",
+      "category": "Hardware",
+      "company": "Tesla",
+      "title": "Firmware Intern - SoC Firmware Engineer - SI Hardware Infrastructure",
+      "location": "Austin, TX",
+      "url": "https://www.tesla.com/careers/search/job/287024",
+      "posted": "2026-10-18T09:37:26.000Z"
+    },
+    {
+      "id": "931408fb-5cb7-4179-8c33-35a242bbc266",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Tesla",
+      "title": "Advanced Automation Engineer Intern - Cell Engineering - Winter/Spring 2027",
+      "location": "Fremont, CA",
+      "url": "https://www.tesla.com/careers/search/job/286986",
+      "posted": "2026-10-18T09:37:21.000Z"
+    },
     {
       "id": "73b77dc7-3276-4d7b-87c8-394b4520f7ac",
       "type": "Internship",
@@ -61,6 +81,26 @@
       "location": "Boston, MA",
       "url": "https://job-boards.greenhouse.io/queracomputinginc/jobs/5455950008",
       "posted": "2026-10-17T01:04:30.000Z"
+    },
+    {
+      "id": "c02d9734-d615-4259-8106-5100b09f6352",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "HCSC",
+      "title": "Finance Data & Analytics Developer Intern",
+      "location": "Chicago, IL; Richardson, TX",
+      "url": "https://hcsc.wd1.myworkdayjobs.com/en-US/HCSC_External/job/IL---Chicago/Early-Careers---Finance-Data---Analytics-Developer-Intern_R0059478",
+      "posted": "2026-10-17T00:00:00.000Z"
+    },
+    {
+      "id": "19c1720c-cfad-48e9-a226-cf3675ab78d2",
+      "type": "Internship",
+      "category": "Software",
+      "company": "HCSC",
+      "title": "Finance Application Developer Intern",
+      "location": "Chicago, IL; Richardson, TX",
+      "url": "https://hcsc.wd1.myworkdayjobs.com/en-US/HCSC_External/job/IL---Chicago/Early-Careers---Finance-Application-Developer-Intern_R0059477",
+      "posted": "2026-10-17T00:00:00.000Z"
     },
     {
       "id": "cb0ce8da-b4a3-49f2-b6b3-ae0734bd4bc1",
@@ -293,16 +333,6 @@
       "posted": "2026-10-16T14:06:10.000Z"
     },
     {
-      "id": "c6cf89af-fd3e-48e3-b886-b14efade21e6",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "TikTok",
-      "title": "Software Engineer Intern - Recommendation Performance Efficiency",
-      "location": "San Jose, CA",
-      "url": "https://lifeattiktok.com/search/7673636206961641781",
-      "posted": "2026-10-16T01:40:30.000Z"
-    },
-    {
       "id": "24187aee-3574-4cb9-8ac2-4a5b4d2b12d5",
       "type": "New Grad",
       "category": "Hardware",
@@ -321,16 +351,6 @@
       "location": "Santa Rosa, CA",
       "url": "https://jobs.keysight.com/jobs/54673?icims=1",
       "posted": "2026-10-16T01:37:02.000Z"
-    },
-    {
-      "id": "6dee80eb-5b2d-4684-8dd3-8c5324036443",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "Apple",
-      "title": "SoC Machine Learning Software Engineer Intern",
-      "location": "Sunnyvale, CA",
-      "url": "https://jobs.apple.com/en-us/details/200689488",
-      "posted": "2026-10-16T01:33:09.000Z"
     },
     {
       "id": "556c54ce-3ed2-4037-9012-4012781317b8",
@@ -413,16 +433,6 @@
       "posted": "2026-10-16T00:00:00.000Z"
     },
     {
-      "id": "ad688060-449b-42fb-a1ac-ec256ea770c5",
-      "type": "Internship",
-      "category": "Hardware",
-      "company": "Rockwell Automation",
-      "title": "Firmware Engineer Intern",
-      "location": "Milwaukee, WI",
-      "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External-Rockwell-Automation-Early-Careers/job/Milwaukee-Wisconsin-United-States/Intern--Firmware-Engineering_R26-7922",
-      "posted": "2026-10-16T00:00:00.000Z"
-    },
-    {
       "id": "a34ec36a-bccc-4e43-93a8-36560196de44",
       "type": "Internship",
       "category": "Software",
@@ -470,16 +480,6 @@
       "title": "Software Engineering Intern",
       "location": "Colorado Springs, CO",
       "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Colorado-Colorado-Springs/XMLNAME-2027-Software-Engineering-Intern---Colorado-Springs_R10256080",
-      "posted": "2026-10-16T00:00:00.000Z"
-    },
-    {
-      "id": "1461f1f6-683f-4743-a11d-5779aebc0f59",
-      "type": "Internship",
-      "category": "Software",
-      "company": "Northrop Grumman",
-      "title": "Software Engineer Intern",
-      "location": "Colorado Springs, CO",
-      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Colorado-Colorado-Springs/XMLNAME-2027-Software-Engineering-Intern---Colorado-Springs_R10256259",
       "posted": "2026-10-16T00:00:00.000Z"
     },
     {
