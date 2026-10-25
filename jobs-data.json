@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T16:27:53.953Z",
+  "updatedAt": "2026-10-25T16:58:58.569Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
     {
@@ -11,6 +11,16 @@
       "location": "Santa Clara, CA",
       "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/348719",
       "posted": "2026-10-24T01:05:52.000Z"
+    },
+    {
+      "id": "308eb188-a697-4f09-9bc6-6defbdb3fa1d",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "University of Arkansas",
+      "title": "Research Analyst",
+      "location": "Morrilton, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/uasys/job/Morrilton/Research-Analyst_R0093136",
+      "posted": "2026-10-24T00:00:00.000Z"
     },
     {
       "id": "df391947-512e-44dc-b105-8741b4bb9dce",
@@ -723,16 +733,6 @@
       "posted": "2026-10-23T00:00:00.000Z"
     },
     {
-      "id": "110cc6b8-f9bf-4999-b76e-978ccc2363b9",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "TruStage",
-      "title": "Annuity Product Analyst",
-      "location": "Madison, WI",
-      "url": "https://trustage.wd1.myworkdayjobs.com/TruStage/job/Madison-WI/Annuity-Product-Analyst_R-012250-1",
-      "posted": "2026-10-23T00:00:00.000Z"
-    },
-    {
       "id": "2dc5b887-d71f-4190-9333-2441f642efce",
       "type": "New Grad",
       "category": "Hardware",
@@ -1063,16 +1063,6 @@
       "posted": "2026-10-01T22:12:17.000Z"
     },
     {
-      "id": "9ef396c2-66dc-41d7-a13d-baba313ff8be",
-      "type": "New Grad",
-      "category": "Quant",
-      "company": "AMERICAN SYSTEMS",
-      "title": "Junior Operations Research Analyst",
-      "location": "Arlington County, Arlington, VA",
-      "url": "https://careers-americansystems.icims.com/jobs/5007/job?mobile=true&needsRedirect=false",
-      "posted": "2026-09-30T22:12:35.000Z"
-    },
-    {
       "id": "35bc5d9a-2ee8-403f-b5b0-872bdee6bb26",
       "type": "New Grad",
       "category": "Quant",
@@ -1201,6 +1191,16 @@
       "location": "San Mateo, CA; Boulder, CO",
       "url": "https://jobs.lever.co/jupiterintel/a5004b2b-3724-417d-bdca-eaba0d760e93/apply",
       "posted": "2026-09-01T18:10:13.000Z"
+    },
+    {
+      "id": "53db2796-761a-4830-8270-258f99483546",
+      "type": "New Grad",
+      "category": "Quant",
+      "company": "GMO",
+      "title": "Quantitative Technology Associate - Class of 2027",
+      "location": "Boston, MA",
+      "url": "https://jobs.lever.co/gmo/df44f4c5-cb3f-4960-a984-5b26acc72962/apply",
+      "posted": "2026-08-31T19:02:17.000Z"
     }
   ]
 }
