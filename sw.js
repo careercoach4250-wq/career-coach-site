@@ -4,14 +4,14 @@
    /api/ calls (AI coach, forms) and cross-origin requests like
    Cal.com and Google Fonts are never intercepted. Bump VERSION on changes to
    the precache list. */
-const VERSION = "cc-v2";
+const VERSION = "cc-v2-track";
 const PAGES = [
   "index", "about", "job-finding", "coaching-roadmaps", "ai-coach",
   "get-started", "privacy", "terms", "offline"
 ];
 const ASSETS = [
   "/styles.css", "/cc-core.js", "/chat-widget.js", "/pwa.js", "/ai-coach.js", "/job-finding.js", "/roadmap-builder.js",
-  "/get-started.js", "/jobs.js", "/resume-review.js",
+  "/get-started.js", "/jobs.js", "/track.js", "/resume-review.js",
   "/jobs-data.json", "/manifest.webmanifest",
   "/icons/icon-192.png", "/icons/icon-512.png", "/icons/apple-touch-icon.png"
 ];
