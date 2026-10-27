@@ -66,24 +66,24 @@
 <main>
   <h1>Career Coach KPIs</h1>
   <p class="sub" id="updated">Loading…</p>
-  <div class="draft" id="draft" hidden></div>
   <section class="note" id="note" aria-label="Note on this update"></section>
 
   <h2>KPIs, in the order of the student's path</h2>
+  <p class="sub">Awareness (reach on Instagram and TikTok) is read from each platform's Insights every day, but it isn't a KPI: it doesn't decide anything that site visits by source can't. Our KPIs start at interest.</p>
   <div class="cards" id="cards"></div>
 
   <h2>Funnel by source</h2>
   <p class="sub" id="funnel-sub"></p>
   <div class="tablewrap">
     <table class="funnel">
-      <thead><tr><th>Source (first link tag)</th><th>Visitors</th><th>Signed up</th><th>Active this week</th><th>Active 4 weeks after sign-up</th></tr></thead>
+      <thead><tr><th scope="col">Source (first link tag)</th><th>Visitors</th><th>Signed up</th><th>Active this week</th><th>Active 4 weeks after sign-up</th></tr></thead>
       <tbody id="funnel"></tbody>
     </table>
   </div>
 
   <footer>
-    <p><b>On track</b> means: for a rate (activation, retention, actions per user), the latest value is at or above the target. For a count (visits, sign-ups, active users), the latest value is at or above a straight-line path from zero on the pace start date to the target on the target date.</p>
-    <p>Counts only. This page never shows a person's name or email. Numbers come from <code>kpi-data.json</code>; each value names the file or query it came from. Plan: <code>ceo/analytics/KPI-PLAN.md</code>. Queries: <code>ceo/analytics/QUERIES.md</code>.</p>
+    <p><b>On track</b> means: for a rate (a % or a per-user number), the latest value is at or above the target. For a count (visits, sign-ups, active users), the latest value is at or above a straight-line path from zero on Oct 26, 2026 to the target on the target date.</p>
+    <p>Counts only. This page never shows a person's name or email. KPI numbers come from <code>kpi-data.json</code> (the course format, read by the course website) and the funnel from <code>funnel.json</code>; each card names its query, and each day's value comes from that day's file in <code>ceo/analytics/data/</code>. Plan: <code>ceo/analytics/KPI-PLAN.md</code>. Queries: <code>ceo/analytics/QUERIES.md</code>.</p>
   </footer>
 </main>
 <script>
@@ -94,11 +94,14 @@
   const fmtDate = (d) => d ? day(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "—";
   const fmt = (v, unit) => v == null ? "—" : (unit === "%" ? (+v).toFixed(1) + "%" : (+v).toLocaleString("en-US", { maximumFractionDigits: 2 }));
 
-  function status(k, latest, paceStart) {
-    if (k.kind !== "kpi" || k.target == null) return { cls: "none", text: "Diagnostic, not a KPI" };
+  const PACE_START = "2026-10-26";
+  const isRate = (k) => k.unit === "%" || /per /.test(k.unit || "");
+  function status(k, latest) {
+    if (k.target == null) return { cls: "none", text: "No target" };
     if (!latest) return { cls: "none", text: "No data yet" };
     let need = k.target;
-    if (k.pace === "ramp") {
+    const paceStart = PACE_START;
+    if (!isRate(k)) {
       const total = (day(k.target_date) - day(paceStart)) / 864e5;
       const done = Math.min(total, Math.max(0, (day(latest.date) - day(paceStart)) / 864e5));
       need = total > 0 ? k.target * done / total : k.target;
@@ -127,57 +130,53 @@
       const r = svg.getBoundingClientRect();
       const fx = (e.clientX - r.left) / r.width * W;
       let i = 0; pts.forEach((_, j) => { if (Math.abs(x(j) - fx) < Math.abs(x(i) - fx)) i = j; });
-      tip.textContent = fmtDate(pts[i].date) + ": " + fmt(pts[i].value, k.unit) + (pts[i].estimate ? " (estimate)" : "");
+      tip.textContent = fmtDate(pts[i].date) + ": " + fmt(pts[i].value, k.unit);
       tip.style.left = (x(i) / W * r.width) + "px"; tip.style.top = (y(vals[i]) / H * r.height) + "px"; tip.style.display = "block";
     });
     svg.addEventListener("pointerleave", () => { tip.style.display = "none"; });
   }
 
   function render(d) {
-    $("updated").textContent = "Last updated " + fmtDate(d.updated) + (d.goal ? " · Goal: " + d.goal : "");
-    if (/draft/i.test(d.format || "")) { $("draft").hidden = false; $("draft").textContent = d.format; }
-    const n = d.note || {};
-    $("note").innerHTML = "<p><b>What moved:</b> " + esc(n.moved) + "</p><p><b>Why:</b> " + esc(n.why) + "</p><p><b>What we'll do:</b> " + esc(n.action) + "</p>";
-
-    const byKpi = {};
-    (d.entries || []).forEach((e) => { (byKpi[e.kpi] = byKpi[e.kpi] || []).push(e); });
-    Object.values(byKpi).forEach((a) => a.sort((p, q) => p.date.localeCompare(q.date)));
+    $("updated").textContent = "Last updated " + fmtDate(d.updated) + " · " + (d.team || "") + (d.section ? ", section " + d.section : "") + (d.goal ? " · Goal: " + d.goal : "");
+    $("note").innerHTML = "<p><b>This update:</b> " + esc(d.note) + "</p>";
 
     $("cards").innerHTML = "";
     d.kpis.forEach((k) => {
-      const pts = byKpi[k.id] || [];
+      const pts = (k.series || []).slice().sort((p, q) => p.date.localeCompare(q.date));
       const latest = pts[pts.length - 1], prev = pts[pts.length - 2];
-      const st = status(k, latest, d.pace_start);
+      const st = status(k, latest);
       const delta = latest && prev ? latest.value - prev.value : null;
       const card = document.createElement("article");
       card.className = "card";
       card.innerHTML =
         '<p class="stage">' + esc(k.stage) + '</p>' +
         '<div class="top"><h3>' + esc(k.name) + '</h3><span class="badge ' + st.cls + '">' + esc(st.text) + '</span></div>' +
-        '<div class="value' + (latest ? "" : " empty") + '">' + (latest ? esc(fmt(latest.value, k.unit)) + (latest.estimate ? ' <span class="meta">(estimate)</span>' : "") : "No data yet") + '</div>' +
-        '<div class="meta">' + (k.target != null ? "Target " + esc(fmt(k.target, k.unit)) + " by " + esc(fmtDate(k.target_date)) : "No target") + " · " + esc(k.window) + '</div>' +
+        '<div class="value' + (latest ? "" : " empty") + '">' + (latest ? esc(fmt(latest.value, k.unit)) : "No data yet") + '</div>' +
+        '<div class="meta">' + (k.target != null ? "Target " + esc(fmt(k.target, k.unit)) + " by " + esc(fmtDate(k.target_date)) : "No target") + (k.unit && k.unit !== "%" ? " · " + esc(k.unit) : "") + '</div>' +
         '<div class="delta">' + (delta == null ? "Change since last update: —" : "Change since " + esc(fmtDate(prev.date)) + ": " + (delta > 0 ? "+" : "") + esc(fmt(delta, k.unit === "%" ? "pts" : k.unit)) + (k.unit === "%" ? " pts" : "")) + '</div>' +
         '<div class="chart"></div>' +
-        '<p class="src">Source: ' + esc(latest ? latest.source : k.source) + '</p>' +
-        (pts.length ? '<details><summary>All values (' + pts.length + ')</summary><table><tr><th>Date</th><th>Value</th><th>Source</th></tr>' +
-          pts.slice().reverse().map((p) => '<tr><td>' + esc(p.date) + '</td><td>' + esc(fmt(p.value, k.unit)) + (p.estimate ? " (est.)" : "") + '</td><td>' + esc(p.source) + '</td></tr>').join("") + '</table></details>' : "") +
+        '<p class="src">Source: ' + esc(k.source) + (latest ? ". Latest value: data/" + esc(latest.date) + "-tracker-daily.csv" : "") + '</p>' +
+        (pts.length ? '<details><summary>All values (' + pts.length + ')</summary><table><tr><th>Date</th><th>Value</th><th>File</th></tr>' +
+          pts.slice().reverse().map((p) => '<tr><td>' + esc(p.date) + '</td><td>' + esc(fmt(p.value, k.unit)) + '</td><td>data/' + esc(p.date) + '-tracker-daily.csv</td></tr>').join("") + '</table></details>' : "") +
         '<p class="decision"><b>Decision it drives:</b> ' + esc(k.decision) + '</p>';
       $("cards").appendChild(card);
       chart(k, pts, card.querySelector(".chart"));
     });
 
-    const f = d.funnel || {};
-    $("funnel-sub").textContent = (f.date ? "As of " + fmtDate(f.date) + ". " : "") + "Source: " + (f.source || "—");
+  }
+
+  function renderFunnel(f) {
+    f = f || {};
+    $("funnel-sub").textContent = (f.updated ? "As of " + fmtDate(f.updated) + ". " : "") + "Source: " + (f.source || "—");
     const rows = f.rows || [];
     $("funnel").innerHTML = rows.length
-      ? rows.map((r) => '<tr><td>' + esc(r.source) + '</td><td>' + esc(fmt(r.visitors)) + '</td><td>' + esc(fmt(r.sign_ups)) + '</td><td>' + esc(fmt(r.active_this_week)) + '</td><td>' + (r.active_week_4 == null ? "too early" : esc(fmt(r.active_week_4))) + '</td></tr>').join("")
+      ? rows.map((r) => '<tr><td>' + esc(r.source) + '</td><td>' + esc(fmt(r.visitors)) + '</td><td>' + esc(fmt(r.signed_up)) + '</td><td>' + esc(fmt(r.active_this_week)) + '</td><td>' + (r.active_week_4 == null ? "too early" : esc(fmt(r.active_week_4))) + '</td></tr>').join("")
       : '<tr><td colspan="5" style="text-align:left;color:var(--muted)">No data yet. The funnel fills in once the tracker is live.</td></tr>';
   }
 
-  fetch("kpi-data.json", { cache: "no-store" })
-    .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    .then(render)
-    .catch((err) => { $("updated").textContent = "Couldn't load kpi-data.json (" + err.message + ")."; });
+  const load = (f) => fetch(f, { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(f + ": HTTP " + r.status); return r.json(); });
+  load("kpi-data.json").then(render).catch((err) => { $("updated").textContent = "Couldn't load kpi-data.json (" + err.message + ")."; });
+  load("funnel.json").then(renderFunnel).catch(() => renderFunnel(null));
 })();
 </script>
 </body>
