@@ -53,7 +53,7 @@
 
 <section>
   <div class="wrap legal">
-    <p class="note"><b>Draft:</b> this policy describes how the site works today. It hasn't been reviewed by a lawyer yet and will be finalized before Career Coach officially launches. Last updated September 24, 2026.</p>
+    <p class="note"><b>Draft:</b> this policy describes how the site works today. It hasn't been reviewed by a lawyer yet and will be finalized before Career Coach officially launches. Last updated October 22, 2026.</p>
 
     <h2>What stays in your browser</h2>
     <p>Your profile (year, major, goals, and so on), your AI Career Coach conversations, your saved roadmap and checklist progress, and your saved jobs are stored in your browser's local storage on your device. They are not sent to or stored on Career Coach's servers. Clearing your browser data deletes them, and they won't follow you to another device.</p>
@@ -63,6 +63,7 @@
       <li><b>Forms.</b> When you submit the request form or the contact form, what you enter (such as your name, email, and message) is emailed to the Career Coach team so a person can follow up. We use an email delivery service (Resend) to send it.</li>
       <li><b>AI tools.</b> When you use the AI Career Coach, AI resume feedback, the cover letter writer, case or interview practice, or the roadmap builder, the text you enter and your profile are sent to an AI model running on Cloudflare Workers AI to generate a response. Career Coach doesn't keep a copy of these conversations.</li>
       <li><b>Instant resume check.</b> The instant (non-AI) resume check runs entirely in your browser. Nothing is sent anywhere.</li>
+      <li><b>Usage.</b> We record how visitors use the site and app, to improve it. That means which pages are opened and which tools are used, with a random ID for your browser and the link that brought you here, kept in our own database. We never record what you type.</li>
     </ul>
 
     <h2>What we don't do</h2>
@@ -73,7 +74,7 @@
     </ul>
 
     <h2>Services we rely on</h2>
-    <p>The site is hosted on Cloudflare. Mock interview booking is provided by Cal.com, and fonts are loaded from Google Fonts. These providers process basic technical information (like your IP address) to deliver their services, under their own privacy policies.</p>
+    <p>The site is hosted on Cloudflare. Usage records are stored with Supabase. Mock interview booking is provided by Cal.com, and fonts are loaded from Google Fonts. These providers process basic technical information (like your IP address) to deliver their services, under their own privacy policies.</p>
 
     <h2>Your choices</h2>
     <p>You can clear your profile at any time from the profile window, and delete conversations from your AI Career Coach history. To ask us to delete anything you've sent through a form, <a href="get-started.html#contact">contact us</a>.</p>
@@ -150,6 +151,7 @@
 
 <script src="cc-core.js"></script>
 <script src="pwa.js"></script>
+<script src="track.js"></script>
 <script src="chat-widget.js"></script>
 </body>
 </html>

@@ -1,0 +1,3 @@
+# Keep the team KPI dashboard and its data out of search engines.
+/kpi/*
+  X-Robots-Tag: noindex, nofollow

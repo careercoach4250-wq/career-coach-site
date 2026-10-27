@@ -1,0 +1,80 @@
+{
+  "venture": "Career Coach",
+  "team": "Presley / Tawakol / Carr",
+  "section": "03",
+  "updated": "2026-10-26",
+  "goal": "By the end of the fall 2026 semester, get Tulane undergraduates to come back to Career Coach and use it every week, and learn which channel brings the students who stay.",
+  "note": "Nothing has moved yet: this is our first update and no data has been collected, so there is only one day and not enough history to show a change. Our usage tracker is built and tested but not live yet because it still needs its Supabase database, and the daily collection rota starts once it is. This week we create the Supabase project, deploy the tracker, put the tagged links in our Instagram and TikTok bios, and start the rota, so the first real numbers appear the next day.",
+  "kpis": [
+    {
+      "name": "Site visits per week",
+      "stage": "interest",
+      "source": "Our tracker: distinct visitors with a page_view, team excluded, 7 days up to each date (QUERIES.md, query D1), saved daily as data/YYYY-MM-DD-tracker-daily.csv; checked weekly against Cloudflare Web Analytics",
+      "unit": "visitors",
+      "target": 300,
+      "target_date": "2026-12-04",
+      "decision": "A source that sends no visits for two weeks gets cut and its posting time moves to the source sending the most; if total visits fall two weeks in a row, we fix distribution before touching the product.",
+      "series": []
+    },
+    {
+      "name": "Sign-ups and bookings per week",
+      "stage": "purchase intention",
+      "source": "Our tracker: sign_up (Get Started sent) plus booking_created events, 7 days up to each date (QUERIES.md, query D1), saved daily as data/YYYY-MM-DD-tracker-daily.csv; checked weekly against the team Gmail and Cal.com by hand",
+      "unit": "sign-ups",
+      "target": 25,
+      "target_date": "2026-12-04",
+      "decision": "If visits rise but sign-ups stay flat for two weeks, we change the Get Started page and the ask in our posts, not the posts' reach.",
+      "series": []
+    },
+    {
+      "name": "Activation rate",
+      "stage": "purchase intention",
+      "source": "Our tracker: share of new visitors with resume_feedback, roadmap_built or coach_answer within 7 days of their first visit, 7 days up to each date (QUERIES.md, query D1), saved daily as data/YYYY-MM-DD-tracker-daily.csv",
+      "unit": "%",
+      "target": 35,
+      "target_date": "2026-12-04",
+      "decision": "Below 25% for two weeks: the home page sends new students straight into the one tool that activates best instead of showing all five.",
+      "series": []
+    },
+    {
+      "name": "Weekly active users",
+      "stage": "retention",
+      "source": "Our tracker: distinct visitors with at least one tool action (page views excluded), 7 days up to each date (QUERIES.md, query D1), saved daily as data/YYYY-MM-DD-tracker-daily.csv",
+      "unit": "users",
+      "target": 120,
+      "target_date": "2026-12-04",
+      "decision": "Read with actions per active user: if users grow while actions per user fall, students are drifting away, so we pause promotion and fix the tools first.",
+      "series": []
+    },
+    {
+      "name": "Actions per active user per week",
+      "stage": "retention",
+      "source": "Our tracker: tool actions divided by weekly active users, 7 days up to each date (QUERIES.md, query D1), saved daily as data/YYYY-MM-DD-tracker-daily.csv",
+      "unit": "actions per user",
+      "target": 3,
+      "target_date": "2026-12-04",
+      "decision": "Falls two weeks in a row: we pause new promotion and fix the tools students are leaving (our Peloton workouts-per-subscription number).",
+      "series": []
+    },
+    {
+      "name": "Still active after 1 week",
+      "stage": "retention",
+      "source": "Our tracker: share of each week's new users with a tool action 7 to 13 days after starting, 7 days up to each date (QUERIES.md, query D1), saved daily as data/YYYY-MM-DD-tracker-daily.csv",
+      "unit": "%",
+      "target": 30,
+      "target_date": "2026-12-04",
+      "decision": "Below 15%: more promotion only fills a leaky bucket, so we spend the next week fixing the product instead of posting more.",
+      "series": []
+    },
+    {
+      "name": "Still active after 4 weeks",
+      "stage": "retention",
+      "source": "Our tracker: share of each week's new users with a tool action 28 to 34 days after starting, 7 days up to each date (QUERIES.md, query D1), saved daily as data/YYYY-MM-DD-tracker-daily.csv",
+      "unit": "%",
+      "target": 15,
+      "target_date": "2026-12-04",
+      "decision": "Decides how we spend the rest of the semester: near zero means we focus on keeping students; at or above target means we put more into the channels that bring them.",
+      "series": []
+    }
+  ]
+}
