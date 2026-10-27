@@ -1,0 +1,133 @@
+{
+  "format": "DRAFT 2026-10-26. Not yet the Practicum 7 step 7 course format; replace the structure with that format once we have it.",
+  "venture": "Career Coach",
+  "goal": "DRAFT, not agreed: By the end of the fall 2026 semester, get Tulane undergraduates to come back to Career Coach and use it every week, and learn which channel brings the students who stay.",
+  "updated": "2026-10-26",
+  "pace_start": "2026-10-26",
+  "entry_format": {"date": "YYYY-MM-DD", "kpi": "kpi id", "value": "number", "source": "file or query", "estimate": "true if not a direct count"},
+  "note": {
+    "moved": "Nothing has moved yet: no data has been collected, so every KPI below shows no value.",
+    "why": "Our usage tracker is built and tested but not live (it needs a Supabase project and a push to the live site), and the daily collection rota has not started.",
+    "action": "This week we create the Supabase project, deploy the tracker, put the tagged links in our Instagram and TikTok bios, and start the rota, so the first real numbers appear here the next day."
+  },
+  "kpis": [
+    {
+      "id": "awareness_reach",
+      "name": "Reach per week on Instagram and TikTok",
+      "stage": "awareness",
+      "kind": "diagnostic",
+      "unit": "people",
+      "window": "7 days",
+      "target": null,
+      "target_date": null,
+      "pace": null,
+      "counted": "Accounts reached in the last 7 days, Instagram plus TikTok, read from each platform's Insights screenshot.",
+      "decision": "Not a KPI. It explains changes in site visits: if reach rises but visits don't, the posts aren't sending people to the site.",
+      "source": "data/YYYY-MM-DD-instagram.png and data/YYYY-MM-DD-tiktok.png (platform Insights)"
+    },
+    {
+      "id": "k1_visits",
+      "name": "Site visits per week",
+      "stage": "interest",
+      "kind": "kpi",
+      "unit": "visitors",
+      "window": "7 days",
+      "target": 300,
+      "target_date": "2026-12-04",
+      "pace": "ramp",
+      "counted": "Distinct visitor IDs with a page view in the 7 days up to this date, team browsers excluded.",
+      "decision": "Where we spend posting and outreach time. A source that sends nobody for two weeks gets cut.",
+      "source": "QUERIES.md Q1 (Supabase events), saved as data/YYYY-MM-DD-tracker-q1.csv; checked against data/YYYY-MM-DD-cloudflare.png"
+    },
+    {
+      "id": "k2_key_actions",
+      "name": "Sign-ups and bookings per week",
+      "stage": "purchase intention",
+      "kind": "kpi",
+      "unit": "actions",
+      "window": "7 days",
+      "target": 25,
+      "target_date": "2026-12-04",
+      "pace": "ramp",
+      "counted": "Get Started intakes sent successfully (sign_up) plus mock-interview bookings (booking_created) in the 7 days up to this date.",
+      "decision": "If visits rise but sign-ups stay flat, we fix the Get Started page, not the posts.",
+      "source": "QUERIES.md Q2, saved as data/YYYY-MM-DD-tracker-q2.csv; checked against data/YYYY-MM-DD-hand.txt (Gmail and Cal.com counts)"
+    },
+    {
+      "id": "k3_activation",
+      "name": "Activation rate",
+      "stage": "purchase intention",
+      "kind": "kpi",
+      "unit": "%",
+      "window": "new visitors in the 7 days ending 7 days before this date",
+      "target": 35,
+      "target_date": "2026-12-04",
+      "pace": "level",
+      "counted": "Share of new visitors who got AI resume feedback, built a roadmap or got an AI coach answer within 7 days of their first visit.",
+      "decision": "If it is low, the home page sends new students straight into one tool instead of showing them everything.",
+      "source": "QUERIES.md Q3, saved as data/YYYY-MM-DD-tracker-q3.csv"
+    },
+    {
+      "id": "k4_wau",
+      "name": "Weekly active users",
+      "stage": "retention",
+      "kind": "kpi",
+      "unit": "users",
+      "window": "7 days",
+      "target": 120,
+      "target_date": "2026-12-04",
+      "pace": "ramp",
+      "counted": "Distinct visitor IDs that did at least one tool action (not just a page view) in the 7 days up to this date.",
+      "decision": "Read together with actions per active user: if users grow while actions per user fall, students are drifting away.",
+      "source": "QUERIES.md Q4, saved as data/YYYY-MM-DD-tracker-q4.csv"
+    },
+    {
+      "id": "k4_actions_per_user",
+      "name": "Actions per active user per week",
+      "stage": "retention",
+      "kind": "kpi",
+      "unit": "actions",
+      "window": "7 days",
+      "target": 3,
+      "target_date": "2026-12-04",
+      "pace": "level",
+      "counted": "Tool actions in the 7 days up to this date, divided by weekly active users. Our version of Peloton's workouts per subscription.",
+      "decision": "If it falls two weeks in a row, we pause new promotion and fix the tools students are leaving.",
+      "source": "QUERIES.md Q4, saved as data/YYYY-MM-DD-tracker-q4.csv"
+    },
+    {
+      "id": "k5_week1",
+      "name": "Still active after 1 week",
+      "stage": "retention",
+      "kind": "kpi",
+      "unit": "%",
+      "window": "latest cohort whose week-1 window has closed",
+      "target": 30,
+      "target_date": "2026-12-04",
+      "pace": "level",
+      "counted": "Of the visitors who signed up or did a main action in a week, the share who did a tool action again 7 to 13 days later.",
+      "decision": "If it is near zero, more promotion only fills a leaky bucket, so we fix the product first.",
+      "source": "QUERIES.md Q5, saved as data/YYYY-MM-DD-tracker-q5.csv"
+    },
+    {
+      "id": "k5_week4",
+      "name": "Still active after 4 weeks",
+      "stage": "retention",
+      "kind": "kpi",
+      "unit": "%",
+      "window": "latest cohort whose week-4 window has closed",
+      "target": 15,
+      "target_date": "2026-12-04",
+      "pace": "level",
+      "counted": "Of the visitors who signed up or did a main action in a week, the share who did a tool action again 28 to 34 days later.",
+      "decision": "Decides whether the rest of the semester goes on getting new students or keeping the ones we have.",
+      "source": "QUERIES.md Q5, saved as data/YYYY-MM-DD-tracker-q5.csv"
+    }
+  ],
+  "entries": [],
+  "funnel": {
+    "date": null,
+    "source": "QUERIES.md Q1, Q2, Q4 and Q5 grouped by first link source",
+    "rows": []
+  }
+}
