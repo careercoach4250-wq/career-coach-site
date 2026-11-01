@@ -1,7 +1,47 @@
 {
-  "updatedAt": "2026-10-31T17:32:35.354Z",
+  "updatedAt": "2026-11-01T18:17:38.092Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
+    {
+      "id": "8b78e2f8-35f6-4abc-bada-954fe7cc7779",
+      "type": "New Grad",
+      "category": "AI/ML/Data",
+      "company": "SAIC",
+      "title": "Geographic Information Systems Analyst",
+      "location": "California, MD",
+      "url": "https://eihu.fa.us8.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/2618675",
+      "posted": "2026-11-01T15:16:26.000Z"
+    },
+    {
+      "id": "aa10db51-ae8e-4b11-8902-b7b5f4cf6d96",
+      "type": "New Grad",
+      "category": "Product",
+      "company": "Huntington Ingalls Industries",
+      "title": "Product Owner - Digital Plant",
+      "location": "Newport News, VA",
+      "url": "https://careers.huntingtoningalls.com/job/Newport-News-PRODUCT-OWNER-DIGITAL-PLANT-Virg/1446303400/?ats=successfactors",
+      "posted": "2026-11-01T06:30:02.000Z"
+    },
+    {
+      "id": "076e4d7b-c105-4b49-866b-5ac1f12ec7b3",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Huntington Ingalls Industries",
+      "title": "Software Engineer 1",
+      "location": "Newport News, VA",
+      "url": "https://careers.huntingtoningalls.com/job/Newport-News-ENGINEER-SOFTWARE-1-Virg/1446380900/?ats=successfactors",
+      "posted": "2026-11-01T06:29:51.000Z"
+    },
+    {
+      "id": "61e56b29-9b9f-481a-926e-c653983f3ff8",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Northrop Grumman",
+      "title": "Associate Software Engineer",
+      "location": "Huntsville, AL",
+      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Alabama-Huntsville/XMLNAME-2027-Associate-Software-Engineer---Bellevue--NE-_R10258366",
+      "posted": "2026-11-01T00:00:00.000Z"
+    },
     {
       "id": "7fb700ca-fd7e-419b-ad41-9969c81c94b6",
       "type": "New Grad",
@@ -523,16 +563,6 @@
       "posted": "2026-10-30T00:00:00.000Z"
     },
     {
-      "id": "fa428a84-cc4e-4bd1-a258-d20af2ff146c",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "ServiceTitan",
-      "title": "AI Engineer",
-      "location": "Remote in USA",
-      "url": "https://servicetitan.wd1.myworkdayjobs.com/ServiceTitan/job/US-Remote/AI-Engineer_JR116391",
-      "posted": "2026-10-30T00:00:00.000Z"
-    },
-    {
       "id": "59ce2823-88f4-4ad5-a1df-23e24df7155d",
       "type": "New Grad",
       "category": "Hardware",
@@ -633,16 +663,6 @@
       "posted": "2026-10-29T22:50:09.000Z"
     },
     {
-      "id": "ddd7e49f-0377-47e0-a9a3-f8ad31c777dc",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Weekday AI",
-      "title": "Business Analyst - Educational Raters - Gemini",
-      "location": "Remote in USA",
-      "url": "https://apply.workable.com/weekday-1/j/A52A7967FB/apply",
-      "posted": "2026-10-29T22:45:54.000Z"
-    },
-    {
       "id": "e6698a06-642e-483b-8dfb-1d1b5ec9299c",
       "type": "Internship",
       "category": "Software",
@@ -681,16 +701,6 @@
       "location": "Foster City, CA; San Diego, CA",
       "url": "https://jobs.lever.co/zoox/67982bee-811b-453b-8596-b53c13f7a78d/apply",
       "posted": "2026-10-29T22:23:53.000Z"
-    },
-    {
-      "id": "5f5642d8-8973-4b72-8adb-bce8f7de7ef9",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Intelliforce-IT Solutions Group",
-      "title": "Junior Software Engineer - Prime",
-      "location": "Annapolis Junction, MD",
-      "url": "https://intelliforceitsolutionsgroup.applytojob.com/apply/vrH8MYXO9u/Junior-Software-Engineer-Prime",
-      "posted": "2026-10-29T22:20:24.000Z"
     },
     {
       "id": "30a61cd3-e5dc-4424-935e-cd3c7954a5db",
@@ -1013,16 +1023,6 @@
       "posted": "2026-10-14T06:05:46.000Z"
     },
     {
-      "id": "aa4c7794-175b-4ae7-bf8f-4aed8e487ed3",
-      "type": "New Grad",
-      "category": "Product",
-      "company": "Trove Brands",
-      "title": "Brand Marketing Associate - Core & Campaign",
-      "location": "Lehi, UT",
-      "url": "https://job-boards.greenhouse.io/trovebrands/jobs/4450961009",
-      "posted": "2026-10-14T01:28:59.000Z"
-    },
-    {
       "id": "77d8fe89-cf3c-44d0-bb1b-617d54c2e182",
       "type": "Internship",
       "category": "Quant",
@@ -1091,16 +1091,6 @@
       "location": "Des Moines, IA",
       "url": "https://careers.principal.com/jobs/52721?icims=1",
       "posted": "2026-10-01T22:12:17.000Z"
-    },
-    {
-      "id": "35bc5d9a-2ee8-403f-b5b0-872bdee6bb26",
-      "type": "New Grad",
-      "category": "Quant",
-      "company": "ConocoPhillips",
-      "title": "Graduate Analyst - Trading Analytics 2027",
-      "location": "Houston, TX",
-      "url": "https://conocophillips.wd1.myworkdayjobs.com/External/job/Houston-TX/Graduate-Analyst--Trading-Analytics-2027_REQ-006637",
-      "posted": "2026-09-29T00:00:00.000Z"
     },
     {
       "id": "3308aac6-4a66-4e7a-a236-e21d3f6b3328",
@@ -1191,6 +1181,16 @@
       "location": "Wynnewood, PA",
       "url": "https://job-boards.greenhouse.io/exoduspoint/jobs/8806119002",
       "posted": "2026-09-14T18:43:03.000Z"
+    },
+    {
+      "id": "96187f79-39c8-4510-8fb5-0c4835cab238",
+      "type": "New Grad",
+      "category": "Quant",
+      "company": "Da Vinci",
+      "title": "Quant Graduate",
+      "location": "Miami, FL",
+      "url": "https://job-boards.eu.greenhouse.io/davinciderivatives/jobs/4241558101",
+      "posted": "2026-09-14T17:38:35.000Z"
     },
     {
       "id": "fe63a08c-95d3-47a7-8837-7df1aff027e2",
