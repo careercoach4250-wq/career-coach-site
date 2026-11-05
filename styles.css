@@ -1117,6 +1117,23 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--t
 .stage-card h3 { margin: 6px 0 8px; font-size: 1.12rem; }
 .stage-card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
 
+/* Pricing */
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 780px; }
+.pricing-card { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); }
+.pricing-card-current { border-color: var(--teal); box-shadow: var(--shadow-md); }
+.pricing-card-future { background: var(--paper-soft); }
+.pricing-badge { align-self: flex-start; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: var(--mint); color: var(--navy-dark); padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; }
+.pricing-badge-muted { background: var(--border); color: var(--muted); }
+.pricing-card h2 { margin: 0 0 4px; font-size: 1.5rem; color: var(--navy); }
+.pricing-price { display: flex; align-items: baseline; gap: 8px; margin: 0 0 12px; }
+.pricing-price b { font-size: 1.8rem; font-family: var(--font-display); color: var(--navy); }
+.pricing-price span { color: var(--muted); font-size: 0.88rem; }
+.pricing-desc { color: var(--muted); font-size: 0.92rem; margin: 0 0 16px; }
+.pricing-features { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 10px; }
+.pricing-features li { padding-left: 26px; position: relative; font-size: 0.93rem; }
+.pricing-features li::before { content: ""; position: absolute; left: 0; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--mint); }
+.pricing-card .btn { margin-top: auto; align-self: flex-start; }
+
 /* Career Toolkit hub */
 .profile-strip {
   display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px;
