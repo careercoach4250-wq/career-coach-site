@@ -2,9 +2,9 @@
   "venture": "Career Coach",
   "team": "Presley / Tawakol / Carr",
   "section": "03",
-  "updated": "2026-10-26",
+  "updated": "2026-11-05",
   "goal": "By the end of the fall 2026 semester, get Tulane undergraduates to come back to Career Coach and use it every week, and learn which channel brings the students who stay.",
-  "note": "Nothing has moved yet: this is our first update and no data has been collected, so there is only one day and not enough history to show a change. Our usage tracker is built and tested but not live yet because it still needs its Supabase database, and the daily collection rota starts once it is. This week we create the Supabase project, deploy the tracker, put the tagged links in our Instagram and TikTok bios, and start the rota, so the first real numbers appear the next day.",
+  "note": "This is our first day with tracker data, so there isn't enough history to show a change: 4 visitors in the last 7 days, 0 sign-ups or bookings, and 0 weekly active users. We don't know yet who the 4 visitors are, because all of them arrived today with no source tag and at least one was our own test of the site. Autumn and Mia will put the tagged links from LINKS.md in the Instagram and TikTok bios and start the daily collection rota by November 9, so that every visit has a source and we can judge each channel.",
   "kpis": [
     {
       "name": "Site visits per week",
@@ -14,7 +14,12 @@
       "target": 300,
       "target_date": "2026-12-04",
       "decision": "A source that sends no visits for two weeks gets cut and its posting time moves to the source sending the most; if total visits fall two weeks in a row, we fix distribution before touching the product.",
-      "series": []
+      "series": [
+        {
+          "date": "2026-11-05",
+          "value": 4
+        }
+      ]
     },
     {
       "name": "Sign-ups and bookings per week",
@@ -24,7 +29,12 @@
       "target": 25,
       "target_date": "2026-12-04",
       "decision": "If visits rise but sign-ups stay flat for two weeks, we change the Get Started page and the ask in our posts, not the posts' reach.",
-      "series": []
+      "series": [
+        {
+          "date": "2026-11-05",
+          "value": 0
+        }
+      ]
     },
     {
       "name": "Activation rate",
@@ -44,7 +54,12 @@
       "target": 120,
       "target_date": "2026-12-04",
       "decision": "Read with actions per active user: if users grow while actions per user fall, students are drifting away, so we pause promotion and fix the tools first.",
-      "series": []
+      "series": [
+        {
+          "date": "2026-11-05",
+          "value": 0
+        }
+      ]
     },
     {
       "name": "Actions per active user per week",

@@ -18,8 +18,8 @@
 (function () {
   // Public values: the project URL and the publishable (anon) key are meant
   // to be in browser code. Row level security only lets browsers add rows.
-  const SUPABASE_URL = "";
-  const SUPABASE_KEY = "";
+  const SUPABASE_URL = "https://edknsiuucsquhaxucgub.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_AYSpr2A2XO28UzyLOgPU7w_I5LQVXQT";
 
   const ENDPOINT = SUPABASE_URL ? SUPABASE_URL.replace(/\/$/, "") + "/rest/v1/events" : "";
   const K = { visitor: "cc_visitor_id", first: "cc_first_tag", team: "cc_team", debug: "cc_debug" };
