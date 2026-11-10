@@ -9,7 +9,9 @@ const GRAD_URL =
   "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json";
 // Up to this many of the newest roles per category, per type, so the feed
 // covers every field instead of whichever one posted most recently.
-const PER_CATEGORY_LIMIT = 40;
+const PER_CATEGORY_LIMIT = 300;
+// Skip older postings: they are more likely filled even if still marked open.
+const MAX_AGE_DAYS = 90;
 
 // SimplifyJobs uses both short and long names for the same categories.
 const CATEGORY_NAMES = {
@@ -38,9 +40,11 @@ async function getFiltered(url, type) {
   if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
   const raw = await res.json();
 
+  const cutoff = Date.now() / 1000 - MAX_AGE_DAYS * 86400;
   const filtered = raw.filter(
     (j) =>
       j.active === true &&
+      j.date_posted >= cutoff &&
       Array.isArray(j.degrees) &&
       j.degrees.includes("Bachelor's") &&
       Array.isArray(j.locations) &&

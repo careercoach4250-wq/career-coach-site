@@ -871,6 +871,7 @@ details.roadmap-phase[open] summary .chev { transform: rotate(90deg); }
   margin: 8px 0 28px;
 }
 .jobs-empty { color: var(--muted); padding: 20px 0; }
+.jobs-more { display: block; margin: 24px auto 0; }
 
 .job-grid {
   display: grid;

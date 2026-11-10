@@ -149,7 +149,21 @@
     return { score, reasons };
   }
 
-  function render() {
+  // Long lists render in pages so phones stay fast.
+  const PAGE_SIZE = 30;
+  let shown = PAGE_SIZE;
+  const moreBtn = document.createElement("button");
+  moreBtn.type = "button";
+  moreBtn.className = "btn btn-outline jobs-more";
+  moreBtn.hidden = true;
+  grid.after(moreBtn);
+  moreBtn.addEventListener("click", () => { shown += PAGE_SIZE; render(true); });
+  const countEl = document.createElement("span");
+  updatedEl.textContent = "";
+  updatedEl.append(countEl, document.createElement("span"));
+  updatedEl.lastChild.textContent = "Loading listings…";
+
+  function render(keepPage) {
     const p = window.CC ? window.CC.profile.get() : null;
     const q = searchInput.value.trim().toLowerCase();
     const ind = industrySel.value;
@@ -170,6 +184,9 @@
     if (sortSel.value === "match") list.sort((a, b) => b.match.score - a.match.score || new Date(b.posted) - new Date(a.posted));
     else list.sort((a, b) => new Date(b.posted) - new Date(a.posted));
 
+    if (!keepPage) shown = PAGE_SIZE;
+    const total = list.length;
+    list = list.slice(0, shown);
     grid.innerHTML = list.map((j) => {
       const saved = savedIds.has(j.id);
       const m = j.match.score >= 5 ? "Strong match" : j.match.score >= 3 ? "Good match" : "";
@@ -192,6 +209,9 @@
       </article>`;
     }).join("");
 
+    moreBtn.hidden = total <= shown;
+    moreBtn.textContent = `Show more jobs (${total - shown} more)`;
+    if (allJobs.length) countEl.textContent = total === allJobs.length ? "" : `${total} match${total === 1 ? "" : "es"} · `;
     emptyEl.hidden = list.length !== 0;
     emptyEl.textContent = activeType === "saved"
       ? "No saved jobs yet. Tap the star on any listing to save it here."
@@ -222,7 +242,7 @@
     if (savedIds.has(id)) savedIds.delete(id); else savedIds.add(id);
     persistSaved();
     updateSavedPillLabel();
-    if (activeType === "saved") return render();
+    if (activeType === "saved") return render(true);
     const nowSaved = savedIds.has(id);
     btn.classList.toggle("saved", nowSaved);
     btn.textContent = nowSaved ? "★" : "☆";
@@ -230,9 +250,9 @@
     btn.setAttribute("aria-label", nowSaved ? "Remove from saved jobs" : "Save this job");
   });
 
-  [searchInput, locationInput].forEach((el) => el.addEventListener("input", render));
-  [industrySel, roleSel, sortSel].forEach((el) => el.addEventListener("change", render));
-  if (window.CC) window.CC.profile.onChange(render);
+  [searchInput, locationInput].forEach((el) => el.addEventListener("input", () => render()));
+  [industrySel, roleSel, sortSel].forEach((el) => el.addEventListener("change", () => render()));
+  if (window.CC) window.CC.profile.onChange(() => render());
   updateSavedPillLabel();
 
   fetch("jobs-data.json")
@@ -249,13 +269,13 @@
       industrySel.insertAdjacentHTML("beforeend", options(counts("industry"), (k) => k));
       roleSel.insertAdjacentHTML("beforeend", options(counts("category"), (k) => CATEGORY_LABELS[k] || k));
       const updated = data.updatedAt ? new Date(data.updatedAt) : null;
-      updatedEl.textContent = allJobs.length
-        ? `${allJobs.length} open roles` + (updated ? ` · updated ${updated.toLocaleDateString()}` : "")
+      updatedEl.lastChild.textContent = allJobs.length
+        ? `${allJobs.length.toLocaleString()} open roles` + (updated ? ` · updated ${updated.toLocaleDateString()}` : "")
         : "No listings available right now.";
       render();
     })
     .catch(() => {
-      updatedEl.textContent = "Couldn't load live listings right now.";
+      updatedEl.lastChild.textContent = "Couldn't load live listings right now.";
       emptyEl.hidden = false;
       emptyEl.textContent = "Something went wrong loading job listings. Please check back later.";
     });
