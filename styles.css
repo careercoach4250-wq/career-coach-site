@@ -1238,8 +1238,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--t
 .mock-book { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--border); }
 
 /* Job opportunities */
-.jobs-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 16px 0 0; }
-@media (max-width: 640px) { .jobs-filters { grid-template-columns: 1fr 1fr; } .jobs-filters label:last-child { grid-column: 1 / -1; } }
+.jobs-filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 16px 0 0; }
+@media (max-width: 640px) { .jobs-filters { grid-template-columns: 1fr 1fr; } }
 .job-match { align-self: flex-start; font-size: 0.72rem; font-weight: 700; color: #0B6B4F; background: #DDF7EE; padding: 3px 9px; border-radius: 999px; margin-bottom: 10px; }
 .job-actions { margin-top: auto; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 

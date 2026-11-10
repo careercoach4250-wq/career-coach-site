@@ -14,6 +14,7 @@
   const typeFilter = document.getElementById("jobs-type-filter");
   const savedPill = document.getElementById("jobs-saved-pill");
   const industrySel = document.getElementById("jobs-industry");
+  const roleSel = document.getElementById("jobs-role");
   const locationInput = document.getElementById("jobs-location");
   const sortSel = document.getElementById("jobs-sort");
 
@@ -50,6 +51,51 @@
     [/electrical|mechanical|biomedical|engineer|chemical/i, ["Hardware"]],
     [/business|management|marketing|design/i, ["Product"]],
   ];
+  // Employer industry. The feed only tags each job with a role type, so we
+  // infer the industry from the company name, then the title, then fall back
+  // on the role type. First match wins, so specific rules come first.
+  const INDUSTRY_RULES = [
+    ["Government & public sector", /federal reserve|investment board|\biso\b|state of |city of |county|department of|usafacts|national lab|\bnasa\b|\bfbi\b|\bnsa\b/i],
+    ["Education & research", /universit|college|school|institute|academ|predoctoral|research specialist/i],
+    ["Aerospace & defense", /dynamics|northrop|raytheon|\brtx\b|lockheed|l3harris|peraton|\bcaci\b|v2x|everwatch|astrion|leidos|booz allen|saic|bae systems|boeing|spacex|blue origin|anduril|american systems|\btsc\b|mission systems|aerospace|defense|missile|satellite/i],
+    ["Insurance", /insurance|liberty mutual|state farm|allstate|progressive|geico|markel|athene|aflac|metlife|prudential|nationwide|travelers|\bchubb\b|lexisnexis risk|underwrit|actuar/i],
+    ["Investing & trading", /trading|capital(?! one)|\bimc\b|\bdrw\b|old mission|\bsig\b|susquehanna|citadel|jane street|hudson river|two sigma|optiver|voloridge|arrowstreet|exoduspoint|pimco|\bscm\b|blackrock|vanguard|fidelity|investment|asset management|hedge|quant|trader|portfolio/i],
+    ["Banking & financial services", /bank|santander|schwab|jpmorgan|chase|goldman|morgan stanley|wells fargo|citi|capital one|american express|paypal|sofi|visa\b|mastercard|stripe|blackhawk network|fhlb|drivetime|credit|lending|fintech|finance engineer|financial/i],
+    ["Healthcare & life sciences", /health|medic|boston scientific|pharma|biotech|\bbio|clinic|hospital|genentech|pfizer|merck|abbott|medtronic|johnson & johnson|urology|patient/i],
+    ["Energy & utilities", /energy|(?<!ring )power|utilit|renewable|solar|\bwind\b|nuclear|framatome|\boil\b|\bgas\b|petrol|exxon|chevron|shell/i],
+    ["Semiconductors & electronics", /texas instruments|micron|analog devices|\bintel\b|nvidia|\bamd\b|qualcomm|broadcom|keysight|samsung|semiconductor|sambanova|fpga|\bic design|pcb/i],
+    ["Automotive & transportation", /paccar|jm family|automotive|tesla|\bford\b|general motors|\bgm\b|toyota|honda|rivian|mann\+hummel|novelis|airline|\brail|vehicle/i],
+    ["Logistics & supply chain", /logistic|supply chain|freight|shipping|ups\b|fedex|rr donnelley|warehouse/i],
+    ["Telecommunications", /t-mobile|verizon|at&t|comcast|charter|telecom|wireless/i],
+    ["Media, entertainment & sports", /hearst|twitch|tiktok|sony|netflix|disney|warner|spotify|fanduel|draftkings|fanatics|oak view|game|sports|media|entertainment|music|nba|nfl/i],
+    ["Consumer goods & retail", /ulta|bass pro|sharkninja|constellation brands|mohawk|walmart|target|costco|nike|procter|unilever|pepsi|coca|retail|ecommerce|apparel|beauty/i],
+    ["Hospitality & travel", /choice hotels|ideas\b|marriott|hilton|hyatt|expedia|airbnb|hotel|travel/i],
+    ["Construction & real estate", /turner & townsend|gaf\b|equipmentshare|ring power|construction|real estate|propert|building/i],
+    ["Agriculture & food", /john deere|cargill|tyson|agri|farm|food/i],
+    ["Consulting & professional services", /deloitte|accenture|mckinsey|bain|bcg|pwc|kpmg|ernst|\bey\b|consult|advisory/i],
+    ["Manufacturing & industrial", /emerson|halma|allegion|dwyeromega|honeywell|siemens|\bge\b|caterpillar|3m\b|manufactur|industrial|equipment|automation/i],
+    ["Technology & software", /microsoft|amazon|google|apple|meta\b|cisco|linkedin|jerry|verkada|oracle|salesforce|ibm|adobe|software|tech|cloud|\bai\b|data/i],
+  ];
+  const ROLE_FALLBACK = { Software: "Technology & software", "AI/ML/Data": "Technology & software", Product: "Technology & software", Hardware: "Manufacturing & industrial", Quant: "Investing & trading" };
+  function industryOf(j) {
+    for (const field of [j.company, j.title]) {
+      const hit = INDUSTRY_RULES.find(([, re]) => re.test(field || ""));
+      if (hit) return hit[0];
+    }
+    return ROLE_FALLBACK[j.category] || "Other";
+  }
+  // Profile industry -> employer industries that usually fit it.
+  const PROFILE_TO_INDUSTRY = {
+    "Finance & banking": ["Banking & financial services", "Investing & trading", "Insurance"],
+    "Consulting": ["Consulting & professional services"],
+    "Technology & software": ["Technology & software"],
+    "Marketing & media": ["Media, entertainment & sports", "Consumer goods & retail"],
+    "Healthcare & public health": ["Healthcare & life sciences"],
+    "Law & policy": ["Government & public sector"],
+    "Real estate": ["Construction & real estate"],
+    "Nonprofit & public service": ["Government & public sector", "Education & research"],
+    "Engineering & hardware": ["Aerospace & defense", "Semiconductors & electronics", "Manufacturing & industrial", "Automotive & transportation", "Energy & utilities"],
+  };
   const STOP = new Set("and or the for with of to in on at a an my i want be work job role roles intern internship analyst".split(" "));
 
   function loadSaved() {
@@ -88,6 +134,7 @@
     const cats = new Set([...(INDUSTRY_TO_CAT[p.industry] || [])]);
     MAJOR_HINTS.forEach(([re, c]) => { if (re.test(p.major || "")) c.forEach((x) => cats.add(x)); });
     if (cats.has(job.category)) { score += 3; reasons.push("fits your field"); }
+    if ((PROFILE_TO_INDUSTRY[p.industry] || []).includes(job.industry)) { score += 2; reasons.push("in your industry"); }
     const title = job.title.toLowerCase();
     const hits = new Set(words(`${p.roles || ""} ${p.interests || ""}`).filter((w) => title.includes(w)));
     if (hits.size) { score += Math.min(hits.size, 2) * 2; reasons.push("matches your interests"); }
@@ -106,15 +153,17 @@
     const p = window.CC ? window.CC.profile.get() : null;
     const q = searchInput.value.trim().toLowerCase();
     const ind = industrySel.value;
+    const role = roleSel.value;
     const loc = locationInput.value.trim().toLowerCase();
     let list = allJobs.filter((j) => {
       if (activeType === "saved") { if (!savedIds.has(j.id)) return false; }
       else if (activeType !== "all" && j.type !== activeType) return false;
-      if (ind && j.category !== ind) return false;
+      if (ind && j.industry !== ind) return false;
+      if (role && j.category !== role) return false;
       if (loc && !j.location.toLowerCase().includes(loc)) return false;
       if (!q) return true;
       // Every word must match somewhere; common synonyms count ("engineer" finds "developer").
-      const hay = [j.title, j.company, j.location, CATEGORY_LABELS[j.category] || j.category].join(" ").toLowerCase();
+      const hay = [j.title, j.company, j.location, j.industry, CATEGORY_LABELS[j.category] || j.category].join(" ").toLowerCase();
       return q.split(/\s+/).filter(Boolean).every((w) => (SYNONYMS[w] || [w]).some((x) => hay.includes(x)));
     }).map((j) => ({ ...j, match: matchInfo(j, p) }));
 
@@ -128,7 +177,7 @@
       <article class="job-card">
         <div class="job-card-top">
           <span class="job-type-badge job-type-${j.type === "Internship" ? "intern" : "newgrad"}">${esc(j.type)}</span>
-          ${j.category ? `<span class="job-category">${esc(CATEGORY_LABELS[j.category] || j.category)}</span>` : ""}
+          <span class="job-category">${esc(j.industry)}</span>
           <button type="button" class="job-save-btn${saved ? " saved" : ""}" data-id="${esc(j.id)}" aria-label="${saved ? "Remove from saved jobs" : "Save this job"}" aria-pressed="${saved}">${saved ? "★" : "☆"}</button>
         </div>
         ${m ? `<span class="job-match" title="${esc(j.match.reasons.join(", "))}">${m}</span>` : ""}
@@ -182,16 +231,23 @@
   });
 
   [searchInput, locationInput].forEach((el) => el.addEventListener("input", render));
-  [industrySel, sortSel].forEach((el) => el.addEventListener("change", render));
+  [industrySel, roleSel, sortSel].forEach((el) => el.addEventListener("change", render));
   if (window.CC) window.CC.profile.onChange(render);
   updateSavedPillLabel();
 
   fetch("jobs-data.json")
     .then((res) => { if (!res.ok) throw new Error("load failed"); return res.json(); })
     .then((data) => {
-      allJobs = (Array.isArray(data.jobs) ? data.jobs : []).map((j) => ({ ...j, category: CATEGORY_NAMES[j.category] || j.category || "" }));
-      const cats = [...new Set(allJobs.map((j) => j.category).filter(Boolean))].sort();
-      industrySel.insertAdjacentHTML("beforeend", cats.map((c) => `<option value="${esc(c)}">${esc(CATEGORY_LABELS[c] || c)}</option>`).join(""));
+      allJobs = (Array.isArray(data.jobs) ? data.jobs : []).map((j) => {
+        const job = { ...j, category: CATEGORY_NAMES[j.category] || j.category || "" };
+        job.industry = industryOf(job);
+        return job;
+      });
+      const counts = (key) => allJobs.reduce((m, j) => (j[key] && (m[j[key]] = (m[j[key]] || 0) + 1), m), {});
+      const options = (m, label) => Object.keys(m).sort((a, b) => (a === "Other") - (b === "Other") || a.localeCompare(b))
+        .map((k) => `<option value="${esc(k)}">${esc(label(k))} (${m[k]})</option>`).join("");
+      industrySel.insertAdjacentHTML("beforeend", options(counts("industry"), (k) => k));
+      roleSel.insertAdjacentHTML("beforeend", options(counts("category"), (k) => CATEGORY_LABELS[k] || k));
       const updated = data.updatedAt ? new Date(data.updatedAt) : null;
       updatedEl.textContent = allJobs.length
         ? `${allJobs.length} open roles` + (updated ? ` · updated ${updated.toLocaleDateString()}` : "")

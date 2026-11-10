@@ -9,7 +9,7 @@ const GRAD_URL =
   "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json";
 // Up to this many of the newest roles per category, per type, so the feed
 // covers every field instead of whichever one posted most recently.
-const PER_CATEGORY_LIMIT = 12;
+const PER_CATEGORY_LIMIT = 40;
 
 // SimplifyJobs uses both short and long names for the same categories.
 const CATEGORY_NAMES = {
