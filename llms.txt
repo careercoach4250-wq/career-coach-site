@@ -1,0 +1,32 @@
+# Career Coach
+
+> Career Coach is a free, AI-powered career platform for Tulane University undergraduates: career-path exploration, a personalized recruiting roadmap, resume and interview prep, job search, and an AI career coach available any time. Access is limited to @tulane.edu students. Built by seven Tulane students; not an official Tulane University service.
+
+## Who this is for
+
+Tulane University undergraduates and recent graduates, any year or major. Not a general public product — this is not for students at other schools.
+
+## What it costs
+
+Free today: $0, no account, no card. See /pricing.html for what might change later.
+
+## Key pages
+
+- [Home](https://career-coach-site.pages.dev/): what Career Coach does, in one page
+- [FAQ](https://career-coach-site.pages.dev/faq.html): what we are, who it's for, what it costs, how to start, how we compare to a career center and to LinkedIn
+- [Coaching & Roadmap](https://career-coach-site.pages.dev/coaching-roadmaps.html): the personalized roadmap builder, plus a fully worked Tulane example
+- [Career Toolkit](https://career-coach-site.pages.dev/career-toolkit.html): resume review, resume templates, cover letters, interview prep, job and internship search
+- [AI Career Coach](https://career-coach-site.pages.dev/ai-coach.html): ask any career question, answered with Tulane-specific context
+- [About](https://career-coach-site.pages.dev/about.html): who built it, why, and the team
+- [Pricing](https://career-coach-site.pages.dev/pricing.html): what's free today and what might come later
+
+## Guides
+
+- [What can I do with my major?](https://career-coach-site.pages.dev/what-can-i-do-with-my-major.html)
+- [When should I apply for internships?](https://career-coach-site.pages.dev/when-should-i-apply-for-internships.html)
+- [How to build a career roadmap](https://career-coach-site.pages.dev/how-to-build-a-career-roadmap.html)
+
+## Optional
+
+- [Privacy Policy](https://career-coach-site.pages.dev/privacy.html)
+- [Terms of Use](https://career-coach-site.pages.dev/terms.html)
