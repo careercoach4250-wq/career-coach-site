@@ -4,7 +4,10 @@
    AI Career Coach for longer conversations. */
 (function () {
   const CC = window.CC;
-  if (!CC || document.body.classList.contains("page-ai-coach")) return;
+  // The dedicated Customer Support widget (support-chat.js) covers FAQ and
+  // Pricing instead, so the two chat bubbles don't stack on the same page.
+  if (!CC || document.body.classList.contains("page-ai-coach") ||
+      document.body.classList.contains("page-faq") || document.body.classList.contains("page-pricing")) return;
 
   function build() {
     const wrap = document.createElement("div");
