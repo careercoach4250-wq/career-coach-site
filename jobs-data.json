@@ -1,7 +1,27 @@
 {
-  "updatedAt": "2026-11-26T22:10:02.558Z",
+  "updatedAt": "2026-11-27T21:50:23.070Z",
   "source": "SimplifyJobs (github.com/SimplifyJobs) — Summer2026-Internships & New-Grad-Positions, community-maintained open datasets",
   "jobs": [
+    {
+      "id": "fc96342b-9d7c-4f3f-a93e-70d935ac86b4",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Synectic Solutions",
+      "title": "Software Engineer 1",
+      "location": "Norco, CA",
+      "url": "https://synecsolu.applytojob.com/apply/kQT1OASGDG/Software-Engineer-I",
+      "posted": "2026-11-27T02:30:49.000Z"
+    },
+    {
+      "id": "fc6955f6-8ff8-4433-b4eb-739c55ab20e0",
+      "type": "Internship",
+      "category": "Software",
+      "company": "Atoms",
+      "title": "Software Engineer Intern",
+      "location": "Seattle, WA; Mountain View, CA",
+      "url": "https://job-boards.greenhouse.io/cssmerge/jobs/8963704002",
+      "posted": "2026-11-26T19:11:25.000Z"
+    },
     {
       "id": "a20fbd72-eae4-4051-ae1c-a1b21340ed3f",
       "type": "New Grad",
@@ -191,16 +211,6 @@
       "location": "Decatur, GA",
       "url": "https://careers.acuityinc.com/job/Decatur-Engineering-Intern-Labs-GA-30035/1453809400/?ats=successfactors",
       "posted": "2026-11-25T23:27:32.000Z"
-    },
-    {
-      "id": "907ac2b0-1ba3-4cc3-bce0-e61334c9d123",
-      "type": "Internship",
-      "category": "Software",
-      "company": "ManTech",
-      "title": "C++ Developer Intern",
-      "location": "Lexington Park, MD",
-      "url": "https://mantech.avature.net/en_US/careers/JobDetail/67268",
-      "posted": "2026-11-25T23:24:00.000Z"
     },
     {
       "id": "65499680-60d8-4f06-a282-494e8dfc0715",
@@ -643,6 +653,26 @@
       "posted": "2026-11-25T00:00:00.000Z"
     },
     {
+      "id": "f5de8d35-3ebe-4a7b-9eac-bdc9b583dc88",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Toyota",
+      "title": "Software Engineer",
+      "location": "Plano, TX",
+      "url": "https://toyota.wd503.myworkdayjobs.com/tmna/job/Plano-Texas/Software-Engineer_10332851",
+      "posted": "2026-11-25T00:00:00.000Z"
+    },
+    {
+      "id": "0c96f624-8843-4aa7-818e-5d2f023f18fd",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Toyota",
+      "title": "Software Engineer",
+      "location": "Plano, TX",
+      "url": "https://toyota.wd503.myworkdayjobs.com/tmna/job/Plano-Texas/Software-Engineer_10325070",
+      "posted": "2026-11-25T00:00:00.000Z"
+    },
+    {
       "id": "9e52e349-d863-4322-94e2-b6c2d08b4316",
       "type": "Internship",
       "category": "Hardware",
@@ -923,6 +953,16 @@
       "posted": "2026-11-24T00:00:00.000Z"
     },
     {
+      "id": "0acee63a-793e-447f-9a73-89f32ed4241f",
+      "type": "New Grad",
+      "category": "Software",
+      "company": "Torch Technologies",
+      "title": "Entry-Level Software Engineer",
+      "location": "Huntsville, AL",
+      "url": "https://starfish.wd501.myworkdayjobs.com/Careers/job/Huntsville-AL/Entry--Level-Software-Engineer_R2227",
+      "posted": "2026-11-24T00:00:00.000Z"
+    },
+    {
       "id": "60fe2bfd-5d70-4125-a0fd-2ff792996d47",
       "type": "Internship",
       "category": "Software",
@@ -1063,16 +1103,6 @@
       "posted": "2026-11-23T23:14:38.000Z"
     },
     {
-      "id": "fcb08f49-b9ed-4c1d-87f3-7191ff497a33",
-      "type": "Internship",
-      "category": "AI/ML/Data",
-      "company": "Milliman",
-      "title": "Data Scientist Intern",
-      "location": "Indianapolis, IN",
-      "url": "https://recruiting2.ultipro.com/MIL1017/JobBoard/f54234e9-dfde-b183-fd20-4fbdb19cba7a/OpportunityDetail?opportunityId=1940672b-d3b1-4e15-a834-fde16cb5a420",
-      "posted": "2026-11-23T23:13:05.000Z"
-    },
-    {
       "id": "a6e7484a-77b3-4267-ac3d-8200ef4a75c1",
       "type": "Internship",
       "category": "Software",
@@ -1113,16 +1143,6 @@
       "posted": "2026-11-23T21:32:28.000Z"
     },
     {
-      "id": "2818bcf6-6a18-4a57-9bae-626acf204922",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Stifel",
-      "title": "Treasury Management Analytics Analyst",
-      "location": "St. Louis, MO",
-      "url": "https://stifel.jibeapply.com/jobs/10982?icims=1&lang=en-us",
-      "posted": "2026-11-23T18:47:00.000Z"
-    },
-    {
       "id": "f5246429-ccf1-4e9e-bbd3-3be489d6a76f",
       "type": "New Grad",
       "category": "AI/ML/Data",
@@ -1161,16 +1181,6 @@
       "location": "Tempe, AZ",
       "url": "https://careers.viasat.com/jobs/10478?icims=1&lang=en-us",
       "posted": "2026-11-23T17:27:00.000Z"
-    },
-    {
-      "id": "91e76f54-acbb-48eb-a85d-21784efd168e",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "AbbVie",
-      "title": "AI Engineer",
-      "location": "North Chicago, IL",
-      "url": "https://jobs.smartrecruiters.com/AbbVie/3743990017034256",
-      "posted": "2026-11-23T16:11:58.000Z"
     },
     {
       "id": "44661bd9-b43c-446d-a232-8a1d4bd6d3c6",
@@ -1380,16 +1390,6 @@
       "title": "Data Scientist 1",
       "location": "St. Louis, MO",
       "url": "https://us-erac.icims.com/jobs/595973/job?mobile=true&needsRedirect=false",
-      "posted": "2026-11-23T00:00:00.000Z"
-    },
-    {
-      "id": "442db055-6c56-4d76-9590-c576a05275d0",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Stifel",
-      "title": "Treasury Management Analytics Analyst",
-      "location": "St. Louis, MO",
-      "url": "https://careers-stifel.icims.com/jobs/10982/job?mobile=true&needsRedirect=false",
       "posted": "2026-11-23T00:00:00.000Z"
     },
     {
@@ -3180,26 +3180,6 @@
       "title": "Business Administration Intern",
       "location": "Pasadena, CA",
       "url": "https://citjpl.wd5.myworkdayjobs.com/Jobs/job/JPL-Campus/Business-Administration-Academic-Part-time-Intern_R6311",
-      "posted": "2026-11-20T00:00:00.000Z"
-    },
-    {
-      "id": "6b1c5a60-a0ba-4c4d-b836-37a2a4dbf50a",
-      "type": "New Grad",
-      "category": "Product",
-      "company": "Jerry",
-      "title": "Product Manager - 2x YC founder mentorship",
-      "location": "Palo Alto, CA",
-      "url": "https://jobs.ashbyhq.com/jerry.ai/62d15042-9e60-405a-a14b-5689ce1bdcf0/application?embed=true",
-      "posted": "2026-11-20T00:00:00.000Z"
-    },
-    {
-      "id": "80a945d4-a36a-4575-9b91-9be1c3fa65de",
-      "type": "New Grad",
-      "category": "Product",
-      "company": "Jerry",
-      "title": "Product Manager-in-Training",
-      "location": "Palo Alto, CA",
-      "url": "https://jobs.ashbyhq.com/jerry.ai/a192c0e7-aa27-4c76-ba9d-7a0a197ae312/application?embed=true",
       "posted": "2026-11-20T00:00:00.000Z"
     },
     {
@@ -13363,6 +13343,16 @@
       "posted": "2026-10-22T00:00:00.000Z"
     },
     {
+      "id": "07734488-59c0-444f-8d79-5ab6d4283215",
+      "type": "Internship",
+      "category": "AI/ML/Data",
+      "company": "Booz Allen",
+      "title": "Enterprise Cybersecurity Data and Business Intelligence Analyst Intern",
+      "location": "McLean, VA",
+      "url": "https://bah.wd1.myworkdayjobs.com/Confidential/job/McLean-VA/Enterprise-Cybersecurity-Data-and-Business-Intelligence-Analyst_R0252250",
+      "posted": "2026-10-22T00:00:00.000Z"
+    },
+    {
       "id": "9f034677-a3d3-4f7d-9504-7620ce4703fa",
       "type": "Internship",
       "category": "Hardware",
@@ -17893,16 +17883,6 @@
       "posted": "2026-09-29T00:00:00.000Z"
     },
     {
-      "id": "1f2f92ef-4765-4730-b29c-a7f5dff8437a",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "RTX",
-      "title": "Systems Engineer 1",
-      "location": "Fulton, MD",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MD-FULTON-8170--8170-Maple-Lawn-Blvd--MAPLE-LAWN-Ste-190-200--300/Systems-Engineer-I--Onsite-_01876828",
-      "posted": "2026-09-29T00:00:00.000Z"
-    },
-    {
       "id": "c472dd7f-34f9-4cb1-8109-a0c22bbdc9f2",
       "type": "New Grad",
       "category": "Hardware",
@@ -17980,26 +17960,6 @@
       "title": "Management Development Program Forward Deployed Digital Product Analyst",
       "location": "Wilmington, DE",
       "url": "https://mtb.wd5.myworkdayjobs.com/Campus/job/Wilmington-DE/XMLNAME-2027-Management-Development-Program---IS-Forward-Deployed-Product--Wilmington--DE-_R89996",
-      "posted": "2026-09-28T00:00:00.000Z"
-    },
-    {
-      "id": "a3488e6f-c542-4279-9aef-97a3f424a008",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "RTX",
-      "title": "Research Software Engineer 1",
-      "location": "Cambridge, MA",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-CAMBRIDGE-BBN06--10--50-Moulton-St--MOULTON-B6/Research-Software-Engineer-I---Onsite_01878338",
-      "posted": "2026-09-28T00:00:00.000Z"
-    },
-    {
-      "id": "baa00ee8-4fec-4f3e-9df3-703c01b4b803",
-      "type": "New Grad",
-      "category": "Software",
-      "company": "Visa",
-      "title": "Software Engineer",
-      "location": "Austin, TX",
-      "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---Austin-TX/SW-Engineer_REF088588W",
       "posted": "2026-09-28T00:00:00.000Z"
     },
     {
@@ -19781,36 +19741,6 @@
       "location": "Des Moines, IA",
       "url": "https://wd5.myworkdaysite.com/recruiting/vhr_fhlbdm/careers/job/Des-Moines/Model-Risk-Co-Op_REQ00696",
       "posted": "2026-08-31T00:00:00.000Z"
-    },
-    {
-      "id": "4eca034e-e697-4d90-bb46-323cab4f0668",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "Crest Industries",
-      "title": "Manufacturing Intelligence Solutions Specialist 1",
-      "location": "Ruston, LA",
-      "url": "https://jobs.lever.co/crestoperations/cac6fc84-2231-4bfb-bc28-6d450ff08c6a/apply",
-      "posted": "2026-08-29T00:34:29.000Z"
-    },
-    {
-      "id": "924a8e94-4f3a-475e-93ea-e8208d857766",
-      "type": "New Grad",
-      "category": "AI/ML/Data",
-      "company": "TikTok",
-      "title": "Machine Learning Engineer Graduate - E-Commerce Knowledge Graph",
-      "location": "San Jose, CA",
-      "url": "https://lifeattiktok.com/search/7679156878833682693",
-      "posted": "2026-08-29T00:31:47.000Z"
-    },
-    {
-      "id": "4376d807-2cde-46d3-be30-f77757fc9eed",
-      "type": "New Grad",
-      "category": "Product",
-      "company": "TikTok",
-      "title": "AI Product Manager Graduate - Product Social",
-      "location": "San Jose, CA",
-      "url": "https://lifeattiktok.com/search/7675616322118584629",
-      "posted": "2026-08-29T00:30:47.000Z"
     }
   ]
 }
